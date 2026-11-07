@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="el" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC VEZHDANISHT | Επίσημη Ιστοσελίδα</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700;1,900&family=Teko:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#D61A21',
+                            darkred: '#960F14',
+                            black: '#0D0D0E',
+                            charcoal: '#171719',
+                            card: '#1D1D21',
+                            lightcard: '#27272C',
+                            accent: '#FF2E36',
+                        }
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        teko: ['Teko', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0c0c0e;
+            color: #f3f4f6;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Diagonal Stripe Background Accents */
+        .badge-stripes {
+            background: repeating-linear-gradient(
+                -45deg,
+                #0d0d0e,
+                #0d0d0e 18px,
+                #d61a21 18px,
+                #d61a21 36px
+            );
+        }
+
+        .stripe-divider {
+            height: 5px;
+            background: linear-gradient(90deg, #D61A21, #FF454D, #0D0D0E);
+        }
+
+        /* Glow effects */
+        .red-glow {
+            box-shadow: 0 0 25px rgba(214, 26, 33, 0.45);
+        }
+        .red-glow-sm {
+            box-shadow: 0 0 12px rgba(214, 26, 33, 0.3);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d61a21;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff2e36;
+        }
+    </style>
+</head>
+<body class="selection:bg-brand-red selection:text-white">
+
+    <!-- TOP TICKER BAR -->
+    <div class="bg-black/90 border-b border-white/10 text-xs py-2 px-6 flex justify-between items-center z-50 relative font-medium">
+        <div class="flex items-center gap-3">
+            <span class="bg-brand-red text-white uppercase text-[10px] font-bold px-2 py-0.5 rounded tracking-widest animate-pulse">
+                BREAKING NEWS
+            </span>
+            <span class="text-gray-300 truncate">
+                🔥 Τεράστια νίκη στο τοπικό ντέρμπι με 3-1! Επόμενη μάχη το Σάββατο στις 19:30.
+            </span>
+        </div>
+        <div class="flex items-center gap-6 text-gray-400">
+            <div class="flex items-center gap-3">
+                <a href="#" class="hover:text-brand-accent transition"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-brand-accent transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-brand-accent transition"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="hover:text-brand-accent transition"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="h-3 w-px bg-white/20"></div>
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-globe text-brand-red text-xs"></i>
+                <span class="hover:text-white cursor-pointer transition">SQ | <strong>GR</strong> | EN</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR (DESKTOP OPTIMIZED) -->
+    <header class="sticky top-0 z-40 bg-brand-black/95 backdrop-blur-md border-b border-brand-red/30 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+            <!-- LOGO / BRANDING -->
+            <a href="#" class="flex items-center gap-3.5 group">
+                <!-- SVG Crest Replica -->
+                <div class="relative w-14 h-14 rounded-full border-2 border-white p-0.5 shadow-md group-hover:scale-105 transition-transform duration-300">
+                    <svg viewBox="0 0 200 200" class="w-full h-full rounded-full">
+                        <!-- Outer White Ring -->
+                        <circle cx="100" cy="100" r="96" fill="#ffffff" stroke="#D61A21" stroke-width="4"/>
+                        <!-- Inner Crest Base with Stripes -->
+                        <clipPath id="circleClip">
+                            <circle cx="100" cy="100" r="68"/>
+                        </clipPath>
+                        <g clip-path="url(#circleClip)">
+                            <rect width="200" height="200" fill="#0d0d0e"/>
+                            <line x1="-50" y1="20" x2="250" y2="-100" stroke="#d61a21" stroke-width="24"/>
+                            <line x1="-50" y1="80" x2="250" y2="-40" stroke="#d61a21" stroke-width="24"/>
+                            <line x1="-50" y1="140" x2="250" y2="20" stroke="#d61a21" stroke-width="24"/>
+                            <line x1="-50" y1="200" x2="250" y2="80" stroke="#d61a21" stroke-width="24"/>
+                            <line x1="-50" y1="260" x2="250" y2="140" stroke="#d61a21" stroke-width="24"/>
+                        </g>
+                        <!-- Inner Border Ring -->
+                        <circle cx="100" cy="100" r="68" fill="none" stroke="#D61A21" stroke-width="3"/>
+                        
+                        <!-- Text around ring -->
+                        <path id="topCurve" d="M 40,100 A 60,60 0 0,1 160,100" fill="none"/>
+                        <path id="bottomCurve" d="M 170,100 A 70,70 0 0,1 30,100" fill="none"/>
+                        
+                        <text font-family="'Teko', sans-serif" font-size="28" font-weight="700" fill="#0d0d0e" text-anchor="middle">
+                            <textPath href="#topCurve" startOffset="50%">FC</textPath>
+                        </text>
+                        <text font-family="'Montserrat', sans-serif" font-size="14" font-weight="900" fill="#0d0d0e" letter-spacing="1.5" text-anchor="middle">
+                            <textPath href="#bottomCurve" startOffset="50%">VEZHDANISHT</textPath>
+                        </text>
+
+                        <!-- Eagle Icons on sides -->
+                        <g transform="translate(18, 92) scale(0.6)">
+                            <path d="M5 2 L8 8 L11 2 L14 7 L12 18 L4 18 Z" fill="#D61A21"/>
+                        </g>
+                        <g transform="translate(168, 92) scale(0.6)">
+                            <path d="M5 2 L8 8 L11 2 L14 7 L12 18 L4 18 Z" fill="#D61A21"/>
+                        </g>
+
+                        <!-- Central Ram Mascot with Ball -->
+                        <g transform="translate(48, 55)">
+                            <!-- Stylized Horns & Ram Body -->
+                            <path d="M25 45 C15 35 2 20 20 15 C35 10 40 25 48 30 C58 35 70 30 75 42 C70 52 50 70 35 60 C25 55 20 65 10 50 Z" fill="#D61A21" stroke="#ffffff" stroke-width="2.5"/>
+                            <path d="M26 22 C30 14 42 16 46 25 C38 28 32 30 26 22" fill="#ffffff"/>
+                            <!-- Soccer ball on horn -->
+                            <circle cx="68" cy="24" r="13" fill="#ffffff" stroke="#D61A21" stroke-width="2"/>
+                            <polygon points="68,17 74,21 72,28 64,28 62,21" fill="#D61A21"/>
+                        </g>
+                    </svg>
+                </div>
+                <div>
+                    <span class="block text-2xl font-black tracking-wider leading-none text-white font-teko uppercase">
+                        FC <span class="text-brand-red">VEZHDANISHT</span>
+                    </span>
+                    <span class="text-[10px] tracking-widest text-gray-400 font-semibold uppercase">Official Club Portal</span>
+                </div>
+            </a>
+
+            <!-- NAVIGATION ITEMS -->
+            <nav class="hidden lg:flex items-center gap-7 text-sm font-bold uppercase tracking-wider text-gray-300">
+                <a href="#hero" class="text-white hover:text-brand-accent transition border-b-2 border-brand-red pb-1">Αρχική</a>
+                <a href="#matches" class="hover:text-brand-accent transition pb-1">Αγώνες</a>
+                <a href="#news" class="hover:text-brand-accent transition pb-1">Νέα</a>
+                <a href="#roster" class="hover:text-brand-accent transition pb-1">Ρόστερ</a>
+                <a href="#standings" class="hover:text-brand-accent transition pb-1">Βαθμολογία</a>
+                <a href="#fanshop" class="hover:text-brand-accent transition pb-1">Fan Shop</a>
+                <a href="#stadium" class="hover:text-brand-accent transition pb-1">Γήπεδο</a>
+            </nav>
+
+            <!-- CALL TO ACTION -->
+            <div class="flex items-center gap-3">
+                <a href="#fanshop" class="hidden xl:flex items-center gap-2 text-xs font-bold uppercase bg-brand-charcoal hover:bg-brand-lightcard border border-white/10 px-4 py-2.5 rounded-lg transition">
+                    <i class="fa-solid fa-bag-shopping text-brand-red"></i>
+                    <span>Store</span>
+                </a>
+                <a href="#tickets" class="relative group overflow-hidden bg-brand-red hover:bg-red-600 text-white font-black text-xs uppercase px-5 py-2.5 rounded-lg tracking-wider transition-all red-glow-sm">
+                    <span class="relative z-10 flex items-center gap-2">
+                        <i class="fa-solid fa-ticket"></i> Εισιτήρια
+                    </span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative min-h-[620px] h-[78vh] flex items-center overflow-hidden bg-brand-black">
+        <!-- Background Imagery with Dark & Red overlay -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-30 transform scale-105 duration-1000"
+             style="background-image: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920&auto=format&fit=crop');">
+        </div>
+        
+        <!-- Gradient layers -->
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/70 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/90 to-transparent"></div>
+        
+        <!-- Decorative Red angled bar -->
+        <div class="absolute -right-20 top-0 w-96 h-full bg-brand-red/10 -skew-x-12 blur-3xl pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6 w-full grid grid-cols-12 gap-8 items-center py-10">
+            <!-- Left Info -->
+            <div class="col-span-12 lg:col-span-7">
+                <div class="inline-flex items-center gap-2 bg-brand-red/20 border border-brand-red/50 text-brand-accent px-3.5 py-1.5 rounded-full text-xs font-extrabold tracking-widest uppercase mb-4">
+                    <span class="w-2 h-2 rounded-full bg-brand-red animate-ping"></span>
+                    Matchday 14 • Albanian Regional League
+                </div>
+
+                <h1 class="text-6xl xl:text-7xl font-black font-teko uppercase tracking-tight leading-[0.95] mb-4 text-white">
+                    ΕΔΩ ΧΤΥΠΑ Η ΚΑΡΔΙΑ <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red via-red-500 to-white">
+                        ΤΩΝ ΝΙΚΗΤΩΝ!
+                    </span>
+                </h1>
+                
+                <p class="text-gray-300 text-base max-w-xl font-normal leading-relaxed mb-8">
+                    Η ιστορική ομάδα του Vezhdanisht ενωμένη με πάθος, δύναμη και τιμή. 
+                    Στηρίξτε τους πολεμιστές μας στον κρισιμότερο εντός έδρας αγώνα της σεζόν!
+                </p>
+
+                <!-- Actions -->
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="#tickets" class="bg-brand-red hover:bg-brand-accent text-white px-7 py-3.5 rounded-xl font-bold uppercase text-sm tracking-wider flex items-center gap-3 transition-all red-glow">
+                        <i class="fa-solid fa-ticket-simple"></i>
+                        Κλείσε Εισιτήριο
+                    </a>
+                    <a href="#matches" class="bg-brand-card hover:bg-brand-lightcard border border-white/10 text-white px-6 py-3.5 rounded-xl font-bold uppercase text-sm tracking-wider flex items-center gap-3 transition">
+                        <i class="fa-solid fa-play text-brand-red"></i>
+                        Highlights & Αποτελέσματα
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Next Match Box Card -->
+            <div class="col-span-12 lg:col-span-5">
+                <div class="bg-gradient-to-b from-brand-card/95 to-brand-charcoal/95 border border-brand-red/40 rounded-2xl p-6 shadow-2xl backdrop-blur-md relative overflow-hidden">
+                    <!-- Subtle stripe header pattern -->
+                    <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-brand-red via-brand-accent to-brand-black"></div>
+                    
+                    <div class="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2">
+                            <i class="fa-regular fa-clock text-brand-red"></i> ΕΠΟΜΕΝΟΣ ΑΓΩΝΑΣ
+                        </span>
+                        <span class="bg-white/10 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded">
+                            Σάββατο, 14 Νοεμβρίου • 19:30
+                        </span>
+                    </div>
+
+                    <!-- Teams Faceoff -->
+                    <div class="grid grid-cols-3 items-center text-center my-4">
+                        <!-- Home Team -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 rounded-full bg-brand-black border-2 border-brand-red flex items-center justify-center p-2 mb-2 shadow-lg">
+                                <span class="font-teko font-black text-2xl text-white">FCV</span>
+                            </div>
+                            <span class="font-bold text-sm uppercase text-white">FC VEZHDANISHT</span>
+                            <span class="text-[11px] text-green-400 font-semibold uppercase mt-0.5">Εντός Έδρας</span>
+                        </div>
+
+                        <!-- VS Badge -->
+                        <div class="flex flex-col items-center">
+                            <span class="font-teko text-3xl font-black text-brand-red italic">VS</span>
+                            <span class="text-[11px] text-gray-400">Δημοτικό Στάδιο</span>
+                        </div>
+
+                        <!-- Away Team -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 rounded-full bg-brand-charcoal border-2 border-white/20 flex items-center justify-center p-2 mb-2 shadow-lg">
+                                <span class="font-teko font-black text-2xl text-gray-300">KFS</span>
+                            </div>
+                            <span class="font-bold text-sm uppercase text-white">KF SKËNDERBEU B</span>
+                            <span class="text-[11px] text-gray-400 font-semibold uppercase mt-0.5">Φιλοξενούμενος</span>
+                        </div>
+                    </div>
+
+                    <!-- Countdown Timer -->
+                    <div class="bg-black/50 border border-white/5 rounded-xl p-3 my-4">
+                        <div class="text-[11px] uppercase tracking-wider text-center text-gray-400 mb-2 font-bold">
+                            Εναπομείναντας Χρόνος
+                        </div>
+                        <div class="grid grid-cols-4 gap-2 text-center" id="countdown">
+                            <div class="bg-brand-charcoal/80 rounded-lg py-2 border border-white/5">
+                                <span class="block text-2xl font-black font-teko text-brand-red" id="cd-days">05</span>
+                                <span class="text-[10px] text-gray-400 uppercase font-semibold">Ημέρες</span>
+                            </div>
+                            <div class="bg-brand-charcoal/80 rounded-lg py-2 border border-white/5">
+                                <span class="block text-2xl font-black font-teko text-white" id="cd-hours">18</span>
+                                <span class="text-[10px] text-gray-400 uppercase font-semibold">Ώρες</span>
+                            </div>
+                            <div class="bg-brand-charcoal/80 rounded-lg py-2 border border-white/5">
+                                <span class="block text-2xl font-black font-teko text-white" id="cd-minutes">42</span>
+                                <span class="text-[10px] text-gray-400 uppercase font-semibold">Λεπτά</span>
+                            </div>
+                            <div class="bg-brand-charcoal/80 rounded-lg py-2 border border-white/5">
+                                <span class="block text-2xl font-black font-teko text-brand-accent" id="cd-seconds">19</span>
+                                <span class="text-[10px] text-gray-400 uppercase font-semibold">Δευτ</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-brand-red hover:bg-brand-accent text-white font-bold text-xs uppercase py-3 rounded-lg tracking-wider transition">
+                        Εξασφάλισε Θέση Τώρα (VIP & Θύρα 3)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STRIPE BAR SEPARATOR -->
+    <div class="stripe-divider"></div>
+
+    <!-- QUICK MATCH STATS & RECENT FIXTURES BAR -->
+    <section id="matches" class="bg-brand-charcoal py-8 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <h2 class="text-3xl font-black font-teko uppercase tracking-wide text-white flex items-center gap-2">
+                        <i class="fa-solid fa-futbol text-brand-red"></i> ΑΠΟΤΕΛΕΣΜΑΤΑ & ΠΡΟΓΡΑΜΜΑ
+                    </h2>
+                    <p class="text-xs text-gray-400">Όλοι οι πρόσφατοι αγώνες και τα επερχόμενα ντέρμπι</p>
+                </div>
+                <div class="flex gap-2">
+                    <button class="w-8 h-8 rounded-lg bg-brand-lightcard hover:bg-brand-red text-white text-xs flex items-center justify-center transition">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="w-8 h-8 rounded-lg bg-brand-lightcard hover:bg-brand-red text-white text-xs flex items-center justify-center transition">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Matches Horizontal Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <!-- Card 1: Last Match (Victory) -->
+                <div class="bg-brand-card hover:border-brand-red/50 border border-white/5 rounded-xl p-5 relative overflow-hidden transition group">
+                    <div class="flex justify-between items-center text-xs mb-3">
+                        <span class="text-gray-400">01 Νοεμβρίου • 17:00</span>
+                        <span class="bg-green-600/20 text-green-400 font-bold px-2 py-0.5 rounded text-[10px] uppercase">
+                            ΝΙΚΗ (ΤΕΛΙΚΟ)
+                        </span>
+                    </div>
+                    <div class="flex items-center justify-between py-2 border-y border-white/10 my-2">
+                        <div class="flex items-center gap-2 font-bold text-sm">
+                            <span class="w-3 h-3 rounded-full bg-brand-red inline-block"></span>
+                            <span>FC Vezhdanisht</span>
+                        </div>
+                        <span class="text-2xl font-black font-teko text-brand-red">3</span>
+                    </div>
+                    <div class="flex items-center justify-between py-2 border-b border-white/10 mb-3">
+                        <div class="flex items-center gap-2 font-bold text-sm text-gray-400">
+                            <span class="w-3 h-3 rounded-full bg-gray-500 inline-block"></span>
+                            <span>KF Gramshi</span>
+                        </div>
+                        <span class="text-2xl font-black font-teko text-gray-400">1</span>
+                    </div>
+                    <div class="text-[11px] text-gray-400 flex items-center justify-between">
+                        <span>⚽ Berisha 22', Hoxha 58', 84'</span>
+                        <a href="#" class="text-brand-accent hover:underline font-semibold">Στιγμιότυπα <i class="fa-solid fa-arrow-right text-[9px]"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Upcoming match (Active) -->
+                <div class="bg-gradient-to-b from-brand-card to-brand-charcoal border-2 border-brand-red rounded-xl p-5 relative overflow-hidden transition shadow-lg">
+                    <div class="absolute -right-8 -top-8 w-20 h-20 bg-brand-red/10 rounded-full blur-xl"></div>
+                    <div class="flex justify-between items-center text-xs mb-3">
+                        <span class="text-brand-accent font-semibold">14 Νοεμβρίου • 19:30</span>
+                        <span class="bg-brand-red text-white font-bold px-2 py-0.5 rounded text-[10px] uppercase">
+                            ΕΠΟΜΕΝΟΣ
+                        </span>
+                    </div>
+                    <div class="flex items-center justify-between py-2 border-y border-white/10 my-2">
+                        <div class="flex items-center gap-2 font-bold text-sm">
+                            <span class="w-3 h-3 rounded-full bg-brand-red inline-block"></span>
+                            <span>FC Vezhdanisht</span>
+                        </div>
+                        <span class="text-xl font-black font-teko text-gray-400">-</span>
+                    </div>
+                    <div class="flex items-center justify-between py-2 border-b border-white/10 mb-3">
+                        <div class="flex items-center gap-2 font-bold text-sm">
+                            <span class="w-3 h-3 rounded-full bg-blue-500 inline-block"></span>
+                            <span>KF Skënderbeu B</span>
+                        </div>
+                        <span class="text-xl font-black font-teko text-gray-400">-</span>
+                    </div>
+                    <div class="text-[11px] text-gray-400 flex items-center justify-between">
+                        <span>📍 Δημοτικό Γήπεδο</span>
+                        <span class="text-brand-red font-bold">Προπώληση: 5€</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Next Away Match -->
+                <div class="bg-brand-card hover:border-brand-red/50 border border-white/5 rounded-xl p-5 relative overflow-hidden transition group">
+                    <div class="flex justify-between items-center text-xs mb-3">
+                        <span class="text-gray-400">22 Νοεμβρίου • 15:00</span>
+                        <span class="bg-white/10 text-gray-300 font-bold px-2 py-0.5 rounded text-[10px] uppercase">
+                            ΕΚΤΟΣ ΕΔΡΑΣ
+                        </span>
+                    </div>
+                    <div class="flex items-center justify-between py-2 border-y border-white/10 my-2">
+                        <div class="flex items-center gap-2 font-bold text-sm text-gray-400">
+                            <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+                            <span>KF Maliqi</span>
+                        </div>
+                        <span class="text-xl font-black font-teko text-gray-400">-</span>
+                    </div>
+                    <div class="flex items-center justify-between py-2 border-b border-white/10 mb-3">
+                        <div class="flex items-center gap-2 font-bold text-sm">
+                            <span class="w-3 h-3 rounded-full bg-brand-red inline-block"></span>
+                            <span>FC Vezhdanisht</span>
+                        </div>
+                        <span class="text-xl font-black font-teko text-gray-400">-</span>
+                    </div>
+                    <div class="text-[11px] text-gray-400 flex items-center justify-between">
+                        <span>📍 Stadiumi Maliq</span>
+                        <a href="#" class="text-gray-300 hover:text-brand-accent font-semibold">Πληροφορίες <i class="fa-solid fa-arrow-right text-[9px]"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT: NEWS & LEAGUE STANDINGS (DESKTOP SPLIT 8/4) -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-12 gap-8">
+            
+            <!-- LEFT COLUMN: LATEST NEWS (8 COLS) -->
+            <div id="news" class="col-span-12 lg:col-span-8">
+                <div class="flex items-center justify-between mb-8 pb-3 border-b border-white/10">
+                    <div>
+                        <span class="text-brand-red text-xs font-bold tracking-widest uppercase">Ενημέρωση & Ανακοινώσεις</span>
+                        <h2 class="text-4xl font-black font-teko uppercase text-white tracking-wide">
+                            ΤΕΛΕΥΤΑΙΑ ΝΕΑ ΤΟΥ ΣΥΛΛΟΓΟΥ
+                        </h2>
+                    </div>
+                    <a href="#" class="text-xs font-bold uppercase text-brand-accent hover:underline flex items-center gap-1">
+                        Ολα τα νεα <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Featured Top Story -->
+                <div class="relative bg-brand-card rounded-2xl overflow-hidden border border-white/10 mb-8 group cursor-pointer">
+                    <div class="h-80 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                         style="background-image: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1200&auto=format&fit=crop');">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/60 to-transparent"></div>
+                    
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <span class="bg-brand-red text-white text-[10px] font-black uppercase px-2.5 py-1 rounded tracking-wider mb-2 inline-block">
+                            ΣΥΝΕΝΤΕΥΞΗ ΤΥΠΟΥ
+                        </span>
+                        <h3 class="text-2xl font-bold text-white group-hover:text-brand-accent transition leading-tight mb-2">
+                            Δηλώσεις Προπονητή: «Η δύναμη του Vezhdanisht είναι οι πιστοί οπαδοί μας και η ψυχή των παικτών!»
+                        </h3>
+                        <p class="text-gray-300 text-xs line-clamp-2 mb-3">
+                            Ο τεχνικός ηγέτης της ομάδας μίλησε για την πορεία πρωταθλητισμού, τη στρατηγική ενόψει του ντέρμπι και την αφοσίωση του νεανικού συνόλου.
+                        </p>
+                        <div class="flex items-center gap-4 text-[11px] text-gray-400">
+                            <span><i class="fa-regular fa-clock text-brand-red mr-1"></i> Πριν 2 ώρες</span>
+                            <span><i class="fa-regular fa-eye mr-1"></i> 1,420 προβολές</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grid of 2 Smaller Stories -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- News 2 -->
+                    <div class="bg-brand-card hover:bg-brand-lightcard border border-white/5 rounded-xl overflow-hidden transition group">
+                        <div class="h-44 bg-cover bg-center group-hover:scale-105 transition duration-500"
+                             style="background-image: url('https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=800&auto=format&fit=crop');">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-brand-red text-[10px] font-bold uppercase tracking-wider block mb-1">ΑΚΑΔΗΜΙΕΣ</span>
+                            <h4 class="font-bold text-base text-white group-hover:text-brand-accent transition mb-2">
+                                Εγγραφές στα τμήματα υποδομής: Χτίζοντας το μέλλον του συλλόγου
+                            </h4>
+                            <p class="text-gray-400 text-xs line-clamp-2 mb-3">
+                                Ξεκίνησαν οι προπονήσεις των τμημάτων Κ-15 και Κ-17 με νέο εξειδικευμένο προπονητικό επιτελείο.
+                            </p>
+                            <span class="text-[11px] text-gray-500">Χθες • 5 σχόλια</span>
+                        </div>
+                    </div>
+
+                    <!-- News 3 -->
+                    <div class="bg-brand-card hover:bg-brand-lightcard border border-white/5 rounded-xl overflow-hidden transition group">
+                        <div class="h-44 bg-cover bg-center group-hover:scale-105 transition duration-500"
+                             style="background-image: url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=800&auto=format&fit=crop');">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-brand-red text-[10px] font-bold uppercase tracking-wider block mb-1">ΜΕΤΑΓΡΑΦΕΣ</span>
+                            <h4 class="font-bold text-base text-white group-hover:text-brand-accent transition mb-2">
+                                Συμφωνία με τον 21χρονο χαφ Arben Krasniqi
+                            </h4>
+                            <p class="text-gray-400 text-xs line-clamp-2 mb-3">
+                                Ο σύλλογος ανακοινώνει την απόκτηση του διεθνούς μέσου με συμβόλαιο διετούς διάρκειας.
+                            </p>
+                            <span class="text-[11px] text-gray-500">2 μέρες πριν</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: STANDINGS & TOP SCORERS TABS (4 COLS) -->
+            <div id="standings" class="col-span-12 lg:col-span-4">
+                <div class="bg-brand-card rounded-2xl border border-white/10 p-5 shadow-xl sticky top-24">
+                    <!-- Tab Headers -->
+                    <div class="flex items-center border-b border-white/10 mb-4 pb-2">
+                        <button id="tab-standings-btn" onclick="switchSidebarTab('standings')" 
+                                class="text-lg font-black font-teko uppercase pb-2 px-3 border-b-2 border-brand-red text-white transition">
+                            Βαθμολογία
+                        </button>
+                        <button id="tab-scorers-btn" onclick="switchSidebarTab('scorers')" 
+                                class="text-lg font-black font-teko uppercase pb-2 px-3 text-gray-400 hover:text-white transition">
+                            Σκόρερς
+                        </button>
+                    </div>
+
+                    <!-- Standings Table Content -->
+                    <div id="standings-content" class="space-y-1 block">
+                        <div class="text-[11px] font-bold text-gray-400 uppercase grid grid-cols-12 px-2 py-1">
+                            <span class="col-span-2">Θέση</span>
+                            <span class="col-span-6">Ομάδα</span>
+                            <span class="col-span-2 text-center">Αγ</span>
+                            <span class="col-span-2 text-right">Βαθ</span>
+                        </div>
+
+                        <!-- 1st Vezhdanisht -->
+                        <div class="grid grid-cols-12 items-center px-2 py-2.5 rounded-lg bg-brand-red/20 border border-brand-red text-white text-xs font-semibold">
+                            <span class="col-span-2 font-bold text-brand-accent">1.</span>
+                            <span class="col-span-6 flex items-center gap-1.5 font-bold">
+                                <span class="w-2 h-2 rounded-full bg-brand-red"></span>
+                                FC Vezhdanisht
+                            </span>
+                            <span class="col-span-2 text-center text-gray-300">13</span>
+                            <span class="col-span-2 text-right font-black font-teko text-lg text-brand-accent">32</span>
+                        </div>
+
+                        <!-- 2nd -->
+                        <div class="grid grid-cols-12 items-center px-2 py-2 rounded-lg hover:bg-white/5 text-gray-300 text-xs">
+                            <span class="col-span-2 font-bold">2.</span>
+                            <span class="col-span-6">KF Skënderbeu B</span>
+                            <span class="col-span-2 text-center text-gray-400">13</span>
+                            <span class="col-span-2 text-right font-bold text-white">29</span>
+                        </div>
+
+                        <!-- 3rd -->
+                        <div class="grid grid-cols-12 items-center px-2 py-2 rounded-lg hover:bg-white/5 text-gray-300 text-xs">
+                            <span class="col-span-2 font-bold">3.</span>
+                            <span class="col-span-6">KF Maliqi</span>
+                            <span class="col-span-2 text-center text-gray-400">13</span>
+                            <span class="col-span-2 text-right font-bold text-white">26</span>
+                        </div>
+
+                        <!-- 4th -->
+                        <div class="grid grid-cols-12 items-center px-2 py-2 rounded-lg hover:bg-white/5 text-gray-300 text-xs">
+                            <span class="col-span-2 font-bold">4.</span>
+                            <span class="col-span-6">KF Devolli</span>
+                            <span class="col-span-2 text-center text-gray-400">12</span>
+                            <span class="col-span-2 text-right font-bold text-white">22</span>
+                        </div>
+
+                        <!-- 5th -->
+                        <div class="grid grid-cols-12 items-center px-2 py-2 rounded-lg hover:bg-white/5 text-gray-300 text-xs">
+                            <span class="col-span-2 font-bold">5.</span>
+                            <span class="col-span-6">KF Gramshi</span>
+                            <span class="col-span-2 text-center text-gray-400">13</span>
+                            <span class="col-span-2 text-right font-bold text-white">19</span>
+                        </div>
+
+                        <!-- 6th -->
+                        <div class="grid grid-cols-12 items-center px-2 py-2 rounded-lg hover:bg-white/5 text-gray-300 text-xs">
+                            <span class="col-span-2 font-bold">6.</span>
+                            <span class="col-span-6">KF Memaliaj</span>
+                            <span class="col-span-2 text-center text-gray-400">13</span>
+                            <span class="col-span-2 text-right font-bold text-white">14</span>
+                        </div>
+
+                        <div class="pt-3 text-[10px] text-gray-400 border-t border-white/5 flex items-center justify-between">
+                            <span class="flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded bg-brand-red"></span> Θέση Ανόδου
+                            </span>
+                            <a href="#" class="text-brand-accent hover:underline">Πλήρης Πίνακας</a>
+                        </div>
+                    </div>
+
+                    <!-- Scorers Content (Initially Hidden) -->
+                    <div id="scorers-content" class="space-y-3 hidden">
+                        <div class="flex items-center justify-between p-2 rounded-lg bg-white/5">
+                            <div class="flex items-center gap-3">
+                                <span class="font-teko font-black text-xl text-brand-red">01</span>
+                                <div>
+                                    <div class="font-bold text-xs text-white">Erion Hoxha</div>
+                                    <div class="text-[10px] text-gray-400">FC Vezhdanisht</div>
+                                </div>
+                            </div>
+                            <span class="font-teko text-2xl font-bold text-brand-accent">11 ⚽</span>
+                        </div>
+
+                        <div class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5">
+                            <div class="flex items-center gap-3">
+                                <span class="font-teko font-black text-xl text-gray-400">02</span>
+                                <div>
+                                    <div class="font-bold text-xs text-white">Artan Berisha</div>
+                                    <div class="text-[10px] text-gray-400">FC Vezhdanisht</div>
+                                </div>
+                            </div>
+                            <span class="font-teko text-2xl font-bold text-white">9 ⚽</span>
+                        </div>
+
+                        <div class="flex items-center justify-between p-2 rounded-lg hover:bg-white/5">
+                            <div class="flex items-center gap-3">
+                                <span class="font-teko font-black text-xl text-gray-400">03</span>
+                                <div>
+                                    <div class="font-bold text-xs text-white">Kledi Duka</div>
+                                    <div class="text-[10px] text-gray-400">KF Skënderbeu B</div>
+                                </div>
+                            </div>
+                            <span class="font-teko text-2xl font-bold text-white">8 ⚽</span>
+                        </div>
+                    </div>
+
+                    <!-- Club Fan Poll Banner -->
+                    <div class="mt-6 p-4 rounded-xl badge-stripes text-white border border-brand-red/40 relative">
+                        <div class="bg-black/85 p-3 rounded-lg backdrop-blur-sm">
+                            <span class="text-[10px] uppercase font-bold text-brand-accent block mb-1">ΨΗΦΟΦΟΡΙΑ MVP</span>
+                            <div class="text-xs font-bold mb-2">Ποιος ήταν ο MVP του αγώνα με το Gramshi;</div>
+                            <div class="space-y-1.5">
+                                <button class="w-full text-left text-[11px] bg-white/10 hover:bg-brand-red px-3 py-1.5 rounded transition flex justify-between">
+                                    <span>Hoxha (2 Γκολ)</span>
+                                    <span class="font-bold">64%</span>
+                                </button>
+                                <button class="w-full text-left text-[11px] bg-white/10 hover:bg-brand-red px-3 py-1.5 rounded transition flex justify-between">
+                                    <span>Berisha (1 Γκολ, 1 Ασίστ)</span>
+                                    <span class="font-bold">36%</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SQUAD / ROSTER SHOWCASE -->
+    <section id="roster" class="bg-brand-charcoal py-16 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                <div>
+                    <span class="text-brand-red text-xs font-bold tracking-widest uppercase">Το Έμψυχο Δυναμικό</span>
+                    <h2 class="text-4xl font-black font-teko uppercase tracking-wide text-white">
+                        ΟΙ ΠΟΔΟΣΦΑΙΡΙΣΤΕΣ ΜΑΣ
+                    </h2>
+                </div>
+                <!-- Position Filters -->
+                <div class="flex items-center gap-2 mt-4 md:mt-0" id="roster-filters">
+                    <button onclick="filterRoster('all')" class="filter-btn active text-xs font-bold uppercase px-3.5 py-1.5 rounded-lg bg-brand-red text-white">Όλοι</button>
+                    <button onclick="filterRoster('gk')" class="filter-btn text-xs font-bold uppercase px-3.5 py-1.5 rounded-lg bg-brand-lightcard hover:bg-brand-red text-gray-300 hover:text-white transition">Τερματοφύλακες</button>
+                    <button onclick="filterRoster('def')" class="filter-btn text-xs font-bold uppercase px-3.5 py-1.5 rounded-lg bg-brand-lightcard hover:bg-brand-red text-gray-300 hover:text-white transition">Αμυντικοί</button>
+                    <button onclick="filterRoster('mid')" class="filter-btn text-xs font-bold uppercase px-3.5 py-1.5 rounded-lg bg-brand-lightcard hover:bg-brand-red text-gray-300 hover:text-white transition">Μέσοι</button>
+                    <button onclick="filterRoster('att')" class="filter-btn text-xs font-bold uppercase px-3.5 py-1.5 rounded-lg bg-brand-lightcard hover:bg-brand-red text-gray-300 hover:text-white transition">Επιθετικοί</button>
+                </div>
+            </div>
+
+            <!-- Player Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Player 1 -->
+                <div class="player-card att bg-brand-card rounded-2xl overflow-hidden border border-white/5 hover:border-brand-red transition-all duration-300 group hover:-translate-y-2">
+                    <div class="relative h-72 bg-gradient-to-t from-brand-card via-transparent to-brand-charcoal overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1543351611-58f69d7c1781?q=80&w=600&auto=format&fit=crop" 
+                             alt="Player" 
+                             class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500 filter grayscale group-hover:grayscale-0">
+                        <span class="absolute top-3 right-3 font-teko text-5xl font-black text-brand-red/40 group-hover:text-brand-red transition">
+                            #09
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] uppercase font-bold text-brand-red tracking-wider">ΕΠΙΘΕΤΙΚΟΣ / ST</span>
+                        <h3 class="text-xl font-black font-teko uppercase text-white tracking-wide">Erion Hoxha</h3>
+                        <div class="mt-3 pt-3 border-t border-white/10 flex justify-between text-xs text-gray-400">
+                            <div><span class="block font-bold text-white text-sm">13</span> Συμμετοχές</div>
+                            <div><span class="block font-bold text-brand-accent text-sm">11</span> Γκολ</div>
+                            <div><span class="block font-bold text-white text-sm">24</span> Ετών</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Player 2 -->
+                <div class="player-card mid bg-brand-card rounded-2xl overflow-hidden border border-white/5 hover:border-brand-red transition-all duration-300 group hover:-translate-y-2">
+                    <div class="relative h-72 bg-gradient-to-t from-brand-card via-transparent to-brand-charcoal overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1570498839593-e565b3d7f672?q=80&w=600&auto=format&fit=crop" 
+                             alt="Player" 
+                             class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500 filter grayscale group-hover:grayscale-0">
+                        <span class="absolute top-3 right-3 font-teko text-5xl font-black text-brand-red/40 group-hover:text-brand-red transition">
+                            #10
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] uppercase font-bold text-brand-red tracking-wider">ΜΕΣΟΣ / CAM (CAPTAIN)</span>
+                        <h3 class="text-xl font-black font-teko uppercase text-white tracking-wide">Artan Berisha</h3>
+                        <div class="mt-3 pt-3 border-t border-white/10 flex justify-between text-xs text-gray-400">
+                            <div><span class="block font-bold text-white text-sm">13</span> Συμμετοχές</div>
+                            <div><span class="block font-bold text-brand-accent text-sm">9</span> Γκολ / 7 Ασίστ</div>
+                            <div><span class="block font-bold text-white text-sm">28</span> Ετών</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Player 3 -->
+                <div class="player-card def bg-brand-card rounded-2xl overflow-hidden border border-white/5 hover:border-brand-red transition-all duration-300 group hover:-translate-y-2">
+                    <div class="relative h-72 bg-gradient-to-t from-brand-card via-transparent to-brand-charcoal overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop" 
+                             alt="Player" 
+                             class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500 filter grayscale group-hover:grayscale-0">
+                        <span class="absolute top-3 right-3 font-teko text-5xl font-black text-brand-red/40 group-hover:text-brand-red transition">
+                            #04
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] uppercase font-bold text-brand-red tracking-wider">ΚΕΝΤΡΙΚΟΣ ΑΜΥΝΤΙΚΟΣ / CB</span>
+                        <h3 class="text-xl font-black font-teko uppercase text-white tracking-wide">Lorenc Gjoni</h3>
+                        <div class="mt-3 pt-3 border-t border-white/10 flex justify-between text-xs text-gray-400">
+                            <div><span class="block font-bold text-white text-sm">12</span> Συμμετοχές</div>
+                            <div><span class="block font-bold text-brand-accent text-sm">6</span> Clean Sheets</div>
+                            <div><span class="block font-bold text-white text-sm">26</span> Ετών</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Player 4 -->
+                <div class="player-card gk bg-brand-card rounded-2xl overflow-hidden border border-white/5 hover:border-brand-red transition-all duration-300 group hover:-translate-y-2">
+                    <div class="relative h-72 bg-gradient-to-t from-brand-card via-transparent to-brand-charcoal overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop" 
+                             alt="Player" 
+                             class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500 filter grayscale group-hover:grayscale-0">
+                        <span class="absolute top-3 right-3 font-teko text-5xl font-black text-brand-red/40 group-hover:text-brand-red transition">
+                            #01
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] uppercase font-bold text-brand-red tracking-wider">ΤΕΡΜΑΤΟΦΥΛΑΚΑΣ / GK</span>
+                        <h3 class="text-xl font-black font-teko uppercase text-white tracking-wide">Florian Balla</h3>
+                        <div class="mt-3 pt-3 border-t border-white/10 flex justify-between text-xs text-gray-400">
+                            <div><span class="block font-bold text-white text-sm">13</span> Συμμετοχές</div>
+                            <div><span class="block font-bold text-brand-accent text-sm">7</span> Clean Sheets</div>
+                            <div><span class="block font-bold text-white text-sm">27</span> Ετών</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFICIAL FAN STORE (PROMOTIONAL SECTION) -->
+    <section id="fanshop" class="py-16 max-w-7xl mx-auto px-6">
+        <div class="relative bg-gradient-to-r from-brand-black via-brand-card to-brand-black border border-brand-red/30 rounded-3xl p-8 lg:p-12 overflow-hidden shadow-2xl">
+            <!-- Background Watermark Badge -->
+            <div class="absolute -right-16 -bottom-16 w-96 h-96 opacity-10 pointer-events-none">
+                <svg viewBox="0 0 200 200" class="w-full h-full fill-white">
+                    <circle cx="100" cy="100" r="90"/>
+                </svg>
+            </div>
+
+            <div class="grid grid-cols-12 gap-8 items-center">
+                <div class="col-span-12 lg:col-span-6">
+                    <span class="bg-brand-red text-white text-xs font-black uppercase px-3 py-1 rounded tracking-widest inline-block mb-3">
+                        OFFICIAL MERCHANDISE
+                    </span>
+                    <h2 class="text-4xl lg:text-5xl font-black font-teko uppercase text-white tracking-tight leading-none mb-4">
+                        ΦΟΡΕΣΕ ΤΑ ΧΡΩΜΑΤΑ ΤΗΣ ΟΜΑΔΑΣ <br>
+                        <span class="text-brand-red">SEASON 2026 / 2027</span>
+                    </h2>
+                    <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                        Ανακαλύψτε τη νέα επίσημη εμφάνιση της FC Vezhdanisht με τις κλασικές κόκκινες και μαύρες ρίγες, επίσημα κασκόλ φιλάθλων και συλλεκτικά αξεσουάρ.
+                    </p>
+
+                    <div class="flex items-center gap-4">
+                        <button class="bg-brand-red hover:bg-brand-accent text-white px-6 py-3 rounded-xl font-bold uppercase text-xs tracking-wider transition red-glow">
+                            Επισκεψη στο Fan Shop
+                        </button>
+                        <span class="text-xs text-gray-400 font-semibold">
+                            🚚 Δωρεάν αποστολή άνω των 50€
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Products Display -->
+                <div class="col-span-12 lg:col-span-6 grid grid-cols-2 gap-4">
+                    <!-- Product 1 -->
+                    <div class="bg-brand-charcoal/80 border border-white/10 rounded-2xl p-4 text-center hover:border-brand-red transition group">
+                        <div class="h-44 flex items-center justify-center p-2 mb-3 bg-brand-black/50 rounded-xl relative overflow-hidden">
+                            <!-- Illustrated Jersey Element -->
+                            <div class="w-28 h-36 rounded-md badge-stripes shadow-lg flex items-center justify-center relative border border-white/20 group-hover:scale-105 transition">
+                                <div class="w-8 h-8 rounded-full bg-white p-0.5 border border-brand-red">
+                                    <div class="w-full h-full bg-brand-black rounded-full flex items-center justify-center text-[7px] font-bold text-white">FCV</div>
+                                </div>
+                            </div>
+                            <span class="absolute top-2 right-2 bg-brand-red text-white text-[9px] font-bold px-1.5 py-0.5 rounded">NEW</span>
+                        </div>
+                        <h4 class="font-bold text-xs uppercase text-white mb-1">Επίσημη Φανέλα Εντός Έδρας</h4>
+                        <div class="text-brand-red font-teko text-xl font-black">44.99 €</div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="bg-brand-charcoal/80 border border-white/10 rounded-2xl p-4 text-center hover:border-brand-red transition group">
+                        <div class="h-44 flex items-center justify-center p-2 mb-3 bg-brand-black/50 rounded-xl relative overflow-hidden">
+                            <!-- Scarf Illustration -->
+                            <div class="w-36 h-10 rounded badge-stripes shadow-md border-y-2 border-white flex items-center justify-center group-hover:scale-105 transition">
+                                <span class="font-teko text-sm font-black text-white tracking-widest bg-black/60 px-2 py-0.5 rounded">VEZHDANISHT</span>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-xs uppercase text-white mb-1">Συλλεκτικό Κασκόλ Θυρών</h4>
+                        <div class="text-brand-red font-teko text-xl font-black">14.99 €</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STADIUM & CLUB INFO BANNER -->
+    <section id="stadium" class="bg-brand-black py-16 border-t border-white/10 relative">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-brand-red/10 border border-brand-red/40 flex items-center justify-center text-brand-red text-xl shrink-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white uppercase text-sm mb-1">Έδρα Συλλόγου</h4>
+                    <p class="text-xs text-gray-400">Δημοτικό Γήπεδο Vezhdanisht<br>Χωρητικότητα: 3,500 θέσεις</p>
+                </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-brand-red/10 border border-brand-red/40 flex items-center justify-center text-brand-red text-xl shrink-0">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white uppercase text-sm mb-1">Σύνδεσμος Φιλάθλων</h4>
+                    <p class="text-xs text-gray-400">Ultras Vezhdanisht - Θύρα 3<br>«Μια ζωή πιστοί στα κόκκινα και μαύρα»</p>
+                </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-brand-red/10 border border-brand-red/40 flex items-center justify-center text-brand-red text-xl shrink-0">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white uppercase text-sm mb-1">Αξίες & Ήθος</h4>
+                    <p class="text-xs text-gray-400">Υπερηφάνεια, σεβασμός, μαχητικότητα και ανάδειξη των νέων ταλέντων της περιοχής.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-charcoal border-t border-brand-red/20 pt-14 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-12 gap-8 mb-12">
+                <!-- Club Col -->
+                <div class="col-span-12 lg:col-span-4">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full border border-white p-0.5">
+                            <div class="w-full h-full rounded-full bg-brand-red flex items-center justify-center font-teko font-black text-white text-lg">
+                                FCV
+                            </div>
+                        </div>
+                        <span class="text-2xl font-black font-teko uppercase text-white tracking-wide">
+                            FC VEZHDANISHT
+                        </span>
+                    </div>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-4">
+                        Η επίσημη διαδικτυακή πύλη του ποδοσφαιρικού συλλόγου FC Vezhdanisht. Ειδήσεις, αποτελέσματα, εισιτήρια και ζωντανή ενημέρωση για όλους τους φιλάθλους.
+                    </p>
+                    <div class="flex items-center gap-3 text-sm">
+                        <a href="#" class="w-8 h-8 rounded-lg bg-brand-card hover:bg-brand-red flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-lg bg-brand-card hover:bg-brand-red flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-lg bg-brand-card hover:bg-brand-red flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-lg bg-brand-card hover:bg-brand-red flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-span-6 lg:col-span-2">
+                    <h5 class="text-white text-xs font-black uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">ΣΥΛΛΟΓΟΣ</h5>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Ιστορία & Ταυτότητα</a></li>
+                        <li><a href="#roster" class="hover:text-white transition">Πρώτη Ομάδα</a></li>
+                        <li><a href="#" class="hover:text-white transition">Προπονητικό Team</a></li>
+                        <li><a href="#" class="hover:text-white transition">Ακαδημίες Νέων</a></li>
+                        <li><a href="#" class="hover:text-white transition">Εγκαταστάσεις</a></li>
+                    </ul>
+                </div>
+
+                <!-- Matchday -->
+                <div class="col-span-6 lg:col-span-2">
+                    <h5 class="text-white text-xs font-black uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">ΑΓΩΝΕΣ</h5>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#matches" class="hover:text-white transition">Πρόγραμμα Αγώνων</a></li>
+                        <li><a href="#standings" class="hover:text-white transition">Βαθμολογία</a></li>
+                        <li><a href="#tickets" class="hover:text-white transition">Αγορά Εισιτηρίων</a></li>
+                        <li><a href="#" class="hover:text-white transition">Κάρτες Διαρκείας</a></li>
+                        <li><a href="#" class="hover:text-white transition">Οδηγίες Πρόσβασης</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-span-12 lg:col-span-4">
+                    <h5 class="text-white text-xs font-black uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">NEWSLETTER ΕΝΗΜΕΡΩΣΗΣ</h5>
+                    <p class="text-gray-400 text-xs mb-3">Εγγραφείτε για να μαθαίνετε πρώτοι τα νέα της ομάδας και ειδικές προσφορές του Fan Shop.</p>
+                    <form onsubmit="handleNewsletter(event)" class="flex gap-2">
+                        <input type="email" required placeholder="Το email σας..." class="bg-brand-card border border-white/10 text-xs text-white px-3.5 py-2.5 rounded-lg w-full focus:outline-none focus:border-brand-red">
+                        <button type="submit" class="bg-brand-red hover:bg-brand-accent text-white px-4 py-2.5 rounded-lg text-xs font-bold uppercase transition shrink-0">
+                            ΕΓΓΡΑΦΗ
+                        </button>
+                    </form>
+                    <div id="newsletter-msg" class="text-[11px] text-green-400 mt-2 hidden">
+                        ✓ Ευχαριστούμε για την εγγραφή σας!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright & Sponsors -->
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+                <div>
+                    © 2026 FC Vezhdanisht. All rights reserved. Σχεδιασμός concept για Desktop.
+                </div>
+                <div class="flex items-center gap-6 uppercase text-[10px] tracking-wider text-gray-400 font-bold">
+                    <span>Χορηγοι:</span>
+                    <span class="hover:text-white">ALB SPORT</span>
+                    <span class="hover:text-white">ENERGY DRINK</span>
+                    <span class="hover:text-white">BALKAN AIR</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVITY JAVASCRIPT -->
+    <script>
+        // 1. Countdown Timer Logic
+        function updateCountdown() {
+            // Match date set to 5 days from now for perpetual dynamic demo
+            const now = new Date();
+            const targetDate = new Date();
+            targetDate.setDate(now.getDate() + 5);
+            targetDate.setHours(19, 30, 0, 0);
+
+            const diff = targetDate - now;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            const dEl = document.getElementById('cd-days');
+            const hEl = document.getElementById('cd-hours');
+            const mEl = document.getElementById('cd-minutes');
+            const sEl = document.getElementById('cd-seconds');
+
+            if (dEl) dEl.innerText = days.toString().padStart(2, '0');
+            if (hEl) hEl.innerText = hours.toString().padStart(2, '0');
+            if (mEl) mEl.innerText = minutes.toString().padStart(2, '0');
+            if (sEl) sEl.innerText = seconds.toString().padStart(2, '0');
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // 2. Sidebar Tabs (Standings vs Scorers)
+        function switchSidebarTab(tab) {
+            const standingsContent = document.getElementById('standings-content');
+            const scorersContent = document.getElementById('scorers-content');
+            const standingsBtn = document.getElementById('tab-standings-btn');
+            const scorersBtn = document.getElementById('tab-scorers-btn');
+
+            if (tab === 'standings') {
+                standingsContent.classList.remove('hidden');
+                scorersContent.classList.add('hidden');
+                standingsBtn.classList.add('border-brand-red', 'text-white');
+                standingsBtn.classList.remove('text-gray-400');
+                scorersBtn.classList.remove('border-brand-red', 'text-white');
+                scorersBtn.classList.add('text-gray-400');
+            } else {
+                scorersContent.classList.remove('hidden');
+                standingsContent.classList.add('hidden');
+                scorersBtn.classList.add('border-brand-red', 'text-white');
+                scorersBtn.classList.remove('text-gray-400');
+                standingsBtn.classList.remove('border-brand-red', 'text-white');
+                standingsBtn.classList.add('text-gray-400');
+            }
+        }
+
+        // 3. Roster Filter
+        function filterRoster(category) {
+            const cards = document.querySelectorAll('.player-card');
+            const buttons = document.querySelectorAll('#roster-filters .filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-red', 'text-white');
+                btn.classList.add('bg-brand-lightcard', 'text-gray-300');
+            });
+
+            // Mark active button
+            event.target.classList.remove('bg-brand-lightcard', 'text-gray-300');
+            event.target.classList.add('bg-brand-red', 'text-white');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // 4. Newsletter mockup handling
+        function handleNewsletter(e) {
+            e.preventDefault();
+            const msg = document.getElementById('newsletter-msg');
+            msg.classList.remove('hidden');
+            setTimeout(() => {
+                msg.classList.add('hidden');
+            }, 4000);
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
