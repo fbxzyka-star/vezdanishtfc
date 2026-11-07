@@ -220,7 +220,7 @@
             <div class="col-span-12 lg:col-span-7">
                 <div class="inline-flex items-center gap-2 bg-brand-red/20 border border-brand-red/50 text-brand-accent px-3.5 py-1.5 rounded-full text-xs font-extrabold tracking-widest uppercase mb-4">
                     <span class="w-2 h-2 rounded-full bg-brand-red animate-ping"></span>
-                    Matchday 14 • Albanian Regional League
+                    <span id="hero-league">Futsal • 2 Prov. Antwerpen</span>
                 </div>
 
                 <h1 class="text-6xl xl:text-7xl font-black font-teko uppercase tracking-tight leading-[0.95] mb-4 text-white">
@@ -258,34 +258,34 @@
                         <span class="text-xs font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2">
                             <i class="fa-regular fa-clock text-brand-red"></i> ΕΠΟΜΕΝΟΣ ΑΓΩΝΑΣ
                         </span>
-                        <span class="bg-white/10 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded">
-                            Σάββατο, 14 Νοεμβρίου • 19:30
+                        <span id="next-date" class="bg-white/10 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded">
+                            Φόρτωση…
                         </span>
                     </div>
 
-                    <!-- Teams Faceoff -->
+                    <!-- Teams Faceoff (filled from data/matches.json) -->
                     <div class="grid grid-cols-3 items-center text-center my-4">
                         <!-- Home Team -->
                         <div class="flex flex-col items-center">
-                            <div class="w-16 h-16 rounded-full bg-brand-black border-2 border-brand-red flex items-center justify-center p-2 mb-2 shadow-lg">
+                            <div id="next-home-logo" class="w-16 h-16 rounded-full bg-brand-black border-2 border-brand-red flex items-center justify-center p-2 mb-2 shadow-lg overflow-hidden">
                                 <span class="font-teko font-black text-2xl text-white">FCV</span>
                             </div>
-                            <span class="font-bold text-sm uppercase text-white">FC VEZHDANISHT</span>
-                            <span class="text-[11px] text-green-400 font-semibold uppercase mt-0.5">Εντός Έδρας</span>
+                            <span id="next-home-name" class="font-bold text-sm uppercase text-white">FC VEZHDANISHT</span>
+                            <span class="text-[11px] text-green-400 font-semibold uppercase mt-0.5">Γηπεδούχος</span>
                         </div>
 
                         <!-- VS Badge -->
                         <div class="flex flex-col items-center">
                             <span class="font-teko text-3xl font-black text-brand-red italic">VS</span>
-                            <span class="text-[11px] text-gray-400">Δημοτικό Στάδιο</span>
+                            <span id="next-venue" class="text-[11px] text-gray-400"></span>
                         </div>
 
                         <!-- Away Team -->
                         <div class="flex flex-col items-center">
-                            <div class="w-16 h-16 rounded-full bg-brand-charcoal border-2 border-white/20 flex items-center justify-center p-2 mb-2 shadow-lg">
-                                <span class="font-teko font-black text-2xl text-gray-300">KFS</span>
+                            <div id="next-away-logo" class="w-16 h-16 rounded-full bg-brand-charcoal border-2 border-white/20 flex items-center justify-center p-2 mb-2 shadow-lg overflow-hidden">
+                                <span class="font-teko font-black text-2xl text-gray-300">?</span>
                             </div>
-                            <span class="font-bold text-sm uppercase text-white">KF SKËNDERBEU B</span>
+                            <span id="next-away-name" class="font-bold text-sm uppercase text-white">—</span>
                             <span class="text-[11px] text-gray-400 font-semibold uppercase mt-0.5">Φιλοξενούμενος</span>
                         </div>
                     </div>
@@ -346,93 +346,11 @@
                 </div>
             </div>
 
-            <!-- Matches Horizontal Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                <!-- Card 1: Last Match (Victory) -->
-                <div class="bg-brand-card hover:border-brand-red/50 border border-white/5 rounded-xl p-5 relative overflow-hidden transition group">
-                    <div class="flex justify-between items-center text-xs mb-3">
-                        <span class="text-gray-400">01 Νοεμβρίου • 17:00</span>
-                        <span class="bg-green-600/20 text-green-400 font-bold px-2 py-0.5 rounded text-[10px] uppercase">
-                            ΝΙΚΗ (ΤΕΛΙΚΟ)
-                        </span>
-                    </div>
-                    <div class="flex items-center justify-between py-2 border-y border-white/10 my-2">
-                        <div class="flex items-center gap-2 font-bold text-sm">
-                            <span class="w-3 h-3 rounded-full bg-brand-red inline-block"></span>
-                            <span>FC Vezhdanisht</span>
-                        </div>
-                        <span class="text-2xl font-black font-teko text-brand-red">3</span>
-                    </div>
-                    <div class="flex items-center justify-between py-2 border-b border-white/10 mb-3">
-                        <div class="flex items-center gap-2 font-bold text-sm text-gray-400">
-                            <span class="w-3 h-3 rounded-full bg-gray-500 inline-block"></span>
-                            <span>KF Gramshi</span>
-                        </div>
-                        <span class="text-2xl font-black font-teko text-gray-400">1</span>
-                    </div>
-                    <div class="text-[11px] text-gray-400 flex items-center justify-between">
-                        <span>⚽ Berisha 22', Hoxha 58', 84'</span>
-                        <a href="#" class="text-brand-accent hover:underline font-semibold">Στιγμιότυπα <i class="fa-solid fa-arrow-right text-[9px]"></i></a>
-                    </div>
-                </div>
-
-                <!-- Card 2: Upcoming match (Active) -->
-                <div class="bg-gradient-to-b from-brand-card to-brand-charcoal border-2 border-brand-red rounded-xl p-5 relative overflow-hidden transition shadow-lg">
-                    <div class="absolute -right-8 -top-8 w-20 h-20 bg-brand-red/10 rounded-full blur-xl"></div>
-                    <div class="flex justify-between items-center text-xs mb-3">
-                        <span class="text-brand-accent font-semibold">14 Νοεμβρίου • 19:30</span>
-                        <span class="bg-brand-red text-white font-bold px-2 py-0.5 rounded text-[10px] uppercase">
-                            ΕΠΟΜΕΝΟΣ
-                        </span>
-                    </div>
-                    <div class="flex items-center justify-between py-2 border-y border-white/10 my-2">
-                        <div class="flex items-center gap-2 font-bold text-sm">
-                            <span class="w-3 h-3 rounded-full bg-brand-red inline-block"></span>
-                            <span>FC Vezhdanisht</span>
-                        </div>
-                        <span class="text-xl font-black font-teko text-gray-400">-</span>
-                    </div>
-                    <div class="flex items-center justify-between py-2 border-b border-white/10 mb-3">
-                        <div class="flex items-center gap-2 font-bold text-sm">
-                            <span class="w-3 h-3 rounded-full bg-blue-500 inline-block"></span>
-                            <span>KF Skënderbeu B</span>
-                        </div>
-                        <span class="text-xl font-black font-teko text-gray-400">-</span>
-                    </div>
-                    <div class="text-[11px] text-gray-400 flex items-center justify-between">
-                        <span>📍 Δημοτικό Γήπεδο</span>
-                        <span class="text-brand-red font-bold">Προπώληση: 5€</span>
-                    </div>
-                </div>
-
-                <!-- Card 3: Next Away Match -->
-                <div class="bg-brand-card hover:border-brand-red/50 border border-white/5 rounded-xl p-5 relative overflow-hidden transition group">
-                    <div class="flex justify-between items-center text-xs mb-3">
-                        <span class="text-gray-400">22 Νοεμβρίου • 15:00</span>
-                        <span class="bg-white/10 text-gray-300 font-bold px-2 py-0.5 rounded text-[10px] uppercase">
-                            ΕΚΤΟΣ ΕΔΡΑΣ
-                        </span>
-                    </div>
-                    <div class="flex items-center justify-between py-2 border-y border-white/10 my-2">
-                        <div class="flex items-center gap-2 font-bold text-sm text-gray-400">
-                            <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
-                            <span>KF Maliqi</span>
-                        </div>
-                        <span class="text-xl font-black font-teko text-gray-400">-</span>
-                    </div>
-                    <div class="flex items-center justify-between py-2 border-b border-white/10 mb-3">
-                        <div class="flex items-center gap-2 font-bold text-sm">
-                            <span class="w-3 h-3 rounded-full bg-brand-red inline-block"></span>
-                            <span>FC Vezhdanisht</span>
-                        </div>
-                        <span class="text-xl font-black font-teko text-gray-400">-</span>
-                    </div>
-                    <div class="text-[11px] text-gray-400 flex items-center justify-between">
-                        <span>📍 Stadiumi Maliq</span>
-                        <a href="#" class="text-gray-300 hover:text-brand-accent font-semibold">Πληροφορίες <i class="fa-solid fa-arrow-right text-[9px]"></i></a>
-                    </div>
-                </div>
+            <!-- Matches Horizontal Cards (filled from data/matches.json) -->
+            <div id="matches-grid" class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div class="text-sm text-gray-400">Φόρτωση αγώνων…</div>
             </div>
+            <p id="data-updated" class="text-[11px] text-gray-500 mt-4"></p>
         </div>
     </section>
 
@@ -540,62 +458,15 @@
                             <span class="col-span-2 text-right">Βαθ</span>
                         </div>
 
-                        <!-- 1st Vezhdanisht -->
-                        <div class="grid grid-cols-12 items-center px-2 py-2.5 rounded-lg bg-brand-red/20 border border-brand-red text-white text-xs font-semibold">
-                            <span class="col-span-2 font-bold text-brand-accent">1.</span>
-                            <span class="col-span-6 flex items-center gap-1.5 font-bold">
-                                <span class="w-2 h-2 rounded-full bg-brand-red"></span>
-                                FC Vezhdanisht
-                            </span>
-                            <span class="col-span-2 text-center text-gray-300">13</span>
-                            <span class="col-span-2 text-right font-black font-teko text-lg text-brand-accent">32</span>
-                        </div>
-
-                        <!-- 2nd -->
-                        <div class="grid grid-cols-12 items-center px-2 py-2 rounded-lg hover:bg-white/5 text-gray-300 text-xs">
-                            <span class="col-span-2 font-bold">2.</span>
-                            <span class="col-span-6">KF Skënderbeu B</span>
-                            <span class="col-span-2 text-center text-gray-400">13</span>
-                            <span class="col-span-2 text-right font-bold text-white">29</span>
-                        </div>
-
-                        <!-- 3rd -->
-                        <div class="grid grid-cols-12 items-center px-2 py-2 rounded-lg hover:bg-white/5 text-gray-300 text-xs">
-                            <span class="col-span-2 font-bold">3.</span>
-                            <span class="col-span-6">KF Maliqi</span>
-                            <span class="col-span-2 text-center text-gray-400">13</span>
-                            <span class="col-span-2 text-right font-bold text-white">26</span>
-                        </div>
-
-                        <!-- 4th -->
-                        <div class="grid grid-cols-12 items-center px-2 py-2 rounded-lg hover:bg-white/5 text-gray-300 text-xs">
-                            <span class="col-span-2 font-bold">4.</span>
-                            <span class="col-span-6">KF Devolli</span>
-                            <span class="col-span-2 text-center text-gray-400">12</span>
-                            <span class="col-span-2 text-right font-bold text-white">22</span>
-                        </div>
-
-                        <!-- 5th -->
-                        <div class="grid grid-cols-12 items-center px-2 py-2 rounded-lg hover:bg-white/5 text-gray-300 text-xs">
-                            <span class="col-span-2 font-bold">5.</span>
-                            <span class="col-span-6">KF Gramshi</span>
-                            <span class="col-span-2 text-center text-gray-400">13</span>
-                            <span class="col-span-2 text-right font-bold text-white">19</span>
-                        </div>
-
-                        <!-- 6th -->
-                        <div class="grid grid-cols-12 items-center px-2 py-2 rounded-lg hover:bg-white/5 text-gray-300 text-xs">
-                            <span class="col-span-2 font-bold">6.</span>
-                            <span class="col-span-6">KF Memaliaj</span>
-                            <span class="col-span-2 text-center text-gray-400">13</span>
-                            <span class="col-span-2 text-right font-bold text-white">14</span>
+                        <div id="standings-rows" class="space-y-1">
+                            <div class="text-xs text-gray-400 px-2 py-2">Φόρτωση βαθμολογίας…</div>
                         </div>
 
                         <div class="pt-3 text-[10px] text-gray-400 border-t border-white/5 flex items-center justify-between">
                             <span class="flex items-center gap-1.5">
                                 <span class="w-2 h-2 rounded bg-brand-red"></span> Θέση Ανόδου
                             </span>
-                            <a href="#" class="text-brand-accent hover:underline">Πλήρης Πίνακας</a>
+                            <a id="standings-source" href="https://www.voetbalvlaanderen.be/club/10000/komende-wedstrijden" target="_blank" rel="noopener" class="text-brand-accent hover:underline">Πλήρης Πίνακας</a>
                         </div>
                     </div>
 
@@ -955,15 +826,112 @@
 
     <!-- INTERACTIVITY JAVASCRIPT -->
     <script>
-        // 1. Countdown Timer Logic
-        function updateCountdown() {
-            // Match date set to 5 days from now for perpetual dynamic demo
-            const now = new Date();
-            const targetDate = new Date();
-            targetDate.setDate(now.getDate() + 5);
-            targetDate.setHours(19, 30, 0, 0);
+        // 1. Live data from data/matches.json (updated by .github/workflows/update-scores.yml)
+        const CLUB_ID = '10000';
+        let nextMatchTime = null;
 
-            const diff = targetDate - now;
+        const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+        const isUs = t => t && t.clubId === CLUB_ID;
+        // Kick-off times are Belgian local time; always shown as such (e.g. "Τρίτη, 10 Νοεμβρίου • 22:00").
+        const fmtDate = (iso, withDay) => {
+            const d = new Date(iso), tz = { timeZone: 'Europe/Brussels' };
+            const date = d.toLocaleDateString('el-GR', { ...tz, day: '2-digit', month: 'long', ...(withDay ? { weekday: 'long' } : {}) });
+            const time = d.toLocaleTimeString('el-GR', { ...tz, hour: '2-digit', minute: '2-digit', hourCycle: 'h23' });
+            return `${date} • ${time}`;
+        };
+        const logoHtml = t => t.logo
+            ? `<img src="${esc(t.logo)}" alt="${esc(t.name)}" class="w-full h-full object-contain rounded-full bg-white" loading="lazy">`
+            : `<span class="font-teko font-black text-2xl text-white">${esc(t.name.slice(0, 3))}</span>`;
+
+        function teamRow(team, goals, extraClass) {
+            const us = isUs(team);
+            return `<div class="flex items-center justify-between py-2 ${extraClass}">
+                <div class="flex items-center gap-2 font-bold text-sm ${us ? '' : 'text-gray-400'}">
+                    <span class="w-3 h-3 rounded-full ${us ? 'bg-brand-red' : 'bg-gray-500'} inline-block shrink-0"></span>
+                    <span>${esc(team.name)}</span>
+                </div>
+                <span class="${goals == null ? 'text-xl' : 'text-2xl'} font-black font-teko ${us && goals != null ? 'text-brand-red' : 'text-gray-400'}">${goals ?? '-'}</span>
+            </div>`;
+        }
+
+        function matchCard(m, kind) {
+            const badges = {
+                W: ['bg-green-600/20 text-green-400', 'ΝΙΚΗ (ΤΕΛΙΚΟ)'],
+                D: ['bg-white/10 text-gray-300', 'ΙΣΟΠΑΛΙΑ (ΤΕΛΙΚΟ)'],
+                L: ['bg-red-900/40 text-red-300', 'ΗΤΤΑ (ΤΕΛΙΚΟ)'],
+                next: ['bg-brand-red text-white', 'ΕΠΟΜΕΝΟΣ'],
+                later: ['bg-white/10 text-gray-300', m.isHome ? 'ΕΝΤΟΣ ΕΔΡΑΣ' : 'ΕΚΤΟΣ ΕΔΡΑΣ']
+            };
+            const [badgeClass, badgeText] = badges[kind === 'last' ? m.result : kind];
+            const featured = kind === 'next';
+            return `<div class="${featured ? 'bg-gradient-to-b from-brand-card to-brand-charcoal border-2 border-brand-red shadow-lg' : 'bg-brand-card hover:border-brand-red/50 border border-white/5'} rounded-xl p-5 relative overflow-hidden transition">
+                <div class="flex justify-between items-center text-xs mb-3">
+                    <span class="${featured ? 'text-brand-accent font-semibold' : 'text-gray-400'}">${esc(fmtDate(m.start))}</span>
+                    <span class="${badgeClass} font-bold px-2 py-0.5 rounded text-[10px] uppercase">${badgeText}</span>
+                </div>
+                ${teamRow(m.home, m.homeGoals, 'border-y border-white/10 my-2')}
+                ${teamRow(m.away, m.awayGoals, 'border-b border-white/10 mb-3')}
+                <div class="text-[11px] text-gray-400">${esc(m.series)}</div>
+            </div>`;
+        }
+
+        function renderData(data) {
+            const now = Date.now();
+            const played = data.matches.filter(m => m.result);
+            const upcoming = data.matches.filter(m => !m.result && new Date(m.start).getTime() > now - 2 * 3600e3);
+            const last = played[played.length - 1];
+            const next = upcoming[0];
+
+            const league = (data.series?.name || '').split(' - ').pop();
+            if (league) document.getElementById('hero-league').textContent = 'Futsal • ' + league;
+
+            if (next) {
+                nextMatchTime = new Date(next.start).getTime();
+                document.getElementById('next-date').textContent = fmtDate(next.start, true);
+                document.getElementById('next-home-name').textContent = next.home.name;
+                document.getElementById('next-away-name').textContent = next.away.name;
+                document.getElementById('next-home-logo').innerHTML = logoHtml(next.home);
+                document.getElementById('next-away-logo').innerHTML = logoHtml(next.away);
+                document.getElementById('next-venue').textContent = next.isHome ? 'Εντός έδρας' : 'Εκτός έδρας';
+            } else {
+                document.getElementById('next-date').textContent = 'Δεν υπάρχει προγραμματισμένος αγώνας';
+            }
+
+            const cards = [];
+            if (last) cards.push(matchCard(last, 'last'));
+            if (next) cards.push(matchCard(next, 'next'));
+            upcoming.slice(1, last ? 2 : 3).forEach(m => cards.push(matchCard(m, 'later')));
+            document.getElementById('matches-grid').innerHTML = cards.join('') || '<div class="text-sm text-gray-400">Δεν υπάρχουν αγώνες.</div>';
+
+            document.getElementById('standings-rows').innerHTML = data.standings.map(t => {
+                const us = t.clubId === CLUB_ID;
+                return `<div class="grid grid-cols-12 items-center px-2 ${us ? 'py-2.5 rounded-lg bg-brand-red/20 border border-brand-red text-white font-semibold' : 'py-2 rounded-lg hover:bg-white/5 text-gray-300'} text-xs">
+                    <span class="col-span-2 font-bold ${us ? 'text-brand-accent' : ''}">${t.position}.</span>
+                    <span class="col-span-6 flex items-center gap-1.5 ${us ? 'font-bold' : ''}">${us ? '<span class="w-2 h-2 rounded-full bg-brand-red shrink-0"></span>' : ''}${esc(t.name)}</span>
+                    <span class="col-span-2 text-center ${us ? 'text-gray-300' : 'text-gray-400'}">${t.matchesPlayed}</span>
+                    <span class="col-span-2 text-right ${us ? 'font-black font-teko text-lg text-brand-accent' : 'font-bold text-white'}">${t.points}</span>
+                </div>`;
+            }).join('');
+
+            if (data.source) document.getElementById('standings-source').href = data.source;
+            if (data.updatedAt) {
+                document.getElementById('data-updated').textContent =
+                    'Πηγή: Voetbal Vlaanderen • Τελευταία ενημέρωση: ' + new Date(data.updatedAt).toLocaleString('el-GR', { timeZone: 'Europe/Brussels' });
+            }
+            updateCountdown();
+        }
+
+        fetch('data/matches.json', { cache: 'no-cache' })
+            .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+            .then(renderData)
+            .catch(err => {
+                console.error('Could not load data/matches.json', err);
+                document.getElementById('matches-grid').innerHTML = '<div class="text-sm text-gray-400">Τα αποτελέσματα δεν είναι διαθέσιμα αυτή τη στιγμή.</div>';
+            });
+
+        // Countdown to the next match
+        function updateCountdown() {
+            const diff = nextMatchTime ? Math.max(0, nextMatchTime - Date.now()) : 0;
 
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
             const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));

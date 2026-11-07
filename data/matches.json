@@ -1,0 +1,703 @@
+{
+  "club": {
+    "id": "10000",
+    "teamId": "369334",
+    "name": "FC VEZHDANISHT RUMST"
+  },
+  "series": {
+    "id": "CHP_130260",
+    "name": "Futsal : Voetbal Vlaanderen - 2 Prov. Antwerpen"
+  },
+  "matches": [
+    {
+      "id": "7614497",
+      "start": "2026-09-11T20:00:00+02:00",
+      "state": "finished",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "364937",
+        "name": "ZVK LEEST B",
+        "clubId": "9784",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27731.jpg"
+      },
+      "away": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "homeGoals": 11,
+      "awayGoals": 6,
+      "status": "finished",
+      "isHome": false,
+      "result": "L"
+    },
+    {
+      "id": "7614511",
+      "start": "2026-09-23T22:00:00+02:00",
+      "state": "finished",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "367333",
+        "name": "Elite Kiel Antwerpen B",
+        "clubId": "9632",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27687.jpg"
+      },
+      "away": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "homeGoals": 12,
+      "awayGoals": 1,
+      "status": "finished",
+      "isHome": false,
+      "result": "L"
+    },
+    {
+      "id": "7614521",
+      "start": "2026-10-05T20:00:00+02:00",
+      "state": "finished",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "367155",
+        "name": "Futsal Atlas Lions Hoboken A",
+        "clubId": "9618",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27675.jpg"
+      },
+      "away": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "homeGoals": 13,
+      "awayGoals": 1,
+      "status": "finished",
+      "isHome": false,
+      "result": "L"
+    },
+    {
+      "id": "7614529",
+      "start": "2026-10-23T20:30:00+02:00",
+      "state": "finished",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "away": {
+        "id": "373694",
+        "name": "FC Los Incas Antwerpen",
+        "clubId": "9722",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/no_logo.jpg"
+      },
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "status": "finished",
+      "isHome": true,
+      "result": "W"
+    },
+    {
+      "id": "7614538",
+      "start": "2026-11-06T20:30:00+01:00",
+      "state": "finished",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "away": {
+        "id": "370975",
+        "name": "FUTSAL CLUB ANTWERPEN UNI B",
+        "clubId": "9760",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27717.jpg"
+      },
+      "homeGoals": 6,
+      "awayGoals": 2,
+      "status": "finished",
+      "isHome": true,
+      "result": "W"
+    },
+    {
+      "id": "7614540",
+      "start": "2026-11-10T22:00:00+01:00",
+      "state": "planned",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "372363",
+        "name": "MERIDIAN ANTWERPEN",
+        "clubId": "10003",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/no_logo.jpg"
+      },
+      "away": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "planned",
+      "isHome": false,
+      "result": null
+    },
+    {
+      "id": "7614550",
+      "start": "2026-11-20T20:30:00+01:00",
+      "state": "planned",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "away": {
+        "id": "375176",
+        "name": "KONINKLIJKE DOVEN SPORT A",
+        "clubId": "9891",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27765.jpg"
+      },
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "planned",
+      "isHome": true,
+      "result": null
+    },
+    {
+      "id": "7614555",
+      "start": "2026-11-27T21:00:00+01:00",
+      "state": "planned",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "367157",
+        "name": "Futsal Atlas Lions Hoboken B",
+        "clubId": "9618",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27675.jpg"
+      },
+      "away": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "planned",
+      "isHome": false,
+      "result": null
+    },
+    {
+      "id": "7614562",
+      "start": "2026-12-04T20:30:00+01:00",
+      "state": "planned",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "away": {
+        "id": "372316",
+        "name": "FT Fusion United Antwerp",
+        "clubId": "9507",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27649.jpg"
+      },
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "planned",
+      "isHome": true,
+      "result": null
+    },
+    {
+      "id": "7614508",
+      "start": "2026-12-18T20:30:00+01:00",
+      "state": "planned",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "away": {
+        "id": "373484",
+        "name": "FT FIT2PLAY HERENTALS",
+        "clubId": "9887",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27761.jpg"
+      },
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "planned",
+      "isHome": true,
+      "result": null
+    },
+    {
+      "id": "7614567",
+      "start": "2027-01-15T20:30:00+01:00",
+      "state": "planned",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "away": {
+        "id": "364937",
+        "name": "ZVK LEEST B",
+        "clubId": "9784",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27731.jpg"
+      },
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "planned",
+      "isHome": true,
+      "result": null
+    },
+    {
+      "id": "7614569",
+      "start": "2027-01-18T20:30:00+01:00",
+      "state": "planned",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "373484",
+        "name": "FT FIT2PLAY HERENTALS",
+        "clubId": "9887",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27761.jpg"
+      },
+      "away": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "planned",
+      "isHome": false,
+      "result": null
+    },
+    {
+      "id": "7614578",
+      "start": "2027-01-29T20:30:00+01:00",
+      "state": "planned",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "away": {
+        "id": "367333",
+        "name": "Elite Kiel Antwerpen B",
+        "clubId": "9632",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27687.jpg"
+      },
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "planned",
+      "isHome": true,
+      "result": null
+    },
+    {
+      "id": "7614584",
+      "start": "2027-02-03T21:00:00+01:00",
+      "state": "planned",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "374571",
+        "name": "FT ASSYRISKA ANTWERPEN",
+        "clubId": "9838",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27742.jpg"
+      },
+      "away": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "planned",
+      "isHome": false,
+      "result": null
+    },
+    {
+      "id": "7614589",
+      "start": "2027-02-12T20:30:00+01:00",
+      "state": "planned",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "away": {
+        "id": "367155",
+        "name": "Futsal Atlas Lions Hoboken A",
+        "clubId": "9618",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27675.jpg"
+      },
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "planned",
+      "isHome": true,
+      "result": null
+    },
+    {
+      "id": "7614595",
+      "start": "2027-02-16T22:00:00+01:00",
+      "state": "planned",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "373694",
+        "name": "FC Los Incas Antwerpen",
+        "clubId": "9722",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/no_logo.jpg"
+      },
+      "away": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "planned",
+      "isHome": false,
+      "result": null
+    },
+    {
+      "id": "7614615",
+      "start": "2027-02-26T19:00:00+01:00",
+      "state": "planned",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "375176",
+        "name": "KONINKLIJKE DOVEN SPORT A",
+        "clubId": "9891",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27765.jpg"
+      },
+      "away": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "planned",
+      "isHome": false,
+      "result": null
+    },
+    {
+      "id": "7614599",
+      "start": "2027-03-01T21:00:00+01:00",
+      "state": "planned",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "370975",
+        "name": "FUTSAL CLUB ANTWERPEN UNI B",
+        "clubId": "9760",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27717.jpg"
+      },
+      "away": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "planned",
+      "isHome": false,
+      "result": null
+    },
+    {
+      "id": "7614610",
+      "start": "2027-03-12T20:30:00+01:00",
+      "state": "planned",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "away": {
+        "id": "372363",
+        "name": "MERIDIAN ANTWERPEN",
+        "clubId": "10003",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/no_logo.jpg"
+      },
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "planned",
+      "isHome": true,
+      "result": null
+    },
+    {
+      "id": "7614622",
+      "start": "2027-03-26T20:30:00+01:00",
+      "state": "planned",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "away": {
+        "id": "367157",
+        "name": "Futsal Atlas Lions Hoboken B",
+        "clubId": "9618",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27675.jpg"
+      },
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "planned",
+      "isHome": true,
+      "result": null
+    },
+    {
+      "id": "7614628",
+      "start": "2027-04-09T22:00:00+02:00",
+      "state": "planned",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "372316",
+        "name": "FT Fusion United Antwerp",
+        "clubId": "9507",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27649.jpg"
+      },
+      "away": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "planned",
+      "isHome": false,
+      "result": null
+    },
+    {
+      "id": "7614520",
+      "start": "2027-05-07T20:30:00+02:00",
+      "state": "planned",
+      "series": "2 Prov. Antwerpen",
+      "home": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "away": {
+        "id": "374571",
+        "name": "FT ASSYRISKA ANTWERPEN",
+        "clubId": "9838",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27742.jpg"
+      },
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "planned",
+      "isHome": true,
+      "result": null
+    }
+  ],
+  "standings": [
+    {
+      "teamId": "374571",
+      "name": "FT ASSYRISKA ANTWERPEN",
+      "position": 1,
+      "clubId": "9838",
+      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27742.jpg",
+      "points": 19,
+      "matchesPlayed": 7,
+      "matchesWon": 6,
+      "matchesLost": 0,
+      "matchesDrawn": 1,
+      "goalsFor": 27,
+      "goalsAgainst": 11,
+      "goalDifference": 16
+    },
+    {
+      "teamId": "367333",
+      "name": "S.V.C. FUTSAL ELITE KIEL ANTWERPEN B",
+      "position": 2,
+      "clubId": "9632",
+      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27687.jpg",
+      "points": 17,
+      "matchesPlayed": 7,
+      "matchesWon": 5,
+      "matchesLost": 0,
+      "matchesDrawn": 2,
+      "goalsFor": 38,
+      "goalsAgainst": 18,
+      "goalDifference": 20
+    },
+    {
+      "teamId": "373484",
+      "name": "FT FIT2PLAY HERENTALS",
+      "position": 3,
+      "clubId": "9887",
+      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27761.jpg",
+      "points": 13,
+      "matchesPlayed": 5,
+      "matchesWon": 4,
+      "matchesLost": 0,
+      "matchesDrawn": 1,
+      "goalsFor": 23,
+      "goalsAgainst": 9,
+      "goalDifference": 14
+    },
+    {
+      "teamId": "372316",
+      "name": "FT FUSION UNITED ANTWERP",
+      "position": 4,
+      "clubId": "9507",
+      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27649.jpg",
+      "points": 12,
+      "matchesPlayed": 6,
+      "matchesWon": 4,
+      "matchesLost": 2,
+      "matchesDrawn": 0,
+      "goalsFor": 41,
+      "goalsAgainst": 22,
+      "goalDifference": 19
+    },
+    {
+      "teamId": "373694",
+      "name": "FC LOS INCAS ANTWERPEN",
+      "position": 5,
+      "clubId": "9722",
+      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/no_logo.jpg",
+      "points": 12,
+      "matchesPlayed": 7,
+      "matchesWon": 4,
+      "matchesLost": 3,
+      "matchesDrawn": 0,
+      "goalsFor": 32,
+      "goalsAgainst": 35,
+      "goalDifference": -3
+    },
+    {
+      "teamId": "370975",
+      "name": "FUTSAL CLUB ANTWERPEN UNITED B",
+      "position": 6,
+      "clubId": "9760",
+      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27717.jpg",
+      "points": 10,
+      "matchesPlayed": 7,
+      "matchesWon": 3,
+      "matchesLost": 3,
+      "matchesDrawn": 1,
+      "goalsFor": 25,
+      "goalsAgainst": 25,
+      "goalDifference": 0
+    },
+    {
+      "teamId": "364937",
+      "name": "ZVK LEEST B",
+      "position": 7,
+      "clubId": "9784",
+      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27731.jpg",
+      "points": 9,
+      "matchesPlayed": 7,
+      "matchesWon": 3,
+      "matchesLost": 4,
+      "matchesDrawn": 0,
+      "goalsFor": 37,
+      "goalsAgainst": 45,
+      "goalDifference": -8
+    },
+    {
+      "teamId": "372363",
+      "name": "MERIDIAN ANTWERPEN",
+      "position": 8,
+      "clubId": "10003",
+      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27776.jpg",
+      "points": 6,
+      "matchesPlayed": 7,
+      "matchesWon": 2,
+      "matchesLost": 5,
+      "matchesDrawn": 0,
+      "goalsFor": 17,
+      "goalsAgainst": 22,
+      "goalDifference": -5
+    },
+    {
+      "teamId": "375176",
+      "name": "KONINKLIJKE DOVEN SPORT ANTWERPEN",
+      "position": 9,
+      "clubId": "9891",
+      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27765.jpg",
+      "points": 6,
+      "matchesPlayed": 7,
+      "matchesWon": 2,
+      "matchesLost": 5,
+      "matchesDrawn": 0,
+      "goalsFor": 21,
+      "goalsAgainst": 29,
+      "goalDifference": -8
+    },
+    {
+      "teamId": "369334",
+      "name": "FC VEZHDANISHT RUMST",
+      "position": 10,
+      "clubId": "10000",
+      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg",
+      "points": 6,
+      "matchesPlayed": 5,
+      "matchesWon": 2,
+      "matchesLost": 3,
+      "matchesDrawn": 0,
+      "goalsFor": 17,
+      "goalsAgainst": 40,
+      "goalDifference": -23
+    },
+    {
+      "teamId": "367155",
+      "name": "FUTSAL ATLAS LIONS HOBOKEN A",
+      "position": 11,
+      "clubId": "9618",
+      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27675.jpg",
+      "points": 4,
+      "matchesPlayed": 7,
+      "matchesWon": 1,
+      "matchesLost": 5,
+      "matchesDrawn": 1,
+      "goalsFor": 23,
+      "goalsAgainst": 23,
+      "goalDifference": 0
+    },
+    {
+      "teamId": "367157",
+      "name": "FUTSAL ATLAS LIONS HOBOKEN B",
+      "position": 12,
+      "clubId": "9618",
+      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27675.jpg",
+      "points": 0,
+      "matchesPlayed": 6,
+      "matchesWon": 0,
+      "matchesLost": 6,
+      "matchesDrawn": 0,
+      "goalsFor": 15,
+      "goalsAgainst": 37,
+      "goalDifference": -22
+    }
+  ],
+  "source": "https://www.voetbalvlaanderen.be/club/10000/komende-wedstrijden",
+  "updatedAt": "2026-11-07T20:02:14+00:00"
+}

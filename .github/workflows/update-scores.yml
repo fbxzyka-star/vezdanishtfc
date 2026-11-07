@@ -1,0 +1,40 @@
+name: Update scores
+
+on:
+  schedule:
+    # Every 3 hours (UTC), plus extra runs on match evenings (Mon-Fri, 20:00-23:59 UTC).
+    - cron: "17 */3 * * *"
+    - cron: "47 20-23 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-scores
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch matches and standings
+        run: python scripts/fetch_scores.py
+
+      - name: Commit if data changed
+        run: |
+          if git diff --quiet -- data/matches.json; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add data/matches.json
+          git commit -m "Update scores and standings"
+          git push
