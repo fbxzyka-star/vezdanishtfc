@@ -85,6 +85,9 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #ff2e36;
         }
+        .no-scrollbar { scrollbar-width: none; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .roster-stripes { background: repeating-linear-gradient(135deg, #0b0b0b 0 70px, #b3141b 70px 140px); }
     </style>
 </head>
 <body class="selection:bg-brand-red selection:text-white overflow-x-hidden">
@@ -135,6 +138,7 @@
                 <a href="#schedule" class="hover:text-brand-accent transition pb-1">Fixtures</a>
                 <a href="#standings" class="hover:text-brand-accent transition pb-1">Standings</a>
                 <a href="#history" class="hover:text-brand-accent transition pb-1">History</a>
+                <a href="#roster" class="hover:text-brand-accent transition pb-1">Roster</a>
             </nav>
 
             <!-- CALL TO ACTION -->
@@ -159,6 +163,7 @@
                 <a href="#standings" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Standings</a>
                 <a href="#stadium" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Venue</a>
                 <a href="#history" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">History</a>
+                <a href="#roster" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Roster</a>
                 <a href="#contact" class="py-3" onclick="toggleMenu(false)">Contact</a>
             </div>
         </nav>
@@ -433,6 +438,31 @@
         </div>
     </section>
 
+    <!-- ROSTER (players from data/roster.json) -->
+    <section id="roster" class="bg-brand-black py-16 border-t border-white/10 scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <span class="text-brand-red text-xs font-bold tracking-widest uppercase">First Team</span>
+            <h2 class="text-4xl font-black font-teko uppercase text-white tracking-wide mb-6">ROSTER</h2>
+
+            <div class="relative">
+                <div id="roster-track" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth rounded-2xl no-scrollbar" aria-roledescription="carousel" aria-label="Players">
+                    <div class="w-full shrink-0 p-10 text-center text-gray-400 text-sm">Loading players…</div>
+                </div>
+                <button type="button" onclick="rosterStep(-1)" aria-label="Previous player"
+                        class="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-14 sm:w-12 sm:h-16 bg-black/80 hover:bg-brand-red text-white flex items-center justify-center transition rounded-r-lg">
+                    <i class="fa-solid fa-chevron-left text-lg"></i>
+                </button>
+                <button type="button" onclick="rosterStep(1)" aria-label="Next player"
+                        class="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-14 sm:w-12 sm:h-16 bg-black/80 hover:bg-brand-red text-white flex items-center justify-center transition rounded-l-lg">
+                    <i class="fa-solid fa-chevron-right text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Quick jump by shirt number -->
+            <div id="roster-numbers" class="flex flex-wrap justify-center gap-2 mt-6"></div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="bg-brand-charcoal border-t border-brand-red/20 pt-14 pb-8">
         <div class="max-w-7xl mx-auto px-6">
@@ -461,6 +491,7 @@
                     <ul class="space-y-2 text-xs text-gray-400">
                         <li><a href="#stadium" class="hover:text-white transition">Venue</a></li>
                         <li><a href="#history" class="hover:text-white transition">History</a></li>
+                        <li><a href="#roster" class="hover:text-white transition">Roster</a></li>
                         <li><a href="https://www.rbfa.be/nl/club/10000/info" target="_blank" rel="noopener" class="hover:text-white transition">RBFA</a></li>
                         <li><a href="https://www.voetbalvlaanderen.be/club/10000/komende-wedstrijden" target="_blank" rel="noopener" class="hover:text-white transition">Voetbal Vlaanderen</a></li>
                     </ul>
@@ -667,6 +698,76 @@
             btn.setAttribute('aria-expanded', show);
             btn.innerHTML = show ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
         }
+
+        // Roster carousel
+        // rosterCur is the slide we are on (or heading to), so fast clicks during a smooth scroll stay correct.
+        let rosterCur = 0;
+        function rosterIndex() {
+            const t = document.getElementById('roster-track');
+            return Math.round(t.scrollLeft / t.clientWidth);
+        }
+        function rosterGo(i) {
+            const t = document.getElementById('roster-track');
+            const n = t.children.length;
+            rosterCur = ((i % n) + n) % n;
+            t.scrollTo({ left: rosterCur * t.clientWidth, behavior: 'smooth' });
+            rosterHighlight();
+        }
+        function rosterStep(d) { rosterGo(rosterCur + d); }
+        function rosterHighlight() {
+            const i = rosterCur;
+            document.querySelectorAll('#roster-numbers button').forEach((b, j) => {
+                b.classList.toggle('bg-brand-red', j === i);
+                b.classList.toggle('text-white', j === i);
+                b.classList.toggle('bg-brand-card', j !== i);
+                b.classList.toggle('text-gray-300', j !== i);
+            });
+        }
+        fetch('data/roster.json', { cache: 'no-cache' })
+            .then(r => r.json())
+            .then(players => {
+                const track = document.getElementById('roster-track');
+                track.innerHTML = players.map((p, i) => {
+                    const parts = String(p.name).trim().split(/\s+/);
+                    const last = parts.pop();
+                    const first = parts.join(' ');
+                    const photo = p.photo
+                        ? `<img src="${esc(p.photo)}" alt="${esc(p.name)}" class="h-full w-full object-contain object-bottom" loading="lazy">`
+                        : `<img src="assets/logo.png" alt="" class="w-40 h-40 sm:w-56 sm:h-56 opacity-90 drop-shadow-2xl">`;
+                    return `<article class="w-full shrink-0 snap-center" aria-label="${esc(p.name)}, number ${esc(p.number)}">
+                        <div class="relative grid grid-cols-1 md:grid-cols-2 items-center min-h-[420px] md:min-h-[460px] overflow-hidden bg-gradient-to-br from-[#1a0d0e] via-brand-black to-[#2a0b0d]">
+                            <div class="absolute inset-0 roster-stripes opacity-[0.07]"></div>
+                            <div class="relative flex items-center justify-center h-56 md:h-full pt-8 md:pt-0">${photo}</div>
+                            <div class="relative px-14 sm:px-16 md:px-6 pb-10 md:pb-0 text-center md:text-left">
+                                <div class="flex items-start justify-center md:justify-start gap-4">
+                                    <span class="font-teko font-black text-white leading-[0.8] text-[110px] sm:text-[140px]">${esc(p.number)}</span>
+                                    <div class="pt-3 text-left">
+                                        <span class="block text-brand-red font-bold uppercase tracking-widest text-xs sm:text-sm">${esc(p.position || 'Player')}</span>
+                                        ${first ? `<span class="block text-white/80 font-teko uppercase text-2xl sm:text-3xl leading-none mt-1">${esc(first)}</span>` : ''}
+                                        <span class="block text-white font-teko font-black uppercase text-4xl sm:text-5xl leading-none break-words">${esc(last)}</span>
+                                    </div>
+                                </div>
+                                <div class="mt-6 inline-flex items-center gap-2 text-[11px] uppercase tracking-wider text-gray-400 font-semibold">
+                                    <span class="w-2 h-2 rounded-full bg-brand-red"></span> FC Vezhdanisht Rumst • ${i + 1} / ${players.length}
+                                </div>
+                            </div>
+                        </div>
+                    </article>`;
+                }).join('');
+                document.getElementById('roster-numbers').innerHTML = players.map((p, i) =>
+                    `<button type="button" onclick="rosterGo(${i})" aria-label="${esc(p.name)}" title="${esc(p.name)}"
+                        class="w-10 h-10 rounded-lg font-teko text-xl font-bold bg-brand-card text-gray-300 hover:bg-brand-red hover:text-white transition">${esc(p.number)}</button>`
+                ).join('');
+                // After a swipe settles, sync the current slide with where the user scrolled to.
+                let settle;
+                track.addEventListener('scroll', () => {
+                    clearTimeout(settle);
+                    settle = setTimeout(() => { rosterCur = rosterIndex(); rosterHighlight(); }, 150);
+                });
+                window.addEventListener('resize', () => { track.scrollLeft = rosterCur * track.clientWidth; });
+                rosterHighlight();
+            })
+            .catch(err => console.error('Could not load data/roster.json', err));
 
         // Countdown to the next match
         function updateCountdown() {
