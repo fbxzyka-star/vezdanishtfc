@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="el" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FC VEZHDANISHT | Επίσημη Ιστοσελίδα</title>
+    <title>FC Vezhdanisht Rumst | Official Website</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
@@ -94,7 +94,7 @@
                 LIVE
             </span>
             <span class="text-gray-300 truncate">
-                <span id="ticker-text">Φόρτωση αποτελεσμάτων…</span>
+                <span id="ticker-text">Loading results…</span>
             </span>
         </div>
         <div class="flex items-center gap-6 text-gray-400">
@@ -107,7 +107,7 @@
             <div class="h-3 w-px bg-white/20"></div>
             <div class="flex items-center gap-2">
                 <i class="fa-solid fa-globe text-brand-red text-xs"></i>
-                <span class="hover:text-white cursor-pointer transition">SQ | <strong>GR</strong> | EN</span>
+                <span class="hover:text-white cursor-pointer transition">SQ | GR | <strong>EN</strong></span>
             </div>
         </div>
     </div>
@@ -177,18 +177,18 @@
 
             <!-- NAVIGATION ITEMS -->
             <nav class="hidden lg:flex items-center gap-7 text-sm font-bold uppercase tracking-wider text-gray-300">
-                <a href="#hero" class="text-white hover:text-brand-accent transition border-b-2 border-brand-red pb-1">Αρχική</a>
-                <a href="#matches" class="hover:text-brand-accent transition pb-1">Αγώνες</a>
-                <a href="#schedule" class="hover:text-brand-accent transition pb-1">Πρόγραμμα</a>
-                <a href="#standings" class="hover:text-brand-accent transition pb-1">Βαθμολογία</a>
-                <a href="#stadium" class="hover:text-brand-accent transition pb-1">Γήπεδο</a>
+                <a href="#hero" class="text-white hover:text-brand-accent transition border-b-2 border-brand-red pb-1">Home</a>
+                <a href="#matches" class="hover:text-brand-accent transition pb-1">Matches</a>
+                <a href="#schedule" class="hover:text-brand-accent transition pb-1">Fixtures</a>
+                <a href="#standings" class="hover:text-brand-accent transition pb-1">Standings</a>
+                <a href="#stadium" class="hover:text-brand-accent transition pb-1">Venue</a>
             </nav>
 
             <!-- CALL TO ACTION -->
             <div class="flex items-center gap-3">
                 <a href="#schedule" class="relative group overflow-hidden bg-brand-red hover:bg-red-600 text-white font-black text-xs uppercase px-5 py-2.5 rounded-lg tracking-wider transition-all red-glow-sm">
                     <span class="relative z-10 flex items-center gap-2">
-                        <i class="fa-regular fa-calendar"></i> Πρόγραμμα
+                        <i class="fa-regular fa-calendar"></i> Fixtures
                     </span>
                 </a>
             </div>
@@ -218,26 +218,26 @@
                 </div>
 
                 <h1 class="text-6xl xl:text-7xl font-black font-teko uppercase tracking-tight leading-[0.95] mb-4 text-white">
-                    ΕΔΩ ΧΤΥΠΑ Η ΚΑΡΔΙΑ <br>
+                    THIS IS WHERE <br>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red via-red-500 to-white">
-                        ΤΩΝ ΝΙΚΗΤΩΝ!
+                        CHAMPIONS ARE MADE!
                     </span>
                 </h1>
                 
                 <p class="text-gray-300 text-base max-w-xl font-normal leading-relaxed mb-8">
-                    Η futsal ομάδα του FC Vezhdanisht Rumst στο πρωτάθλημα της Voetbal Vlaanderen.
-                    Ελάτε να μας στηρίξετε στο Sporthal Uitgedekt Schoor!
+                    The futsal team of FC Vezhdanisht Rumst, competing in the Voetbal Vlaanderen league.
+                    Come and support us at Sporthal Uitgedekt Schoor!
                 </p>
 
                 <!-- Actions -->
                 <div class="flex flex-wrap items-center gap-4">
                     <a href="#schedule" class="bg-brand-red hover:bg-brand-accent text-white px-7 py-3.5 rounded-xl font-bold uppercase text-sm tracking-wider flex items-center gap-3 transition-all red-glow">
                         <i class="fa-regular fa-calendar"></i>
-                        Πρόγραμμα Αγώνων
+                        Fixtures
                     </a>
                     <a href="#matches" class="bg-brand-card hover:bg-brand-lightcard border border-white/10 text-white px-6 py-3.5 rounded-xl font-bold uppercase text-sm tracking-wider flex items-center gap-3 transition">
                         <i class="fa-solid fa-futbol text-brand-red"></i>
-                        Αποτελέσματα
+                        Results
                     </a>
                 </div>
             </div>
@@ -250,10 +250,10 @@
                     
                     <div class="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
                         <span class="text-xs font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2">
-                            <i class="fa-regular fa-clock text-brand-red"></i> ΕΠΟΜΕΝΟΣ ΑΓΩΝΑΣ
+                            <i class="fa-regular fa-clock text-brand-red"></i> NEXT MATCH
                         </span>
                         <span id="next-date" class="bg-white/10 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded">
-                            Φόρτωση…
+                            Loading…
                         </span>
                     </div>
 
@@ -265,7 +265,7 @@
                                 <span class="font-teko font-black text-2xl text-white">FCV</span>
                             </div>
                             <span id="next-home-name" class="font-bold text-sm uppercase text-white">FC VEZHDANISHT</span>
-                            <span class="text-[11px] text-green-400 font-semibold uppercase mt-0.5">Γηπεδούχος</span>
+                            <span class="text-[11px] text-green-400 font-semibold uppercase mt-0.5">Home</span>
                         </div>
 
                         <!-- VS Badge -->
@@ -280,37 +280,37 @@
                                 <span class="font-teko font-black text-2xl text-gray-300">?</span>
                             </div>
                             <span id="next-away-name" class="font-bold text-sm uppercase text-white">—</span>
-                            <span class="text-[11px] text-gray-400 font-semibold uppercase mt-0.5">Φιλοξενούμενος</span>
+                            <span class="text-[11px] text-gray-400 font-semibold uppercase mt-0.5">Away</span>
                         </div>
                     </div>
 
                     <!-- Countdown Timer -->
                     <div class="bg-black/50 border border-white/5 rounded-xl p-3 my-4">
                         <div class="text-[11px] uppercase tracking-wider text-center text-gray-400 mb-2 font-bold">
-                            Εναπομείναντας Χρόνος
+                            Kick-off in
                         </div>
                         <div class="grid grid-cols-4 gap-2 text-center" id="countdown">
                             <div class="bg-brand-charcoal/80 rounded-lg py-2 border border-white/5">
                                 <span class="block text-2xl font-black font-teko text-brand-red" id="cd-days">05</span>
-                                <span class="text-[10px] text-gray-400 uppercase font-semibold">Ημέρες</span>
+                                <span class="text-[10px] text-gray-400 uppercase font-semibold">Days</span>
                             </div>
                             <div class="bg-brand-charcoal/80 rounded-lg py-2 border border-white/5">
                                 <span class="block text-2xl font-black font-teko text-white" id="cd-hours">18</span>
-                                <span class="text-[10px] text-gray-400 uppercase font-semibold">Ώρες</span>
+                                <span class="text-[10px] text-gray-400 uppercase font-semibold">Hours</span>
                             </div>
                             <div class="bg-brand-charcoal/80 rounded-lg py-2 border border-white/5">
                                 <span class="block text-2xl font-black font-teko text-white" id="cd-minutes">42</span>
-                                <span class="text-[10px] text-gray-400 uppercase font-semibold">Λεπτά</span>
+                                <span class="text-[10px] text-gray-400 uppercase font-semibold">Min</span>
                             </div>
                             <div class="bg-brand-charcoal/80 rounded-lg py-2 border border-white/5">
                                 <span class="block text-2xl font-black font-teko text-brand-accent" id="cd-seconds">19</span>
-                                <span class="text-[10px] text-gray-400 uppercase font-semibold">Δευτ</span>
+                                <span class="text-[10px] text-gray-400 uppercase font-semibold">Sec</span>
                             </div>
                         </div>
                     </div>
 
                     <a href="#schedule" class="block text-center w-full bg-brand-red hover:bg-brand-accent text-white font-bold text-xs uppercase py-3 rounded-lg tracking-wider transition">
-                        Όλο το πρόγραμμα της σεζόν
+                        Full season fixtures
                     </a>
                 </div>
             </div>
@@ -326,9 +326,9 @@
             <div class="flex items-center justify-between mb-6">
                 <div>
                     <h2 class="text-3xl font-black font-teko uppercase tracking-wide text-white flex items-center gap-2">
-                        <i class="fa-solid fa-futbol text-brand-red"></i> ΑΠΟΤΕΛΕΣΜΑΤΑ & ΠΡΟΓΡΑΜΜΑ
+                        <i class="fa-solid fa-futbol text-brand-red"></i> RESULTS & FIXTURES
                     </h2>
-                    <p class="text-xs text-gray-400">Όλοι οι πρόσφατοι αγώνες και τα επερχόμενα ντέρμπι</p>
+                    <p class="text-xs text-gray-400">Latest result and upcoming matches</p>
                 </div>
                 <div class="flex gap-2">
                     <button class="w-8 h-8 rounded-lg bg-brand-lightcard hover:bg-brand-red text-white text-xs flex items-center justify-center transition">
@@ -342,7 +342,7 @@
 
             <!-- Matches Horizontal Cards (filled from data/matches.json) -->
             <div id="matches-grid" class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                <div class="text-sm text-gray-400">Φόρτωση αγώνων…</div>
+                <div class="text-sm text-gray-400">Loading matches…</div>
             </div>
             <p id="data-updated" class="text-[11px] text-gray-500 mt-4"></p>
         </div>
@@ -358,13 +358,13 @@
                     <div>
                         <span id="schedule-league" class="text-brand-red text-xs font-bold tracking-widest uppercase">Futsal</span>
                         <h2 class="text-4xl font-black font-teko uppercase text-white tracking-wide">
-                            ΠΡΟΓΡΑΜΜΑ ΣΕΖΟΝ
+                            SEASON FIXTURES
                         </h2>
                     </div>
                     <span id="schedule-record" class="text-xs font-bold uppercase text-gray-400"></span>
                 </div>
                 <div id="schedule-list" class="space-y-2">
-                    <div class="text-sm text-gray-400">Φόρτωση προγράμματος…</div>
+                    <div class="text-sm text-gray-400">Loading fixtures…</div>
                 </div>
             </div>
 
@@ -372,27 +372,27 @@
             <div id="standings" class="col-span-12 lg:col-span-4">
                 <div class="bg-brand-card rounded-2xl border border-white/10 p-5 shadow-xl sticky top-24">
                     <div class="flex items-center border-b border-white/10 mb-4 pb-2">
-                        <h3 class="text-lg font-black font-teko uppercase pb-2 px-3 border-b-2 border-brand-red text-white">Βαθμολογία</h3>
+                        <h3 class="text-lg font-black font-teko uppercase pb-2 px-3 border-b-2 border-brand-red text-white">Standings</h3>
                     </div>
 
                     <!-- Standings Table Content -->
                     <div id="standings-content" class="space-y-1">
                         <div class="text-[11px] font-bold text-gray-400 uppercase grid grid-cols-12 px-2 py-1">
-                            <span class="col-span-2">Θέση</span>
-                            <span class="col-span-6">Ομάδα</span>
-                            <span class="col-span-2 text-center">Αγ</span>
-                            <span class="col-span-2 text-right">Βαθ</span>
+                            <span class="col-span-2">Pos</span>
+                            <span class="col-span-6">Team</span>
+                            <span class="col-span-2 text-center">P</span>
+                            <span class="col-span-2 text-right">Pts</span>
                         </div>
 
                         <div id="standings-rows" class="space-y-1">
-                            <div class="text-xs text-gray-400 px-2 py-2">Φόρτωση βαθμολογίας…</div>
+                            <div class="text-xs text-gray-400 px-2 py-2">Loading standings…</div>
                         </div>
 
                         <div class="pt-3 text-[10px] text-gray-400 border-t border-white/5 flex items-center justify-between">
                             <span class="flex items-center gap-1.5">
                                 <span class="w-2 h-2 rounded bg-brand-red"></span> FC Vezhdanisht Rumst
                             </span>
-                            <a id="standings-source" href="https://www.voetbalvlaanderen.be/club/10000/komende-wedstrijden" target="_blank" rel="noopener" class="text-brand-accent hover:underline">Πλήρης Πίνακας</a>
+                            <a id="standings-source" href="https://www.voetbalvlaanderen.be/club/10000/komende-wedstrijden" target="_blank" rel="noopener" class="text-brand-accent hover:underline">Full table</a>
                         </div>
                     </div>
 
@@ -410,9 +410,9 @@
                     <i class="fa-solid fa-location-dot"></i>
                 </div>
                 <div>
-                    <h4 class="font-bold text-white uppercase text-sm mb-1">Γήπεδο</h4>
+                    <h4 class="font-bold text-white uppercase text-sm mb-1">Venue</h4>
                     <p class="text-xs text-gray-400">Sporthal Uitgedekt Schoor<br>Europalaan 3, 2840 Rumst</p>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Europalaan+3+2840+Rumst" target="_blank" rel="noopener" class="text-[11px] text-brand-accent hover:underline">Οδηγίες στον χάρτη</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Europalaan+3+2840+Rumst" target="_blank" rel="noopener" class="text-[11px] text-brand-accent hover:underline">Get directions</a>
                 </div>
             </div>
 
@@ -421,8 +421,8 @@
                     <i class="fa-solid fa-trophy"></i>
                 </div>
                 <div>
-                    <h4 class="font-bold text-white uppercase text-sm mb-1">Πρωτάθλημα</h4>
-                    <p class="text-xs text-gray-400">Futsal • <span id="info-league">2 Prov. Antwerpen</span><br>Μέλος της Voetbal Vlaanderen</p>
+                    <h4 class="font-bold text-white uppercase text-sm mb-1">League</h4>
+                    <p class="text-xs text-gray-400">Futsal • <span id="info-league">2 Prov. Antwerpen</span><br>Member of Voetbal Vlaanderen</p>
                 </div>
             </div>
 
@@ -431,9 +431,9 @@
                     <i class="fa-solid fa-shield-halved"></i>
                 </div>
                 <div>
-                    <h4 class="font-bold text-white uppercase text-sm mb-1">Σύλλογος</h4>
-                    <p class="text-xs text-gray-400">FC Vezhdanisht Rumst<br>Αριθμός μητρώου RBFA: A27775</p>
-                    <a href="https://www.rbfa.be/nl/club/10000/info" target="_blank" rel="noopener" class="text-[11px] text-brand-accent hover:underline">Σελίδα στο RBFA</a>
+                    <h4 class="font-bold text-white uppercase text-sm mb-1">Club</h4>
+                    <p class="text-xs text-gray-400">FC Vezhdanisht Rumst<br>RBFA registration no. A27775</p>
+                    <a href="https://www.rbfa.be/nl/club/10000/info" target="_blank" rel="noopener" class="text-[11px] text-brand-accent hover:underline">View on RBFA</a>
                 </div>
             </div>
         </div>
@@ -456,7 +456,7 @@
                         </span>
                     </div>
                     <p class="text-gray-400 text-xs leading-relaxed mb-4">
-                        Η επίσημη ιστοσελίδα της futsal ομάδας FC Vezhdanisht Rumst. Αποτελέσματα, πρόγραμμα και βαθμολογία, με αυτόματη ενημέρωση από τη Voetbal Vlaanderen.
+                        The official website of futsal club FC Vezhdanisht Rumst. Results, fixtures and standings, updated automatically from Voetbal Vlaanderen.
                     </p>
                     <div class="flex items-center gap-3 text-sm">
                         <a href="#" class="w-8 h-8 rounded-lg bg-brand-card hover:bg-brand-red flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
@@ -468,9 +468,9 @@
 
                 <!-- Quick Links -->
                 <div class="col-span-6 lg:col-span-2">
-                    <h5 class="text-white text-xs font-black uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">ΣΥΛΛΟΓΟΣ</h5>
+                    <h5 class="text-white text-xs font-black uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">CLUB</h5>
                     <ul class="space-y-2 text-xs text-gray-400">
-                        <li><a href="#stadium" class="hover:text-white transition">Γήπεδο</a></li>
+                        <li><a href="#stadium" class="hover:text-white transition">Venue</a></li>
                         <li><a href="https://www.rbfa.be/nl/club/10000/info" target="_blank" rel="noopener" class="hover:text-white transition">RBFA</a></li>
                         <li><a href="https://www.voetbalvlaanderen.be/club/10000/komende-wedstrijden" target="_blank" rel="noopener" class="hover:text-white transition">Voetbal Vlaanderen</a></li>
                     </ul>
@@ -478,17 +478,17 @@
 
                 <!-- Matchday -->
                 <div class="col-span-6 lg:col-span-2">
-                    <h5 class="text-white text-xs font-black uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">ΑΓΩΝΕΣ</h5>
+                    <h5 class="text-white text-xs font-black uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">MATCHES</h5>
                     <ul class="space-y-2 text-xs text-gray-400">
-                        <li><a href="#matches" class="hover:text-white transition">Αποτελέσματα</a></li>
-                        <li><a href="#standings" class="hover:text-white transition">Βαθμολογία</a></li>
-                        <li><a href="#schedule" class="hover:text-white transition">Πρόγραμμα Σεζόν</a></li>
+                        <li><a href="#matches" class="hover:text-white transition">Results</a></li>
+                        <li><a href="#standings" class="hover:text-white transition">Standings</a></li>
+                        <li><a href="#schedule" class="hover:text-white transition">Season Fixtures</a></li>
                     </ul>
                 </div>
 
                 <!-- Newsletter -->
                 <div class="col-span-12 lg:col-span-4">
-                    <h5 class="text-white text-xs font-black uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">ΕΠΟΜΕΝΟΣ ΑΓΩΝΑΣ</h5>
+                    <h5 class="text-white text-xs font-black uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">NEXT MATCH</h5>
                     <p id="footer-next" class="text-gray-400 text-xs mb-3">—</p>
                     <p class="text-gray-500 text-[11px]">Sporthal Uitgedekt Schoor, Europalaan 3, 2840 Rumst</p>
                 </div>
@@ -499,7 +499,7 @@
                 <div>
                     © 2026 FC Vezhdanisht Rumst. All rights reserved.
                 </div>
-                <div class="text-[10px] text-gray-500">Δεδομένα αγώνων: Voetbal Vlaanderen</div>
+                <div class="text-[10px] text-gray-500">Match data: Voetbal Vlaanderen</div>
             </div>
         </div>
     </footer>
@@ -512,11 +512,11 @@
 
         const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
         const isUs = t => t && t.clubId === CLUB_ID;
-        // Kick-off times are Belgian local time; always shown as such (e.g. "Τρίτη, 10 Νοεμβρίου • 22:00").
+        // Kick-off times are Belgian local time; always shown as such (e.g. "Tuesday 10 November • 22:00").
         const fmtDate = (iso, withDay) => {
             const d = new Date(iso), tz = { timeZone: 'Europe/Brussels' };
-            const date = d.toLocaleDateString('el-GR', { ...tz, day: '2-digit', month: 'long', ...(withDay ? { weekday: 'long' } : {}) });
-            const time = d.toLocaleTimeString('el-GR', { ...tz, hour: '2-digit', minute: '2-digit', hourCycle: 'h23' });
+            const date = d.toLocaleDateString('en-GB', { ...tz, day: '2-digit', month: 'long', ...(withDay ? { weekday: 'long' } : {}) });
+            const time = d.toLocaleTimeString('en-GB', { ...tz, hour: '2-digit', minute: '2-digit', hourCycle: 'h23' });
             return `${date} • ${time}`;
         };
         const logoHtml = t => t.logo
@@ -536,11 +536,11 @@
 
         function matchCard(m, kind) {
             const badges = {
-                W: ['bg-green-600/20 text-green-400', 'ΝΙΚΗ (ΤΕΛΙΚΟ)'],
-                D: ['bg-white/10 text-gray-300', 'ΙΣΟΠΑΛΙΑ (ΤΕΛΙΚΟ)'],
-                L: ['bg-red-900/40 text-red-300', 'ΗΤΤΑ (ΤΕΛΙΚΟ)'],
-                next: ['bg-brand-red text-white', 'ΕΠΟΜΕΝΟΣ'],
-                later: ['bg-white/10 text-gray-300', m.isHome ? 'ΕΝΤΟΣ ΕΔΡΑΣ' : 'ΕΚΤΟΣ ΕΔΡΑΣ']
+                W: ['bg-green-600/20 text-green-400', 'WIN (FT)'],
+                D: ['bg-white/10 text-gray-300', 'DRAW (FT)'],
+                L: ['bg-red-900/40 text-red-300', 'LOSS (FT)'],
+                next: ['bg-brand-red text-white', 'NEXT'],
+                later: ['bg-white/10 text-gray-300', m.isHome ? 'HOME' : 'AWAY']
             };
             const [badgeClass, badgeText] = badges[kind === 'last' ? m.result : kind];
             const featured = kind === 'next';
@@ -572,16 +572,16 @@
                 document.getElementById('next-away-name').textContent = next.away.name;
                 document.getElementById('next-home-logo').innerHTML = logoHtml(next.home);
                 document.getElementById('next-away-logo').innerHTML = logoHtml(next.away);
-                document.getElementById('next-venue').textContent = next.isHome ? 'Εντός έδρας' : 'Εκτός έδρας';
+                document.getElementById('next-venue').textContent = next.isHome ? 'Home game' : 'Away game';
             } else {
-                document.getElementById('next-date').textContent = 'Δεν υπάρχει προγραμματισμένος αγώνας';
+                document.getElementById('next-date').textContent = 'No match scheduled';
             }
 
             const cards = [];
             if (last) cards.push(matchCard(last, 'last'));
             if (next) cards.push(matchCard(next, 'next'));
             upcoming.slice(1, last ? 2 : 3).forEach(m => cards.push(matchCard(m, 'later')));
-            document.getElementById('matches-grid').innerHTML = cards.join('') || '<div class="text-sm text-gray-400">Δεν υπάρχουν αγώνες.</div>';
+            document.getElementById('matches-grid').innerHTML = cards.join('') || '<div class="text-sm text-gray-400">No matches.</div>';
 
             document.getElementById('standings-rows').innerHTML = data.standings.map(t => {
                 const us = t.clubId === CLUB_ID;
@@ -595,9 +595,9 @@
 
             // Full season schedule
             const resultBadge = {
-                W: '<span class="bg-green-600/20 text-green-400 font-bold px-2 py-0.5 rounded text-[10px]">Ν</span>',
-                D: '<span class="bg-white/10 text-gray-300 font-bold px-2 py-0.5 rounded text-[10px]">Ι</span>',
-                L: '<span class="bg-red-900/40 text-red-300 font-bold px-2 py-0.5 rounded text-[10px]">Η</span>'
+                W: '<span class="bg-green-600/20 text-green-400 font-bold px-2 py-0.5 rounded text-[10px]">W</span>',
+                D: '<span class="bg-white/10 text-gray-300 font-bold px-2 py-0.5 rounded text-[10px]">D</span>',
+                L: '<span class="bg-red-900/40 text-red-300 font-bold px-2 py-0.5 rounded text-[10px]">L</span>'
             };
             document.getElementById('schedule-list').innerHTML = data.matches.map(m => {
                 const isNext = next && m.id === next.id;
@@ -608,12 +608,12 @@
                     <span class="col-span-5 sm:col-span-3 text-right truncate">${name(m.home)}</span>
                     <span class="col-span-2 text-center font-teko text-xl font-black ${m.result ? 'text-white' : 'text-gray-500'}">${score}</span>
                     <span class="col-span-5 sm:col-span-3 truncate">${name(m.away)}</span>
-                    <span class="hidden sm:block sm:col-span-1 text-right">${m.result ? resultBadge[m.result] : (isNext ? '<span class="bg-brand-red text-white font-bold px-2 py-0.5 rounded text-[10px]">ΕΠΟΜ.</span>' : '')}</span>
+                    <span class="hidden sm:block sm:col-span-1 text-right">${m.result ? resultBadge[m.result] : (isNext ? '<span class="bg-brand-red text-white font-bold px-2 py-0.5 rounded text-[10px]">NEXT</span>' : '')}</span>
                 </div>`;
             }).join('');
             const rec = { W: 0, D: 0, L: 0 };
             played.forEach(m => rec[m.result]++);
-            document.getElementById('schedule-record').textContent = `${played.length} αγώνες • ${rec.W}Ν ${rec.D}Ι ${rec.L}Η`;
+            document.getElementById('schedule-record').textContent = `${played.length} played • ${rec.W}W ${rec.D}D ${rec.L}L`;
             if (league) {
                 document.getElementById('schedule-league').textContent = 'Futsal • ' + league;
                 document.getElementById('info-league').textContent = league;
@@ -622,17 +622,17 @@
             // Ticker + footer
             const short = m => `${m.home.name} ${m.homeGoals ?? ''}${m.result ? '-' : ' - '}${m.awayGoals ?? ''} ${m.away.name}`.replace(/\s+/g, ' ');
             const parts = [];
-            if (last) parts.push(`Τελευταίο αποτέλεσμα: ${short(last)}`);
-            if (next) parts.push(`Επόμενος αγώνας: ${next.home.name} - ${next.away.name}, ${fmtDate(next.start, true)}`);
+            if (last) parts.push(`Latest result: ${short(last)}`);
+            if (next) parts.push(`Next match: ${next.home.name} - ${next.away.name}, ${fmtDate(next.start, true)}`);
             document.getElementById('ticker-text').textContent = parts.join('  •  ') || 'FC Vezhdanisht Rumst';
             document.getElementById('footer-next').textContent = next
                 ? `${next.home.name} - ${next.away.name}, ${fmtDate(next.start, true)}`
-                : 'Δεν υπάρχει προγραμματισμένος αγώνας.';
+                : 'No match scheduled.';
 
             if (data.source) document.getElementById('standings-source').href = data.source;
             if (data.updatedAt) {
                 document.getElementById('data-updated').textContent =
-                    'Πηγή: Voetbal Vlaanderen • Τελευταία ενημέρωση: ' + new Date(data.updatedAt).toLocaleString('el-GR', { timeZone: 'Europe/Brussels' });
+                    'Source: Voetbal Vlaanderen • Last updated: ' + new Date(data.updatedAt).toLocaleString('en-GB', { timeZone: 'Europe/Brussels' });
             }
             updateCountdown();
         }
@@ -642,7 +642,7 @@
             .then(renderData)
             .catch(err => {
                 console.error('Could not load data/matches.json', err);
-                document.getElementById('matches-grid').innerHTML = '<div class="text-sm text-gray-400">Τα αποτελέσματα δεν είναι διαθέσιμα αυτή τη στιγμή.</div>';
+                document.getElementById('matches-grid').innerHTML = '<div class="text-sm text-gray-400">Results are not available right now.</div>';
             });
 
         // Countdown to the next match
