@@ -136,6 +136,7 @@
                 <a href="#standings" class="hover:text-brand-accent transition pb-1">Standings</a>
                 <a href="#stadium" class="hover:text-brand-accent transition pb-1">Venue</a>
                 <a href="#history" class="hover:text-brand-accent transition pb-1">History</a>
+                <a href="#contact" class="hover:text-brand-accent transition pb-1">Contact</a>
             </nav>
 
             <!-- CALL TO ACTION -->
@@ -146,20 +147,21 @@
                     </span>
                 </a>
                 <button id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMenu()"
-                        class="lg:hidden w-10 h-10 rounded-lg bg-brand-card border border-white/10 text-white flex items-center justify-center">
+                        class="w-10 h-10 rounded-lg bg-brand-card hover:bg-brand-lightcard border border-white/10 text-white flex items-center justify-center transition">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
-        <!-- Mobile menu -->
-        <nav id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-brand-black/95 px-4 pb-4">
-            <div class="flex flex-col text-sm font-bold uppercase tracking-wider text-gray-300">
+        <!-- Dropdown menu (all screen sizes) -->
+        <nav id="mobile-menu" class="hidden border-t border-white/10 bg-brand-black/95 px-4 sm:px-6 pb-4">
+            <div class="max-w-7xl mx-auto flex flex-col text-sm font-bold uppercase tracking-wider text-gray-300">
                 <a href="#hero" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Home</a>
                 <a href="#matches" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Matches</a>
                 <a href="#schedule" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Fixtures</a>
                 <a href="#standings" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Standings</a>
                 <a href="#stadium" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Venue</a>
-                <a href="#history" class="py-3" onclick="toggleMenu(false)">History</a>
+                <a href="#history" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">History</a>
+                <a href="#contact" class="py-3" onclick="toggleMenu(false)">Contact</a>
             </div>
         </nav>
     </header>
@@ -484,7 +486,28 @@
                 </div>
             </div>
 
-            <!-- Bottom Copyright & Sponsors -->
+            <!-- Contact -->
+            <div id="contact" class="scroll-mt-24 mb-10 rounded-2xl border border-brand-red/30 bg-brand-card p-6 sm:p-8">
+                <h5 class="text-white text-xl font-black font-teko uppercase tracking-wide mb-4">CONTACT US</h5>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <a href="mailto:contact@vezhdanishtfc.com" class="flex items-center gap-3 rounded-xl bg-brand-black/60 border border-white/10 hover:border-brand-red p-4 transition min-w-0">
+                        <span class="w-10 h-10 rounded-lg bg-brand-red/15 text-brand-red flex items-center justify-center shrink-0"><i class="fa-solid fa-envelope"></i></span>
+                        <span class="min-w-0">
+                            <span class="block text-[10px] uppercase tracking-wider text-gray-400 font-bold">Email</span>
+                            <span class="block text-[13px] sm:text-sm text-white font-semibold">contact@<wbr>vezhdanishtfc.com</span>
+                        </span>
+                    </a>
+                    <a href="tel:+32493877223" class="flex items-center gap-3 rounded-xl bg-brand-black/60 border border-white/10 hover:border-brand-red p-4 transition">
+                        <span class="w-10 h-10 rounded-lg bg-brand-red/15 text-brand-red flex items-center justify-center shrink-0"><i class="fa-solid fa-phone"></i></span>
+                        <span>
+                            <span class="block text-[10px] uppercase tracking-wider text-gray-400 font-bold">Phone</span>
+                            <span class="block text-sm text-white font-semibold">0493 87 72 23</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright -->
             <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
                 <div>
                     © 2026 FC Vezhdanisht Rumst. All rights reserved.
