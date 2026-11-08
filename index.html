@@ -314,58 +314,56 @@
         </div>
     </section>
 
-    <!-- MAIN CONTENT: NEWS & LEAGUE STANDINGS (DESKTOP SPLIT 8/4) -->
-    <section class="max-w-7xl mx-auto px-6 py-16">
-        <div class="grid grid-cols-12 gap-y-8 lg:gap-8">
-            
-            <!-- LEFT COLUMN: FULL SEASON SCHEDULE (8 COLS, filled from data/matches.json) -->
-            <div id="schedule" class="col-span-12 lg:col-span-8 scroll-mt-24 min-w-0">
-                <div class="flex flex-wrap items-end justify-between gap-x-4 gap-y-1 mb-8 pb-3 border-b border-white/10">
-                    <div>
-                        <span id="schedule-league" class="text-brand-red text-xs font-bold tracking-widest uppercase">Futsal</span>
-                        <h2 class="text-4xl font-black font-teko uppercase text-white tracking-wide">
-                            SEASON FIXTURES
-                        </h2>
-                    </div>
-                    <span id="schedule-record" class="text-xs font-bold uppercase text-gray-400"></span>
+    <!-- MAIN CONTENT: LEAGUE STANDINGS + SEASON FIXTURES (filled from data/matches.json) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16 space-y-16">
+
+        <!-- STANDINGS (full table) -->
+        <div id="standings" class="scroll-mt-24 min-w-0">
+            <div class="flex flex-wrap items-end justify-between gap-x-4 gap-y-1 mb-6 pb-3 border-b border-white/10">
+                <div>
+                    <span id="standings-league" class="text-brand-red text-xs font-bold tracking-widest uppercase">Futsal</span>
+                    <h2 class="text-4xl font-black font-teko uppercase text-white tracking-wide">STANDINGS</h2>
                 </div>
-                <div id="schedule-list" class="space-y-2">
-                    <div class="text-sm text-gray-400">Loading fixtures…</div>
-                </div>
+                <a id="standings-source" href="https://www.voetbalvlaanderen.be/club/10000/ploeg/369334/overzicht" target="_blank" rel="noopener" class="text-xs font-bold uppercase text-brand-accent hover:underline">Voetbal Vlaanderen <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
             </div>
-
-            <!-- RIGHT COLUMN: STANDINGS & TOP SCORERS TABS (4 COLS) -->
-            <div id="standings" class="col-span-12 lg:col-span-4">
-                <div class="bg-brand-card rounded-2xl border border-white/10 p-5 shadow-xl sticky top-24">
-                    <div class="flex items-center border-b border-white/10 mb-4 pb-2">
-                        <h3 class="text-lg font-black font-teko uppercase pb-2 px-3 border-b-2 border-brand-red text-white">Standings</h3>
-                    </div>
-
-                    <!-- Standings Table Content -->
-                    <div id="standings-content" class="space-y-1">
-                        <div class="text-[11px] font-bold text-gray-400 uppercase grid grid-cols-12 px-2 py-1">
-                            <span class="col-span-2">Pos</span>
-                            <span class="col-span-6">Team</span>
-                            <span class="col-span-2 text-center">P</span>
-                            <span class="col-span-2 text-right">Pts</span>
-                        </div>
-
-                        <div id="standings-rows" class="space-y-1">
-                            <div class="text-xs text-gray-400 px-2 py-2">Loading standings…</div>
-                        </div>
-
-                        <div class="pt-3 text-[10px] text-gray-400 border-t border-white/5 flex items-center justify-between">
-                            <span class="flex items-center gap-1.5">
-                                <span class="w-2 h-2 rounded bg-brand-red"></span> FC Vezhdanisht Rumst
-                            </span>
-                            <a id="standings-source" href="https://www.voetbalvlaanderen.be/club/10000/komende-wedstrijden" target="_blank" rel="noopener" class="text-brand-accent hover:underline">Full table</a>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="bg-brand-card rounded-2xl border border-white/10 overflow-x-auto">
+                <table class="w-full text-xs sm:text-sm">
+                    <thead>
+                        <tr class="text-[10px] sm:text-[11px] font-bold text-gray-400 uppercase tracking-wider border-b border-white/10">
+                            <th class="py-3 pl-3 sm:pl-5 pr-2 text-left w-8">#</th>
+                            <th class="py-3 px-2 text-left">Team</th>
+                            <th class="py-3 px-1.5 sm:px-3 text-center" title="Played">P</th>
+                            <th class="py-3 px-1.5 sm:px-3 text-center" title="Won">W</th>
+                            <th class="py-3 px-1.5 sm:px-3 text-center" title="Drawn">D</th>
+                            <th class="py-3 px-1.5 sm:px-3 text-center" title="Lost">L</th>
+                            <th class="py-3 px-1.5 sm:px-3 text-center hidden sm:table-cell" title="Goals for : against">Goals</th>
+                            <th class="py-3 px-1.5 sm:px-3 text-center" title="Goal difference">GD</th>
+                            <th class="py-3 pl-1.5 pr-3 sm:pr-5 text-right" title="Points">Pts</th>
+                        </tr>
+                    </thead>
+                    <tbody id="standings-rows">
+                        <tr><td colspan="9" class="py-6 text-center text-gray-400">Loading standings…</td></tr>
+                    </tbody>
+                </table>
             </div>
-
         </div>
+
+        <!-- FULL SEASON SCHEDULE -->
+        <div id="schedule" class="scroll-mt-24 min-w-0">
+            <div class="flex flex-wrap items-end justify-between gap-x-4 gap-y-1 mb-8 pb-3 border-b border-white/10">
+                <div>
+                    <span id="schedule-league" class="text-brand-red text-xs font-bold tracking-widest uppercase">Futsal</span>
+                    <h2 class="text-4xl font-black font-teko uppercase text-white tracking-wide">
+                        SEASON FIXTURES
+                    </h2>
+                </div>
+                <span id="schedule-record" class="text-xs font-bold uppercase text-gray-400"></span>
+            </div>
+            <div id="schedule-list" class="space-y-2">
+                <div class="text-sm text-gray-400">Loading fixtures…</div>
+            </div>
+        </div>
+
     </section>
 
     <!-- ROSTER (players from data/roster.json) -->
@@ -629,12 +627,30 @@
 
             document.getElementById('standings-rows').innerHTML = data.standings.map(t => {
                 const us = t.clubId === CLUB_ID;
-                return `<div class="grid grid-cols-12 items-center px-2 ${us ? 'py-2.5 rounded-lg bg-brand-red/20 border border-brand-red text-white font-semibold' : 'py-2 rounded-lg hover:bg-white/5 text-gray-300'} text-xs">
-                    <span class="col-span-2 font-bold ${us ? 'text-brand-accent' : ''}">${t.position}.</span>
-                    <span class="col-span-6 flex items-center gap-1.5 ${us ? 'font-bold' : ''}">${us ? '<span class="w-2 h-2 rounded-full bg-brand-red shrink-0"></span>' : ''}${esc(t.name)}</span>
-                    <span class="col-span-2 text-center ${us ? 'text-gray-300' : 'text-gray-400'}">${t.matchesPlayed}</span>
-                    <span class="col-span-2 text-right ${us ? 'font-black font-teko text-lg text-brand-accent' : 'font-bold text-white'}">${t.points}</span>
-                </div>`;
+                const initials = esc(String(t.name).replace(/^(FC|FT|ZVK|S\.V\.C\.|FUTSAL)\s+/i, '').slice(0, 2));
+                const logo = us
+                    ? '<img src="assets/logo.png" alt="" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full shrink-0">'
+                    : t.logo
+                        ? `<img src="${esc(t.logo)}" alt="" loading="lazy" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white object-contain shrink-0" onerror="this.classList.add('invisible')">`
+                        : `<span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 text-[10px] font-bold text-gray-300 flex items-center justify-center shrink-0">${initials}</span>`;
+                const gd = t.goalDifference > 0 ? '+' + t.goalDifference : t.goalDifference;
+                const cell = 'py-2.5 px-1.5 sm:px-3 text-center';
+                return `<tr class="border-b border-white/5 last:border-0 ${us ? 'bg-brand-red/20 text-white font-semibold' : 'text-gray-300 hover:bg-white/5'}">
+                    <td class="py-2.5 pl-3 sm:pl-5 pr-2 font-bold ${us ? 'text-brand-accent border-l-4 border-brand-red' : ''}">${t.position}</td>
+                    <td class="py-2.5 px-2">
+                        <div class="flex items-center gap-2 sm:gap-3 min-w-[140px]">
+                            ${logo}
+                            <span class="leading-tight ${us ? 'font-bold' : ''}">${esc(t.name)}</span>
+                        </div>
+                    </td>
+                    <td class="${cell}">${t.matchesPlayed}</td>
+                    <td class="${cell}">${t.matchesWon}</td>
+                    <td class="${cell}">${t.matchesDrawn}</td>
+                    <td class="${cell}">${t.matchesLost}</td>
+                    <td class="${cell} hidden sm:table-cell whitespace-nowrap">${t.goalsFor}:${t.goalsAgainst}</td>
+                    <td class="${cell} ${t.goalDifference > 0 ? 'text-green-400' : t.goalDifference < 0 ? 'text-red-400' : ''}">${gd}</td>
+                    <td class="py-2.5 pl-1.5 pr-3 sm:pr-5 text-right font-black font-teko text-lg sm:text-xl ${us ? 'text-brand-accent' : 'text-white'}">${t.points}</td>
+                </tr>`;
             }).join('');
 
             // Full season schedule
@@ -660,6 +676,7 @@
             document.getElementById('schedule-record').textContent = `${played.length} played • ${rec.W}W ${rec.D}D ${rec.L}L`;
             if (league) {
                 document.getElementById('schedule-league').textContent = 'Futsal • ' + league;
+                document.getElementById('standings-league').textContent = 'Futsal • ' + league;
                 document.getElementById('info-league').textContent = league;
             }
 
@@ -673,7 +690,6 @@
                 ? `${next.home.name} - ${next.away.name}, ${fmtDate(next.start, true)}`
                 : 'No match scheduled.';
 
-            if (data.source) document.getElementById('standings-source').href = data.source;
             if (data.updatedAt) {
                 document.getElementById('data-updated').textContent =
                     'Source: Voetbal Vlaanderen • Last updated: ' + new Date(data.updatedAt).toLocaleString('en-GB', { timeZone: 'Europe/Brussels' });
