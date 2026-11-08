@@ -185,7 +185,7 @@
                 <a href="#matches" class="hover:text-brand-accent transition pb-1">Matches</a>
                 <a href="#schedule" class="hover:text-brand-accent transition pb-1">Fixtures</a>
                 <a href="#standings" class="hover:text-brand-accent transition pb-1">Standings</a>
-                <a href="#our team" class="hover:text-brand-accent transition pb-1">our team</a>
+                <a href="#our-team" class="hover:text-brand-accent transition pb-1">Our Team</a>
                 <a href="#history" class="hover:text-brand-accent transition pb-1">History</a>
             </nav>
 
@@ -210,7 +210,7 @@
                 <a href="#schedule" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Fixtures</a>
                 <a href="#standings" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Standings</a>
                 <a href="#store" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Store</a>
-                <a href="#our team" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">our team</a>
+                <a href="#our-team" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Our Team</a>
                 <a href="#history" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">History</a>
                 <a href="#stadium" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Stadium</a>
                 <a href="#contact" class="py-3" onclick="toggleMenu(false)">Contact</a>
@@ -346,17 +346,27 @@
     <!-- QUICK MATCH STATS & RECENT FIXTURES BAR -->
     <section id="matches" class="bg-brand-charcoal py-8 border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center justify-between gap-4 mb-6">
                 <div>
                     <h2 class="text-3xl font-black font-teko uppercase tracking-wide text-white flex items-center gap-2">
                         <i class="fa-solid fa-futbol text-brand-red"></i> RESULTS & FIXTURES
                     </h2>
-                    <p class="text-xs text-gray-400">Latest result and upcoming matches</p>
+                    <p class="text-xs text-gray-400">Slide left for earlier results, right for upcoming matches</p>
+                </div>
+                <div class="flex gap-2 shrink-0">
+                    <button type="button" onclick="matchesStep(-1)" aria-label="Earlier matches"
+                            class="w-9 h-9 rounded-lg bg-brand-lightcard hover:bg-brand-red text-white text-xs flex items-center justify-center transition">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button type="button" onclick="matchesStep(1)" aria-label="Later matches"
+                            class="w-9 h-9 rounded-lg bg-brand-lightcard hover:bg-brand-red text-white text-xs flex items-center justify-center transition">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
 
-            <!-- Matches Horizontal Cards (filled from data/matches.json) -->
-            <div id="matches-grid" class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <!-- Matches carousel: all season matches (filled from data/matches.json) -->
+            <div id="matches-grid" class="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar pb-1" aria-roledescription="carousel" aria-label="Matches">
                 <div class="text-sm text-gray-400">Loading matches…</div>
             </div>
             <p id="data-updated" class="text-[11px] text-gray-500 mt-4"></p>
@@ -446,10 +456,10 @@
     </section>
 
     <!-- our team (players from data/roster.json) -->
-    <section id="our team" class="bg-brand-black py-16 border-t border-white/10 scroll-mt-24">
+    <section id="our-team" class="bg-brand-black py-16 border-t border-white/10 scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <span class="text-brand-red text-xs font-bold tracking-widest uppercase">First Team</span>
-            <h2 class="text-4xl font-black font-teko uppercase text-white tracking-wide mb-6">our team</h2>
+            <h2 class="text-4xl font-black font-teko uppercase text-white tracking-wide mb-6">OUR TEAM</h2>
 
             <div class="relative">
                 <div id="roster-track" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth rounded-2xl no-scrollbar" aria-roledescription="carousel" aria-label="Players">
@@ -491,7 +501,7 @@
                     </li>
                     <li class="flex gap-4 items-start bg-brand-red/15 border border-brand-red rounded-xl p-4">
                         <span class="font-teko text-2xl font-black text-brand-accent leading-none shrink-0">2026</span>
-                        <span>The major breakthrough came in 2026, when FC Vezhdanisht officially stepped up to Provincial 2 Antwerp (RBFA). Backed by key new transfers and a re-energized our team, the club built a formidable team that hit the ground running with a strong start to the season.</span>
+                        <span>The major breakthrough came in 2026, when FC Vezhdanisht officially stepped up to Provincial 2 Antwerp (RBFA). Backed by key new transfers and a re-energized squad, the club built a formidable team that hit the ground running with a strong start to the season.</span>
                     </li>
                 </ul>
                 <p>Today, FC Vezhdanisht continues to push its boundaries—driven by the vision of its founder, the guidance of its club legend, and the ambition of every player wearing the badge.</p>
@@ -567,7 +577,7 @@
                     <h5 class="text-white text-xs font-black uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">CLUB</h5>
                     <ul class="space-y-2 text-xs text-gray-400">
                         <li><a href="#store" class="hover:text-white transition">Store</a></li>
-                        <li><a href="#our team" class="hover:text-white transition">our team</a></li>
+                        <li><a href="#our-team" class="hover:text-white transition">Our Team</a></li>
                         <li><a href="#history" class="hover:text-white transition">History</a></li>
                         <li><a href="#stadium" class="hover:text-white transition">Stadium</a></li>
                         <li><a href="https://www.rbfa.be/nl/club/10000/info" target="_blank" rel="noopener" class="hover:text-white transition">RBFA</a></li>
@@ -645,12 +655,19 @@
             ? `<img src="${esc(t.logo)}" alt="${esc(t.name)}" class="w-full h-full object-contain rounded-full bg-white" loading="lazy">`
             : `<span class="font-teko font-black text-2xl text-white">${esc(t.name.slice(0, 3))}</span>`;
 
+        // Small round team logo for match cards (our crest locally, others from RBFA; hidden if it fails to load)
+        const smallLogo = t => isUs(t)
+            ? '<img src="assets/logo.png" alt="" class="w-7 h-7 rounded-full shrink-0">'
+            : t.logo
+                ? `<img src="${esc(t.logo)}" alt="" loading="lazy" class="w-7 h-7 rounded-full bg-white object-contain shrink-0" onerror="this.classList.add('invisible')">`
+                : '<span class="w-7 h-7 rounded-full bg-white/10 shrink-0"></span>';
+
         function teamRow(team, goals, extraClass) {
             const us = isUs(team);
             return `<div class="flex items-center justify-between py-2 ${extraClass}">
-                <div class="flex items-center gap-2 font-bold text-sm ${us ? '' : 'text-gray-400'}">
-                    <span class="w-3 h-3 rounded-full ${us ? 'bg-brand-red' : 'bg-gray-500'} inline-block shrink-0"></span>
-                    <span>${esc(team.name)}</span>
+                <div class="flex items-center gap-2.5 font-bold text-sm min-w-0 ${us ? '' : 'text-gray-400'}">
+                    ${smallLogo(team)}
+                    <span class="leading-tight">${esc(team.name)}</span>
                 </div>
                 <span class="${goals == null ? 'text-xl' : 'text-2xl'} font-black font-teko ${us && goals != null ? 'text-brand-red' : 'text-gray-400'}">${goals ?? '-'}</span>
             </div>`;
@@ -664,9 +681,9 @@
                 next: ['bg-brand-red text-white', 'NEXT'],
                 later: ['bg-white/10 text-gray-300', m.isHome ? 'HOME' : 'AWAY']
             };
-            const [badgeClass, badgeText] = badges[kind === 'last' ? m.result : kind];
+            const [badgeClass, badgeText] = badges[kind === 'last' || kind === 'played' ? m.result : kind];
             const featured = kind === 'next';
-            return `<div class="${featured ? 'bg-gradient-to-b from-brand-card to-brand-charcoal border-2 border-brand-red shadow-lg' : 'bg-brand-card hover:border-brand-red/50 border border-white/5'} rounded-xl p-5 relative overflow-hidden transition">
+            return `<div class="match-card snap-start shrink-0 w-[85%] sm:w-[calc((100%-1.25rem)/2)] md:w-[calc((100%-2.5rem)/3)] ${featured ? 'bg-gradient-to-b from-brand-card to-brand-charcoal border-2 border-brand-red shadow-lg' : 'bg-brand-card hover:border-brand-red/50 border border-white/5'} rounded-xl p-5 relative overflow-hidden transition">
                 <div class="flex justify-between items-center text-xs mb-3">
                     <span class="${featured ? 'text-brand-accent font-semibold' : 'text-gray-400'}">${esc(fmtDate(m.start))}</span>
                     <span class="${badgeClass} font-bold px-2 py-0.5 rounded text-[10px] uppercase">${badgeText}</span>
@@ -699,11 +716,17 @@
                 document.getElementById('next-date').textContent = 'No match scheduled';
             }
 
-            const cards = [];
-            if (last) cards.push(matchCard(last, 'last'));
-            if (next) cards.push(matchCard(next, 'next'));
-            upcoming.slice(1, last ? 2 : 3).forEach(m => cards.push(matchCard(m, 'later')));
-            document.getElementById('matches-grid').innerHTML = cards.join('') || '<div class="text-sm text-gray-400">No matches.</div>';
+            // All season matches in one slider; it opens on the latest result (then next match, then later ones)
+            const grid = document.getElementById('matches-grid');
+            grid.innerHTML = data.matches.map(m =>
+                matchCard(m, m.result ? 'played' : (next && m.id === next.id) ? 'next' : 'later')
+            ).join('') || '<div class="text-sm text-gray-400">No matches.</div>';
+            const startIdx = last ? data.matches.indexOf(last) : (next ? data.matches.indexOf(next) : 0);
+            requestAnimationFrame(() => matchesGo(startIdx, 'instant'));
+            // after a swipe settles, remember where the user is
+            let settle;
+            grid.addEventListener('scroll', () => { clearTimeout(settle); settle = setTimeout(matchesSync, 150); });
+            window.addEventListener('resize', () => matchesGo(matchesCur, 'instant'));
 
             document.getElementById('standings-rows').innerHTML = data.standings.map(t => {
                 const us = t.clubId === CLUB_ID;
@@ -784,6 +807,28 @@
                 console.error('Could not load data/matches.json', err);
                 document.getElementById('matches-grid').innerHTML = '<div class="text-sm text-gray-400">Results are not available right now.</div>';
             });
+
+        // Results & fixtures slider: move by one card
+        let matchesCur = 0; // index of the first visible card (kept explicitly so fast clicks add up correctly)
+        function matchesGo(i, behavior = 'smooth') {
+            const grid = document.getElementById('matches-grid');
+            const cards = grid.querySelectorAll('.match-card');
+            if (!cards.length) return;
+            const maxLeft = grid.scrollWidth - grid.clientWidth;
+            matchesCur = Math.max(0, Math.min(cards.length - 1, i));
+            const left = Math.min(maxLeft, cards[matchesCur].offsetLeft - cards[0].offsetLeft);
+            grid.scrollTo({ left, behavior });
+        }
+        function matchesStep(d) { matchesGo(matchesCur + d); }
+        function matchesSync() {
+            const grid = document.getElementById('matches-grid');
+            const cards = [...grid.querySelectorAll('.match-card')];
+            if (!cards.length) return;
+            const x = grid.scrollLeft + cards[0].offsetLeft;
+            let best = 0;
+            cards.forEach((c, i) => { if (Math.abs(c.offsetLeft - x) < Math.abs(cards[best].offsetLeft - x)) best = i; });
+            matchesCur = best;
+        }
 
         // Mobile menu
         function toggleMenu(open) {
