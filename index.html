@@ -209,6 +209,7 @@
                 <a href="#matches" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Matches</a>
                 <a href="#schedule" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Fixtures</a>
                 <a href="#standings" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Standings</a>
+                <a href="#store" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Store</a>
                 <a href="#roster" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Roster</a>
                 <a href="#history" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">History</a>
                 <a href="#stadium" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Venue</a>
@@ -419,6 +420,49 @@
 
     </section>
 
+    <!-- STORE -->
+    <section id="store" class="bg-brand-charcoal py-16 border-t border-white/10 scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <span class="text-brand-red text-xs font-bold tracking-widest uppercase">Official Merchandise</span>
+            <h2 class="text-4xl font-black font-teko uppercase text-white tracking-wide mb-8">STORE</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl">
+                <!-- Product images: front / back -->
+                <div class="relative">
+                    <div id="jersey-track" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth rounded-2xl no-scrollbar bg-[#ededed]" aria-roledescription="carousel" aria-label="Home jersey images">
+                        <img src="assets/store/jersey-home-front.jpg" alt="FC Vezhdanisht home jersey, front" width="900" height="1000" loading="lazy" class="w-full shrink-0 snap-center aspect-[9/10] object-contain">
+                        <img src="assets/store/jersey-home-back.jpg" alt="FC Vezhdanisht home jersey, back with name and number" width="900" height="1000" loading="lazy" class="w-full shrink-0 snap-center aspect-[9/10] object-contain">
+                    </div>
+                    <button type="button" onclick="jerseyGo(jerseyCur - 1)" aria-label="Previous image"
+                            class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 hover:bg-brand-red text-white flex items-center justify-center transition">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button type="button" onclick="jerseyGo(jerseyCur + 1)" aria-label="Next image"
+                            class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 hover:bg-brand-red text-white flex items-center justify-center transition">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                    <div class="flex justify-center gap-2 mt-4" id="jersey-tabs">
+                        <button type="button" onclick="jerseyGo(0)" class="px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-brand-red text-white transition">Front</button>
+                        <button type="button" onclick="jerseyGo(1)" class="px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-brand-card text-gray-300 transition">Back</button>
+                    </div>
+                </div>
+
+                <!-- Product info -->
+                <div>
+                    <span class="inline-block bg-brand-red/20 border border-brand-red/50 text-brand-accent text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full mb-3">2026 Season</span>
+                    <h3 class="text-4xl sm:text-5xl font-black font-teko uppercase text-white leading-none mb-2">Home Jersey</h3>
+                    <p class="text-gray-400 text-sm mb-5">Official FC Vezhdanisht home shirt by JAKO in our red and black stripes, with the club crest on the front and FC VEZHDANISHT on the back.</p>
+                    <div class="font-teko text-5xl font-black text-brand-red mb-6">€39.99</div>
+                    <a href="mailto:contact@vezhdanishtfc.com?subject=Order%3A%20Home%20Jersey%20(%E2%82%AC39.99)&body=Hello%2C%0A%0AI%20would%20like%20to%20order%20the%20home%20jersey.%0A%0ASize%3A%20%0AQuantity%3A%20%0AName%20and%20number%20on%20the%20back%20(optional)%3A%20%0A%0AThank%20you!"
+                       class="inline-flex items-center gap-3 bg-brand-red hover:bg-brand-accent text-white px-7 py-3.5 rounded-xl font-bold uppercase text-sm tracking-wider transition red-glow">
+                        <i class="fa-solid fa-bag-shopping"></i> Order now
+                    </a>
+                    <p class="text-[11px] text-gray-500 mt-3">Orders by email or phone: <a href="tel:+32493877223" class="text-gray-400 hover:text-white">0493 87 72 23</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ROSTER (players from data/roster.json) -->
     <section id="roster" class="bg-brand-black py-16 border-t border-white/10 scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
@@ -540,6 +584,7 @@
                 <div class="col-span-6 lg:col-span-2">
                     <h5 class="text-white text-xs font-black uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">CLUB</h5>
                     <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#store" class="hover:text-white transition">Store</a></li>
                         <li><a href="#roster" class="hover:text-white transition">Roster</a></li>
                         <li><a href="#history" class="hover:text-white transition">History</a></li>
                         <li><a href="#stadium" class="hover:text-white transition">Venue</a></li>
@@ -767,6 +812,32 @@
             btn.setAttribute('aria-expanded', show);
             btn.innerHTML = show ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
         }
+
+        // Store: jersey front/back slider
+        let jerseyCur = 0;
+        function jerseyGo(i) {
+            const t = document.getElementById('jersey-track');
+            const n = t.children.length;
+            jerseyCur = ((i % n) + n) % n;
+            t.scrollTo({ left: jerseyCur * t.clientWidth, behavior: 'smooth' });
+            jerseyTabs();
+        }
+        function jerseyTabs() {
+            document.querySelectorAll('#jersey-tabs button').forEach((b, j) => {
+                const on = j === jerseyCur;
+                b.classList.toggle('bg-brand-red', on); b.classList.toggle('text-white', on);
+                b.classList.toggle('bg-brand-card', !on); b.classList.toggle('text-gray-300', !on);
+            });
+        }
+        (() => {
+            const t = document.getElementById('jersey-track');
+            let settle;
+            t.addEventListener('scroll', () => {
+                clearTimeout(settle);
+                settle = setTimeout(() => { jerseyCur = Math.round(t.scrollLeft / t.clientWidth); jerseyTabs(); }, 150);
+            });
+            window.addEventListener('resize', () => { t.scrollLeft = jerseyCur * t.clientWidth; });
+        })();
 
         // Roster carousel
         // rosterCur is the slide we are on (or heading to), so fast clicks during a smooth scroll stay correct.
