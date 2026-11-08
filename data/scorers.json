@@ -1,0 +1,42 @@
+{
+  "scorers": [
+    {
+      "name": "Maurice Kone",
+      "goals": 4
+    },
+    {
+      "name": "Umar Bah",
+      "goals": 4
+    },
+    {
+      "name": "Jimmy Geldorp",
+      "goals": 2
+    },
+    {
+      "name": "Mohamed Marcelin Saoro Haba",
+      "goals": 2
+    },
+    {
+      "name": "Ali Tahirovic",
+      "goals": 1
+    },
+    {
+      "name": "Aurel Zyka",
+      "goals": 1
+    },
+    {
+      "name": "Bruce Gnana Saoro Haba",
+      "goals": 1
+    },
+    {
+      "name": "Keenan Wilssens",
+      "goals": 1
+    },
+    {
+      "name": "Omar Zyka",
+      "goals": 1
+    }
+  ],
+  "totalGoals": 17,
+  "updatedAt": "2026-11-08T14:47:55+00:00"
+}

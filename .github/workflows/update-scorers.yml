@@ -1,0 +1,40 @@
+name: Update goal scorers
+
+on:
+  schedule:
+    # Every hour: download the club's OneDrive Excel and update data/scorers.json if it changed.
+    - cron: "23 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-site-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch goal scorers from Excel
+        run: python scripts/fetch_scorers.py
+
+      - name: Commit if data changed
+        run: |
+          if git diff --quiet -- data/scorers.json; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add data/scorers.json
+          git commit -m "Update goal scorers"
+          for i in 1 2 3; do git pull --rebase --quiet && git push && exit 0; sleep 5; done
+          exit 1
