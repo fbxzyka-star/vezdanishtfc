@@ -2,7 +2,7 @@
   "scorers": [
     {
       "name": "Maurice Kone",
-      "goals": 5
+      "goals": 4
     },
     {
       "name": "Umar Bah",
@@ -37,6 +37,6 @@
       "goals": 1
     }
   ],
-  "totalGoals": 18,
-  "updatedAt": "2026-11-08T14:55:23+00:00"
+  "totalGoals": 17,
+  "updatedAt": "2026-11-08T15:56:50+00:00"
 }
