@@ -5,8 +5,14 @@
     "price": 39.99,
     "description": "Official FC Vezhdanisht home shirt by JAKO in our red and black stripes, with the club crest on the front and FC VEZHDANISHT on the back.",
     "images": [
-      { "src": "assets/store/jersey-home-front.jpg", "label": "Front" },
-      { "src": "assets/store/jersey-home-back.jpg", "label": "Back" }
+      {
+        "src": "assets/store/jersey-home-front.jpg",
+        "label": "Front"
+      },
+      {
+        "src": "assets/store/jersey-home-back.jpg",
+        "label": "Back"
+      }
     ]
   },
   {
@@ -15,8 +21,58 @@
     "price": 39.99,
     "description": "Official FC Vezhdanisht away shirt by JAKO in green and white stripes, with the club crest on the front and FC VEZHDANISHT on the back.",
     "images": [
-      { "src": "assets/store/jersey-away-front.jpg", "label": "Front" },
-      { "src": "assets/store/jersey-away-back.jpg", "label": "Back" }
+      {
+        "src": "assets/store/jersey-away-front.jpg",
+        "label": "Front"
+      },
+      {
+        "src": "assets/store/jersey-away-back.jpg",
+        "label": "Back"
+      }
+    ]
+  },
+  {
+    "name": "Hooded Jacket Red/Black",
+    "tag": "Training Wear",
+    "price": 62.99,
+    "description": "JAKO hooded jacket in black with red sleeves and hood, full zip and the FC Vezhdanisht crest on the chest.",
+    "images": [
+      {
+        "src": "assets/store/jacket-redblack-front.jpg",
+        "label": "Front"
+      },
+      {
+        "src": "assets/store/jacket-redblack-side.jpg",
+        "label": "Side"
+      }
+    ]
+  },
+  {
+    "name": "Hooded Jacket Red",
+    "tag": "Training Wear",
+    "price": 55.99,
+    "description": "JAKO hooded jacket in club red with white stripes, full zip and the FC Vezhdanisht crest on the chest.",
+    "images": [
+      {
+        "src": "assets/store/jacket-red-front.jpg",
+        "label": "Front"
+      },
+      {
+        "src": "assets/store/jacket-red-side.jpg",
+        "label": "Side"
+      }
+    ]
+  },
+  {
+    "name": "Tracksuit White/Red",
+    "tag": "Set: Jacket + Pants",
+    "price": 85.99,
+    "description": "JAKO tracksuit set: white hooded jacket with red trims and the club crest, plus red training pants.",
+    "images": [
+      {
+        "src": "assets/store/tracksuit-white.jpg",
+        "label": "Set"
+      }
     ]
   },
   {
@@ -25,7 +81,10 @@
     "price": 12.99,
     "description": "JAKO trucker cap in red and black with the FC Vezhdanisht crest on the front.",
     "images": [
-      { "src": "assets/store/cap.jpg", "label": "Cap" }
+      {
+        "src": "assets/store/cap.jpg",
+        "label": "Cap"
+      }
     ]
   },
   {
@@ -34,7 +93,10 @@
     "price": 15.99,
     "description": "White football with red and black striped panels and the FC Vezhdanisht crest.",
     "images": [
-      { "src": "assets/store/ball.jpg", "label": "Ball" }
+      {
+        "src": "assets/store/ball.jpg",
+        "label": "Ball"
+      }
     ]
   },
   {
@@ -43,7 +105,10 @@
     "price": 27.99,
     "description": "JAKO sports bag in club red with the FC Vezhdanisht crest, shoulder strap and side pockets.",
     "images": [
-      { "src": "assets/store/bag.jpg", "label": "Bag" }
+      {
+        "src": "assets/store/bag.jpg",
+        "label": "Bag"
+      }
     ]
   }
 ]
