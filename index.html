@@ -458,7 +458,7 @@
 
     <!-- TOP SCORERS (from the club's Excel via data/scorers.json) -->
     <section id="scorers" class="bg-brand-black py-16 border-t border-white/10 scroll-mt-24">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex flex-wrap items-end justify-between gap-x-4 gap-y-1 mb-6 pb-3 border-b border-white/10">
                 <div>
                     <span class="text-brand-red text-xs font-bold tracking-widest uppercase">Season 2026</span>
@@ -466,7 +466,7 @@
                 </div>
                 <span id="scorers-total" class="text-xs font-bold uppercase text-gray-400"></span>
             </div>
-            <ol id="scorers-list" class="space-y-2">
+            <ol id="scorers-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
                 <li class="text-sm text-gray-400">Loading scorers…</li>
             </ol>
             <p id="scorers-updated" class="text-[11px] text-gray-500 mt-4"></p>
@@ -955,7 +955,6 @@
             const norm = s => String(s).toLowerCase().replace(/\s+/g, ' ').trim();
             const numberOf = Object.fromEntries(roster.map(p => [norm(p.name), p.number]));
             const list = data.scorers || [];
-            const top = Math.max(1, ...list.map(s => s.goals));
             let rank = 0, prev = null;
             document.getElementById('scorers-list').innerHTML = list.map((s, i) => {
                 if (s.goals !== prev) { rank = i + 1; prev = s.goals; }   // equal goals share a rank
@@ -963,15 +962,20 @@
                 const num = numberOf[norm(s.name)];
                 const parts = s.name.split(' ');
                 const last = parts.pop();
-                return `<li class="flex items-center gap-3 sm:gap-4 rounded-xl px-3 sm:px-4 py-3 ${podium ? 'bg-brand-red/15 border border-brand-red/50' : 'bg-brand-card border border-white/5'}">
-                    <span class="w-6 text-center font-teko text-2xl font-black ${rank === 1 ? 'text-brand-accent' : podium ? 'text-white' : 'text-gray-500'}">${rank}</span>
-                    <span class="w-10 h-10 sm:w-11 sm:h-11 rounded-full ${podium ? 'bg-brand-red' : 'bg-brand-lightcard'} text-white font-teko text-xl font-black flex items-center justify-center shrink-0">${num ?? '–'}</span>
+                return `<li class="flex items-center gap-3 sm:gap-4 rounded-2xl px-4 sm:px-5 py-4 transition ${rank === 1 ? 'bg-brand-red/15 border border-brand-red' : 'bg-brand-card border border-white/10 hover:border-brand-red/50'}">
+                    <span class="font-semibold text-sm sm:text-base w-8 shrink-0 ${rank === 1 ? 'text-brand-accent' : 'text-gray-400'}">#${rank}</span>
+                    <span class="relative shrink-0">
+                        <span class="w-12 h-12 sm:w-14 sm:h-14 rounded-full ${podium ? 'bg-brand-red' : 'bg-brand-lightcard'} text-white font-teko text-2xl sm:text-3xl font-black flex items-center justify-center">${num ?? '–'}</span>
+                        <img src="assets/logo.png" alt="" class="absolute -bottom-0.5 -right-0.5 w-5 h-5 rounded-full ring-2 ring-brand-card">
+                    </span>
                     <div class="flex-1 min-w-0">
-                        <div class="text-white leading-tight"><span class="text-gray-300 text-xs sm:text-sm">${esc(parts.join(' '))}</span> <span class="font-bold uppercase text-sm sm:text-base">${esc(last)}</span></div>
-                        <div class="mt-1.5 h-1.5 rounded-full bg-white/10 overflow-hidden"><div class="h-full rounded-full ${podium ? 'bg-brand-red' : 'bg-gray-500'}" style="width:${Math.round(s.goals / top * 100)}%"></div></div>
+                        <div class="text-white font-bold text-lg sm:text-xl leading-tight break-words">${esc(last)}</div>
+                        <div class="text-gray-400 text-xs sm:text-sm leading-tight truncate">${parts.length ? esc(parts.join(' ')) : 'FC Vezhdanisht'}</div>
                     </div>
-                    <span class="font-teko text-3xl font-black ${podium ? 'text-brand-accent' : 'text-white'} w-10 text-right">${s.goals}</span>
-                    <i class="fa-solid fa-futbol text-gray-500 text-sm"></i>
+                    <div class="pl-3 sm:pl-4 border-l border-white/10 text-center shrink-0">
+                        <div class="font-teko text-4xl font-black leading-none ${podium ? 'text-brand-accent' : 'text-white'}">${s.goals}</div>
+                        <div class="text-gray-400 text-xs sm:text-sm">${s.goals === 1 ? 'Goal' : 'Goals'}</div>
+                    </div>
                 </li>`;
             }).join('') || '<li class="text-sm text-gray-400">No goals yet.</li>';
             document.getElementById('scorers-total').textContent = `${data.totalGoals ?? 0} goals • ${list.length} scorers`;
