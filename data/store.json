@@ -1,0 +1,49 @@
+[
+  {
+    "name": "Home Jersey",
+    "tag": "2026 Season",
+    "price": 39.99,
+    "description": "Official FC Vezhdanisht home shirt by JAKO in our red and black stripes, with the club crest on the front and FC VEZHDANISHT on the back.",
+    "images": [
+      { "src": "assets/store/jersey-home-front.jpg", "label": "Front" },
+      { "src": "assets/store/jersey-home-back.jpg", "label": "Back" }
+    ]
+  },
+  {
+    "name": "Away Jersey",
+    "tag": "2026 Season",
+    "price": 39.99,
+    "description": "Official FC Vezhdanisht away shirt by JAKO in green and white stripes, with the club crest on the front and FC VEZHDANISHT on the back.",
+    "images": [
+      { "src": "assets/store/jersey-away-front.jpg", "label": "Front" },
+      { "src": "assets/store/jersey-away-back.jpg", "label": "Back" }
+    ]
+  },
+  {
+    "name": "Club Cap",
+    "tag": "Accessories",
+    "price": 12.99,
+    "description": "JAKO trucker cap in red and black with the FC Vezhdanisht crest on the front.",
+    "images": [
+      { "src": "assets/store/cap.jpg", "label": "Cap" }
+    ]
+  },
+  {
+    "name": "Club Ball",
+    "tag": "Accessories",
+    "price": 15.99,
+    "description": "White football with red and black striped panels and the FC Vezhdanisht crest.",
+    "images": [
+      { "src": "assets/store/ball.jpg", "label": "Ball" }
+    ]
+  },
+  {
+    "name": "Sports Bag",
+    "tag": "Accessories",
+    "price": 27.99,
+    "description": "JAKO sports bag in club red with the FC Vezhdanisht crest, shoulder strap and side pockets.",
+    "images": [
+      { "src": "assets/store/bag.jpg", "label": "Bag" }
+    ]
+  }
+]

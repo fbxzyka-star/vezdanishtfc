@@ -420,46 +420,28 @@
 
     </section>
 
-    <!-- STORE -->
+    <!-- STORE (products from data/store.json) -->
     <section id="store" class="bg-brand-charcoal py-16 border-t border-white/10 scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <span class="text-brand-red text-xs font-bold tracking-widest uppercase">Official Merchandise</span>
             <h2 class="text-4xl font-black font-teko uppercase text-white tracking-wide mb-8">STORE</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl">
-                <!-- Product images: front / back -->
-                <div class="relative">
-                    <div id="jersey-track" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth rounded-2xl no-scrollbar bg-[#ededed]" aria-roledescription="carousel" aria-label="Home jersey images">
-                        <img src="assets/store/jersey-home-front.jpg" alt="FC Vezhdanisht home jersey, front" width="900" height="1000" loading="lazy" class="w-full shrink-0 snap-center aspect-[9/10] object-contain">
-                        <img src="assets/store/jersey-home-back.jpg" alt="FC Vezhdanisht home jersey, back with name and number" width="900" height="1000" loading="lazy" class="w-full shrink-0 snap-center aspect-[9/10] object-contain">
-                    </div>
-                    <button type="button" onclick="jerseyGo(jerseyCur - 1)" aria-label="Previous image"
-                            class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 hover:bg-brand-red text-white flex items-center justify-center transition">
-                        <i class="fa-solid fa-chevron-left"></i>
-                    </button>
-                    <button type="button" onclick="jerseyGo(jerseyCur + 1)" aria-label="Next image"
-                            class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 hover:bg-brand-red text-white flex items-center justify-center transition">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </button>
-                    <div class="flex justify-center gap-2 mt-4" id="jersey-tabs">
-                        <button type="button" onclick="jerseyGo(0)" class="px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-brand-red text-white transition">Front</button>
-                        <button type="button" onclick="jerseyGo(1)" class="px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-brand-card text-gray-300 transition">Back</button>
-                    </div>
+            <div class="relative">
+                <div id="store-track" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar" aria-roledescription="carousel" aria-label="Products">
+                    <div class="w-full shrink-0 p-10 text-center text-gray-400 text-sm">Loading products…</div>
                 </div>
-
-                <!-- Product info -->
-                <div>
-                    <span class="inline-block bg-brand-red/20 border border-brand-red/50 text-brand-accent text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full mb-3">2026 Season</span>
-                    <h3 class="text-4xl sm:text-5xl font-black font-teko uppercase text-white leading-none mb-2">Home Jersey</h3>
-                    <p class="text-gray-400 text-sm mb-5">Official FC Vezhdanisht home shirt by JAKO in our red and black stripes, with the club crest on the front and FC VEZHDANISHT on the back.</p>
-                    <div class="font-teko text-5xl font-black text-brand-red mb-6">€39.99</div>
-                    <a href="mailto:contact@vezhdanishtfc.com?subject=Order%3A%20Home%20Jersey%20(%E2%82%AC39.99)&body=Hello%2C%0A%0AI%20would%20like%20to%20order%20the%20home%20jersey.%0A%0ASize%3A%20%0AQuantity%3A%20%0AName%20and%20number%20on%20the%20back%20(optional)%3A%20%0A%0AThank%20you!"
-                       class="inline-flex items-center gap-3 bg-brand-red hover:bg-brand-accent text-white px-7 py-3.5 rounded-xl font-bold uppercase text-sm tracking-wider transition red-glow">
-                        <i class="fa-solid fa-bag-shopping"></i> Order now
-                    </a>
-                    <p class="text-[11px] text-gray-500 mt-3">Orders by email or phone: <a href="tel:+32493877223" class="text-gray-400 hover:text-white">0493 87 72 23</a></p>
-                </div>
+                <button type="button" onclick="storeGo(storeCur - 1)" aria-label="Previous product"
+                        class="absolute left-0 top-[38%] md:top-1/2 -translate-y-1/2 w-10 h-14 sm:w-12 sm:h-16 bg-black/80 hover:bg-brand-red text-white flex items-center justify-center transition rounded-r-lg z-10">
+                    <i class="fa-solid fa-chevron-left text-lg"></i>
+                </button>
+                <button type="button" onclick="storeGo(storeCur + 1)" aria-label="Next product"
+                        class="absolute right-0 top-[38%] md:top-1/2 -translate-y-1/2 w-10 h-14 sm:w-12 sm:h-16 bg-black/80 hover:bg-brand-red text-white flex items-center justify-center transition rounded-l-lg z-10">
+                    <i class="fa-solid fa-chevron-right text-lg"></i>
+                </button>
             </div>
+
+            <!-- Product thumbnails -->
+            <div id="store-thumbs" class="flex flex-wrap justify-center gap-2 mt-6"></div>
         </div>
     </section>
 
@@ -813,31 +795,92 @@
             btn.innerHTML = show ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
         }
 
-        // Store: jersey front/back slider
-        let jerseyCur = 0;
-        function jerseyGo(i) {
-            const t = document.getElementById('jersey-track');
+        // Store: product carousel (data/store.json); each product can have several views (e.g. Front/Back)
+        let storeCur = 0;
+        const STORE_EMAIL = 'contact@vezhdanishtfc.com';
+        const fmtPrice = v => '€' + Number(v).toFixed(2);
+        function storeGo(i) {
+            const t = document.getElementById('store-track');
             const n = t.children.length;
-            jerseyCur = ((i % n) + n) % n;
-            t.scrollTo({ left: jerseyCur * t.clientWidth, behavior: 'smooth' });
-            jerseyTabs();
+            storeCur = ((i % n) + n) % n;
+            t.scrollTo({ left: storeCur * t.clientWidth, behavior: 'smooth' });
+            storeThumbs();
         }
-        function jerseyTabs() {
-            document.querySelectorAll('#jersey-tabs button').forEach((b, j) => {
-                const on = j === jerseyCur;
+        function storeThumbs() {
+            document.querySelectorAll('#store-thumbs button').forEach((b, j) => {
+                b.classList.toggle('ring-2', j === storeCur);
+                b.classList.toggle('ring-brand-red', j === storeCur);
+                b.classList.toggle('opacity-60', j !== storeCur);
+            });
+        }
+        function productView(p, v) {
+            const card = document.querySelector(`#store-track article[data-p="${p}"]`);
+            card.querySelectorAll('[data-view]').forEach(img => img.classList.toggle('opacity-0', +img.dataset.view !== v));
+            card.querySelectorAll('[data-viewbtn]').forEach(b => {
+                const on = +b.dataset.viewbtn === v;
                 b.classList.toggle('bg-brand-red', on); b.classList.toggle('text-white', on);
                 b.classList.toggle('bg-brand-card', !on); b.classList.toggle('text-gray-300', !on);
             });
+            card.dataset.v = v;
         }
-        (() => {
-            const t = document.getElementById('jersey-track');
-            let settle;
-            t.addEventListener('scroll', () => {
-                clearTimeout(settle);
-                settle = setTimeout(() => { jerseyCur = Math.round(t.scrollLeft / t.clientWidth); jerseyTabs(); }, 150);
-            });
-            window.addEventListener('resize', () => { t.scrollLeft = jerseyCur * t.clientWidth; });
-        })();
+        function productFlip(p) {
+            const card = document.querySelector(`#store-track article[data-p="${p}"]`);
+            const n = card.querySelectorAll('[data-view]').length;
+            productView(p, ((+card.dataset.v || 0) + 1) % n);
+        }
+        fetch('data/store.json', { cache: 'no-cache' })
+            .then(r => r.json())
+            .then(products => {
+                const track = document.getElementById('store-track');
+                track.innerHTML = products.map((p, i) => {
+                    const imgs = p.images || [];
+                    const multi = imgs.length > 1;
+                    const mail = 'mailto:' + STORE_EMAIL
+                        + '?subject=' + encodeURIComponent(`Order: ${p.name} (${fmtPrice(p.price)})`)
+                        + '&body=' + encodeURIComponent(`Hello,\n\nI would like to order: ${p.name} (${fmtPrice(p.price)}).\n\n`
+                            + (/jersey/i.test(p.name) ? 'Size: \nQuantity: \nName and number on the back (optional): \n' : 'Quantity: \n')
+                            + '\nThank you!');
+                    return `<article data-p="${i}" data-v="0" class="w-full shrink-0 snap-center px-12 sm:px-16" aria-label="${esc(p.name)}">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center max-w-5xl mx-auto">
+                            <div>
+                                <div class="relative rounded-2xl overflow-hidden bg-[#ededed] aspect-[9/10] ${multi ? 'cursor-pointer' : ''}" ${multi ? `onclick="productFlip(${i})" title="Tap to see the other side"` : ''}>
+                                    ${imgs.map((im, k) => `<img data-view="${k}" src="${esc(im.src)}" alt="${esc(p.name)} – ${esc(im.label)}" width="900" height="1000" loading="lazy"
+                                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ${k ? 'opacity-0' : ''}">`).join('')}
+                                    ${multi ? '<span class="absolute bottom-3 right-3 bg-black/70 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full"><i class="fa-solid fa-rotate mr-1"></i> Tap to flip</span>' : ''}
+                                </div>
+                                ${multi ? `<div class="flex justify-center gap-2 mt-4">${imgs.map((im, k) =>
+                                    `<button type="button" data-viewbtn="${k}" onclick="productView(${i}, ${k})" class="px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider transition ${k ? 'bg-brand-card text-gray-300' : 'bg-brand-red text-white'}">${esc(im.label)}</button>`
+                                ).join('')}</div>` : ''}
+                            </div>
+                            <div class="text-center md:text-left">
+                                ${p.tag ? `<span class="inline-block bg-brand-red/20 border border-brand-red/50 text-brand-accent text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full mb-3">${esc(p.tag)}</span>` : ''}
+                                <h3 class="text-4xl sm:text-5xl font-black font-teko uppercase text-white leading-none mb-2">${esc(p.name)}</h3>
+                                ${p.description ? `<p class="text-gray-400 text-sm mb-5">${esc(p.description)}</p>` : ''}
+                                <div class="font-teko text-5xl font-black text-brand-red mb-6">${fmtPrice(p.price)}</div>
+                                <a href="${mail}" class="inline-flex items-center gap-3 bg-brand-red hover:bg-brand-accent text-white px-7 py-3.5 rounded-xl font-bold uppercase text-sm tracking-wider transition red-glow">
+                                    <i class="fa-solid fa-bag-shopping"></i> Order now
+                                </a>
+                                <p class="text-[11px] text-gray-500 mt-3">Orders by email or phone: <a href="tel:+32493877223" class="text-gray-400 hover:text-white">0493 87 72 23</a></p>
+                                <p class="text-[11px] text-gray-500 mt-1">${i + 1} / ${products.length}</p>
+                            </div>
+                        </div>
+                    </article>`;
+                }).join('');
+                document.getElementById('store-thumbs').innerHTML = products.map((p, i) =>
+                    `<button type="button" onclick="storeGo(${i})" aria-label="${esc(p.name)} – ${fmtPrice(p.price)}" title="${esc(p.name)}"
+                        class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-[#ededed] transition hover:opacity-100">
+                        <img src="${esc(p.images[0].src)}" alt="" class="w-full h-full object-contain" loading="lazy">
+                    </button>`
+                ).join('');
+                let settle;
+                track.addEventListener('scroll', () => {
+                    clearTimeout(settle);
+                    settle = setTimeout(() => { storeCur = Math.round(track.scrollLeft / track.clientWidth); storeThumbs(); }, 150);
+                });
+                window.addEventListener('resize', () => { track.scrollLeft = storeCur * track.clientWidth; });
+                storeThumbs();
+            })
+            .catch(err => console.error('Could not load data/store.json', err));
 
         // Roster carousel
         // rosterCur is the slide we are on (or heading to), so fast clicks during a smooth scroll stay correct.
