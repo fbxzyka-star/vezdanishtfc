@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FC Vezhdanisht Rumst | Official Website</title>
-    <meta name="description" content="Official website of FC Vezhdanisht Rumst, futsal club in 2 Prov. Antwerpen (RBFA). Live results, fixtures, standings, roster and club history.">
+    <meta name="description" content="Official website of FC Vezhdanisht Rumst, futsal club in 2 Prov. Antwerpen (RBFA). Live results, fixtures, standings, our team and club history.">
     <link rel="canonical" href="https://vezhdanishtfc.com/">
     <!-- Icons (Google search uses a square favicon that is a multiple of 48px) -->
     <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -16,7 +16,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="FC Vezhdanisht Rumst">
     <meta property="og:title" content="FC Vezhdanisht Rumst | Official Website">
-    <meta property="og:description" content="Official website of FC Vezhdanisht Rumst, futsal club in 2 Prov. Antwerpen (RBFA). Live results, fixtures, standings, roster and club history.">
+    <meta property="og:description" content="Official website of FC Vezhdanisht Rumst, futsal club in 2 Prov. Antwerpen (RBFA). Live results, fixtures, standings, our team and club history.">
     <meta property="og:url" content="https://vezhdanishtfc.com/">
     <meta property="og:image" content="https://vezhdanishtfc.com/assets/logo.png">
     <!-- Club info for search engines -->
@@ -185,7 +185,7 @@
                 <a href="#matches" class="hover:text-brand-accent transition pb-1">Matches</a>
                 <a href="#schedule" class="hover:text-brand-accent transition pb-1">Fixtures</a>
                 <a href="#standings" class="hover:text-brand-accent transition pb-1">Standings</a>
-                <a href="#roster" class="hover:text-brand-accent transition pb-1">Roster</a>
+                <a href="#our team" class="hover:text-brand-accent transition pb-1">our team</a>
                 <a href="#history" class="hover:text-brand-accent transition pb-1">History</a>
             </nav>
 
@@ -210,7 +210,7 @@
                 <a href="#schedule" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Fixtures</a>
                 <a href="#standings" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Standings</a>
                 <a href="#store" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Store</a>
-                <a href="#roster" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Roster</a>
+                <a href="#our team" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">our team</a>
                 <a href="#history" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">History</a>
                 <a href="#stadium" class="py-3 border-b border-white/5" onclick="toggleMenu(false)">Stadium</a>
                 <a href="#contact" class="py-3" onclick="toggleMenu(false)">Contact</a>
@@ -445,11 +445,11 @@
         </div>
     </section>
 
-    <!-- ROSTER (players from data/roster.json) -->
-    <section id="roster" class="bg-brand-black py-16 border-t border-white/10 scroll-mt-24">
+    <!-- our team (players from data/roster.json) -->
+    <section id="our team" class="bg-brand-black py-16 border-t border-white/10 scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <span class="text-brand-red text-xs font-bold tracking-widest uppercase">First Team</span>
-            <h2 class="text-4xl font-black font-teko uppercase text-white tracking-wide mb-6">ROSTER</h2>
+            <h2 class="text-4xl font-black font-teko uppercase text-white tracking-wide mb-6">our team</h2>
 
             <div class="relative">
                 <div id="roster-track" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth rounded-2xl no-scrollbar" aria-roledescription="carousel" aria-label="Players">
@@ -491,7 +491,7 @@
                     </li>
                     <li class="flex gap-4 items-start bg-brand-red/15 border border-brand-red rounded-xl p-4">
                         <span class="font-teko text-2xl font-black text-brand-accent leading-none shrink-0">2026</span>
-                        <span>The major breakthrough came in 2026, when FC Vezhdanisht officially stepped up to Provincial 2 Antwerp (RBFA). Backed by key new transfers and a re-energized roster, the club built a formidable team that hit the ground running with a strong start to the season.</span>
+                        <span>The major breakthrough came in 2026, when FC Vezhdanisht officially stepped up to Provincial 2 Antwerp (RBFA). Backed by key new transfers and a re-energized our team, the club built a formidable team that hit the ground running with a strong start to the season.</span>
                     </li>
                 </ul>
                 <p>Today, FC Vezhdanisht continues to push its boundaries—driven by the vision of its founder, the guidance of its club legend, and the ambition of every player wearing the badge.</p>
@@ -567,7 +567,7 @@
                     <h5 class="text-white text-xs font-black uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">CLUB</h5>
                     <ul class="space-y-2 text-xs text-gray-400">
                         <li><a href="#store" class="hover:text-white transition">Store</a></li>
-                        <li><a href="#roster" class="hover:text-white transition">Roster</a></li>
+                        <li><a href="#our team" class="hover:text-white transition">our team</a></li>
                         <li><a href="#history" class="hover:text-white transition">History</a></li>
                         <li><a href="#stadium" class="hover:text-white transition">Stadium</a></li>
                         <li><a href="https://www.rbfa.be/nl/club/10000/info" target="_blank" rel="noopener" class="hover:text-white transition">RBFA</a></li>
@@ -883,7 +883,7 @@
             })
             .catch(err => console.error('Could not load data/store.json', err));
 
-        // Roster carousel
+        // our team carousel
         // rosterCur is the slide we are on (or heading to), so fast clicks during a smooth scroll stay correct.
         let rosterCur = 0;
         function rosterIndex() {
