@@ -563,9 +563,24 @@
       "goalDifference": 14
     },
     {
+      "teamId": "373694",
+      "name": "FC LOS INCAS ANTWERPEN",
+      "position": 4,
+      "clubId": "9722",
+      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/no_logo.jpg",
+      "points": 13,
+      "matchesPlayed": 8,
+      "matchesWon": 4,
+      "matchesLost": 3,
+      "matchesDrawn": 1,
+      "goalsFor": 37,
+      "goalsAgainst": 40,
+      "goalDifference": -3
+    },
+    {
       "teamId": "372316",
       "name": "FT FUSION UNITED ANTWERP",
-      "position": 4,
+      "position": 5,
       "clubId": "9507",
       "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27649.jpg",
       "points": 12,
@@ -578,33 +593,18 @@
       "goalDifference": 19
     },
     {
-      "teamId": "373694",
-      "name": "FC LOS INCAS ANTWERPEN",
-      "position": 5,
-      "clubId": "9722",
-      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/no_logo.jpg",
-      "points": 12,
-      "matchesPlayed": 7,
-      "matchesWon": 4,
-      "matchesLost": 3,
-      "matchesDrawn": 0,
-      "goalsFor": 32,
-      "goalsAgainst": 35,
-      "goalDifference": -3
-    },
-    {
       "teamId": "370975",
       "name": "FUTSAL CLUB ANTWERPEN UNITED B",
       "position": 6,
       "clubId": "9760",
       "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27717.jpg",
-      "points": 10,
-      "matchesPlayed": 7,
+      "points": 11,
+      "matchesPlayed": 8,
       "matchesWon": 3,
       "matchesLost": 3,
-      "matchesDrawn": 1,
-      "goalsFor": 25,
-      "goalsAgainst": 25,
+      "matchesDrawn": 2,
+      "goalsFor": 30,
+      "goalsAgainst": 30,
       "goalDifference": 0
     },
     {
@@ -699,5 +699,5 @@
     }
   ],
   "source": "https://www.voetbalvlaanderen.be/club/10000/komende-wedstrijden",
-  "updatedAt": "2026-11-07T20:02:14+00:00"
+  "updatedAt": "2026-11-09T21:53:35+00:00"
 }
