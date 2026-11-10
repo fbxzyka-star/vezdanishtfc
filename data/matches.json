@@ -127,13 +127,13 @@
     {
       "id": "7614540",
       "start": "2026-11-10T22:00:00+01:00",
-      "state": "planned",
+      "state": "postponed",
       "series": "2 Prov. Antwerpen",
       "home": {
         "id": "372363",
         "name": "MERIDIAN ANTWERPEN",
         "clubId": "10003",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/no_logo.jpg"
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27776.jpg"
       },
       "away": {
         "id": "369334",
@@ -143,7 +143,7 @@
       },
       "homeGoals": null,
       "awayGoals": null,
-      "status": "planned",
+      "status": "postponed",
       "isHome": false,
       "result": null
     },
@@ -930,5 +930,5 @@
   ],
   "leagueCalendarUrl": "https://www.voetbalvlaanderen.be/competitie/CHP_130260/kalender",
   "source": "https://www.voetbalvlaanderen.be/club/10000/komende-wedstrijden",
-  "updatedAt": "2026-11-10T17:33:36+00:00"
+  "updatedAt": "2026-11-10T21:25:17+00:00"
 }
