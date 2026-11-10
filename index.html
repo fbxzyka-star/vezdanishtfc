@@ -775,13 +775,15 @@
                         : `<span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 text-[10px] font-bold text-gray-300 flex items-center justify-center shrink-0">${initials}</span>`;
                 const gd = t.goalDifference > 0 ? '+' + t.goalDifference : t.goalDifference;
                 const cell = 'py-2.5 px-1.5 sm:px-3 text-center';
-                return `<tr class="border-b border-white/5 last:border-0 ${us ? 'bg-brand-red/20 text-white font-semibold' : 'text-gray-300 hover:bg-white/5'}">
+                // Each team links to its calendar on Voetbal Vlaanderen
+                const teamUrl = `https://www.voetbalvlaanderen.be/club/${encodeURIComponent(t.clubId)}/ploeg/${encodeURIComponent(t.teamId)}/kalender`;
+                return `<tr data-href="${teamUrl}" onclick="if (!event.target.closest('a')) window.open(this.dataset.href, '_blank', 'noopener')" class="cursor-pointer border-b border-white/5 last:border-0 ${us ? 'bg-brand-red/20 text-white font-semibold hover:bg-brand-red/30' : 'text-gray-300 hover:bg-white/5'}">
                     <td class="py-2.5 pl-3 sm:pl-5 pr-2 font-bold ${us ? 'text-brand-accent border-l-4 border-brand-red' : ''}">${t.position}</td>
                     <td class="py-2.5 px-2">
-                        <div class="flex items-center gap-2 sm:gap-3 min-w-[140px]">
+                        <a href="${teamUrl}" target="_blank" rel="noopener" title="${esc(t.name)} on Voetbal Vlaanderen" class="flex items-center gap-2 sm:gap-3 min-w-[140px] group">
                             ${logo}
-                            <span class="leading-tight ${us ? 'font-bold' : ''}">${esc(t.name)}</span>
-                        </div>
+                            <span class="leading-tight group-hover:underline ${us ? 'font-bold' : ''}">${esc(t.name)}</span>
+                        </a>
                     </td>
                     <td class="${cell}">${t.matchesPlayed}</td>
                     <td class="${cell}">${t.matchesWon}</td>
