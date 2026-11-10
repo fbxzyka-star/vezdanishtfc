@@ -310,7 +310,7 @@
 
                     <!-- Countdown Timer -->
                     <div class="bg-black/50 border border-white/5 rounded-xl p-3 my-4">
-                        <div class="text-[11px] uppercase tracking-wider text-center text-gray-400 mb-2 font-bold">
+                        <div id="cd-label" class="text-[11px] uppercase tracking-wider text-center text-gray-400 mb-2 font-bold">
                             Kick-off in
                         </div>
                         <div class="grid grid-cols-4 gap-2 text-center" id="countdown">
@@ -716,7 +716,8 @@
                 D: ['bg-white/10 text-gray-300', 'DRAW (FT)'],
                 L: ['bg-red-900/40 text-red-300', 'LOSS (FT)'],
                 next: ['bg-brand-red text-white', 'NEXT'],
-                later: ['bg-white/10 text-gray-300', m.isHome ? 'HOME' : 'AWAY']
+                later: ['bg-white/10 text-gray-300', m.isHome ? 'HOME' : 'AWAY'],
+                off: ['bg-amber-500/20 text-amber-300', m.state === 'postponed' ? 'POSTPONED' : m.state === 'forfeit' ? 'FORFEIT' : 'CANCELLED']
             };
             const [badgeClass, badgeText] = badges[kind === 'last' || kind === 'played' ? m.result : kind];
             const featured = kind === 'next';
@@ -734,7 +735,9 @@
         function renderData(data) {
             const now = Date.now();
             const played = data.matches.filter(m => m.result);
-            const upcoming = data.matches.filter(m => !m.result && new Date(m.start).getTime() > now - 2 * 3600e3);
+            // Postponed / cancelled / forfeited games are not 'next'; a game stays 'next' until 2h after kick-off
+            const OFF = ['postponed', 'canceled', 'cancelled', 'forfeit'];
+            const upcoming = data.matches.filter(m => !m.result && !OFF.includes(m.state) && new Date(m.start).getTime() > now - 2 * 3600e3);
             const last = played[played.length - 1];
             const next = upcoming[0];
 
@@ -756,7 +759,7 @@
             // All season matches in one slider; it opens on the latest result (then next match, then later ones)
             const grid = document.getElementById('matches-grid');
             grid.innerHTML = data.matches.map(m =>
-                matchCard(m, m.result ? 'played' : (next && m.id === next.id) ? 'next' : 'later')
+                matchCard(m, m.result ? 'played' : OFF.includes(m.state) ? 'off' : (next && m.id === next.id) ? 'next' : 'later')
             ).join('') || '<div class="text-sm text-gray-400">No matches.</div>';
             const startIdx = last ? data.matches.indexOf(last) : (next ? data.matches.indexOf(next) : 0);
             requestAnimationFrame(() => matchesGo(startIdx, 'instant'));
@@ -810,7 +813,7 @@
                     <span class="col-span-5 sm:col-span-3 text-right leading-tight break-words min-w-0">${name(m.home)}</span>
                     <span class="col-span-2 text-center font-teko text-xl font-black ${m.result ? 'text-white' : 'text-gray-500'}">${score}</span>
                     <span class="col-span-5 sm:col-span-3 leading-tight break-words min-w-0">${name(m.away)}</span>
-                    <span class="hidden sm:block sm:col-span-1 text-right">${m.result ? resultBadge[m.result] : (isNext ? '<span class="bg-brand-red text-white font-bold px-2 py-0.5 rounded text-[10px]">NEXT</span>' : '')}</span>
+                    <span class="hidden sm:block sm:col-span-1 text-right">${m.result ? resultBadge[m.result] : OFF.includes(m.state) ? `<span class="bg-amber-500/20 text-amber-300 font-bold px-2 py-0.5 rounded text-[10px]" title="${esc(m.state)}">${m.state === 'postponed' ? 'PPD' : m.state === 'forfeit' ? 'FF' : 'CANC'}</span>` : (isNext ? '<span class="bg-brand-red text-white font-bold px-2 py-0.5 rounded text-[10px]">NEXT</span>' : '')}</span>
                 </div>`;
             }).join('');
             const rec = { W: 0, D: 0, L: 0 };
@@ -1103,6 +1106,8 @@
         // Countdown to the next match
         function updateCountdown() {
             const diff = nextMatchTime ? Math.max(0, nextMatchTime - Date.now()) : 0;
+            const label = document.getElementById('cd-label');
+            if (label) label.textContent = !nextMatchTime ? 'No match scheduled' : diff === 0 ? 'Match in progress' : 'Kick-off in';
 
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
             const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
