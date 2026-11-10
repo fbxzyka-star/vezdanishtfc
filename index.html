@@ -341,6 +341,24 @@
         </div>
     </section>
 
+    <!-- LATEST RESULTS OF THE WHOLE LEAGUE (from data/matches.json → leagueResults) -->
+    <section id="league-results" class="bg-brand-black border-t border-white/10 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between gap-4 mb-4">
+                <h2 class="font-teko text-2xl sm:text-3xl font-black uppercase text-white leading-none">
+                    Latest Results <span id="league-results-name" class="text-brand-red"></span>
+                </h2>
+                <a id="league-results-all" href="https://www.voetbalvlaanderen.be/competitie/CHP_130260/kalender" target="_blank" rel="noopener"
+                   class="shrink-0 inline-flex items-center gap-2 bg-brand-red hover:bg-brand-accent text-white text-[11px] sm:text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-lg transition">
+                    All results <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+            <div id="league-results-list" class="flex gap-3 overflow-x-auto snap-x no-scrollbar pb-1">
+                <div class="text-sm text-gray-400">Loading results…</div>
+            </div>
+        </div>
+    </section>
+
     <!-- STRIPE BAR SEPARATOR -->
     <div class="stripe-divider"></div>
 
@@ -811,6 +829,30 @@
             document.getElementById('footer-next').textContent = next
                 ? `${next.home.name} - ${next.away.name}, ${fmtDate(next.start, true)}`
                 : 'No match scheduled.';
+
+            // Latest results of all league teams (strip under the hero)
+            const lr = data.leagueResults || [];
+            if (league) document.getElementById('league-results-name').textContent = `(${league})`;
+            if (data.leagueCalendarUrl) document.getElementById('league-results-all').href = data.leagueCalendarUrl;
+            const lrSide = t => `<span class="flex items-center gap-2 min-w-0 ${isUs(t) ? 'text-white' : 'text-gray-300'}">${smallLogo(t)}<span class="truncate text-xs font-bold uppercase">${esc(t.name)}</span></span>`;
+            document.getElementById('league-results-list').innerHTML = lr.map(m => {
+                const live = m.state === 'started';
+                const badge = live ? '<span class="px-1.5 py-0.5 rounded font-bold bg-brand-red text-white animate-pulse">LIVE</span>'
+                    : m.state === 'forfeit' ? '<span class="px-1.5 py-0.5 rounded font-bold bg-white/10 text-gray-300">FF</span>'
+                    : '<span class="px-1.5 py-0.5 rounded font-bold bg-white/10 text-gray-400">FT</span>';
+                const ours = isUs(m.home) || isUs(m.away);
+                return `<a href="https://www.voetbalvlaanderen.be/wedstrijd/${encodeURIComponent(m.id)}" target="_blank" rel="noopener"
+                    class="snap-start shrink-0 w-[260px] sm:w-[300px] rounded-xl px-3 py-2.5 transition ${ours ? 'bg-brand-red/15 border border-brand-red/60' : 'bg-brand-card border border-white/10 hover:border-brand-red/50'}">
+                    <div class="flex items-center justify-between text-[10px] text-gray-500 mb-1.5">
+                        <span>${esc(fmtDate(m.start))}</span>
+                        ${badge}
+                    </div>
+                    <div class="grid grid-cols-[1fr_auto] items-center gap-x-3 gap-y-1.5">
+                        ${lrSide(m.home)}<span class="font-teko text-2xl font-black text-white leading-none text-right">${m.homeGoals ?? '-'}</span>
+                        ${lrSide(m.away)}<span class="font-teko text-2xl font-black text-white leading-none text-right">${m.awayGoals ?? '-'}</span>
+                    </div>
+                </a>`;
+            }).join('') || '<div class="text-sm text-gray-400">No results yet.</div>';
 
             if (data.updatedAt) {
                 document.getElementById('data-updated').textContent =

@@ -54,6 +54,22 @@ query GetSeriesRankings ($seriesId: ID!, $language: Language!) {
 """
 
 
+SERIES_CALENDAR = """
+query GetSeriesCalendar($seriesId: ID!, $endDate: String!, $startDate: String!, $language: Language!) {
+  seriesCalendar(seriesId: $seriesId, startDate: $startDate, endDate: $endDate, language: $language) {
+    id
+    state
+    startTime
+    homeTeam { id name clubId logo }
+    awayTeam { id name clubId logo }
+    outcome { status homeTeamGoals awayTeamGoals }
+  }
+}
+"""
+
+LEAGUE_RESULTS = 12  # how many recent league results (all teams) to keep for the "Latest results" strip
+
+
 def gql(operation, query, variables):
     body = json.dumps({"operationName": operation, "query": query, "variables": variables}).encode()
     req = urllib.request.Request(
@@ -109,11 +125,35 @@ def main():
     general = next((r for r in rk["rankings"] if r["type"] == "generalRanking"), rk["rankings"][0] if rk["rankings"] else None)
     standings = sorted(general["teams"], key=lambda t: t["position"]) if general else []
 
+    # Latest results of every team in the league (newest first), incl. live and forfeited games.
+    today = datetime.now(TZ).date()
+    season_start = today.year if today.month >= 7 else today.year - 1
+    cal = gql("GetSeriesCalendar", SERIES_CALENDAR, {
+        "seriesId": series_id, "language": LANGUAGE,
+        "startDate": f"{season_start}-07-01", "endDate": f"{season_start + 1}-06-30",
+    })["seriesCalendar"] or []
+    shown = [m for m in cal if m.get("state") in ("finished", "started", "forfeit")]
+    shown.sort(key=lambda m: m["startTime"], reverse=True)
+    league_results = []
+    for m in shown[:LEAGUE_RESULTS]:
+        o = m.get("outcome") or {}
+        league_results.append({
+            "id": m["id"],
+            "start": datetime.fromisoformat(m["startTime"]).replace(tzinfo=TZ).isoformat(),
+            "state": m["state"],
+            "home": team(m["homeTeam"]),
+            "away": team(m["awayTeam"]),
+            "homeGoals": o.get("homeTeamGoals"),
+            "awayGoals": o.get("awayTeamGoals"),
+        })
+
     data = {
         "club": {"id": CLUB_ID, "teamId": TEAM_ID, "name": "FC VEZHDANISHT RUMST"},
         "series": {"id": series_id, "name": rk["name"]},
         "matches": matches,
         "standings": standings,
+        "leagueResults": league_results,
+        "leagueCalendarUrl": f"https://www.voetbalvlaanderen.be/competitie/{series_id}/kalender",
         "source": f"https://www.voetbalvlaanderen.be/club/{CLUB_ID}/komende-wedstrijden",
     }
 

@@ -698,6 +698,237 @@
       "goalDifference": -22
     }
   ],
+  "leagueResults": [
+    {
+      "id": "7614539",
+      "start": "2026-11-09T21:00:00+01:00",
+      "state": "finished",
+      "home": {
+        "id": "370975",
+        "name": "FUTSAL CLUB ANTWERPEN UNI B",
+        "clubId": "9760",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27717.jpg"
+      },
+      "away": {
+        "id": "373694",
+        "name": "FC Los Incas Antwerpen",
+        "clubId": "9722",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/no_logo.jpg"
+      },
+      "homeGoals": 5,
+      "awayGoals": 5
+    },
+    {
+      "id": "7614538",
+      "start": "2026-11-06T20:30:00+01:00",
+      "state": "finished",
+      "home": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "away": {
+        "id": "370975",
+        "name": "FUTSAL CLUB ANTWERPEN UNI B",
+        "clubId": "9760",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27717.jpg"
+      },
+      "homeGoals": 6,
+      "awayGoals": 2
+    },
+    {
+      "id": "7614498",
+      "start": "2026-11-02T22:00:00+01:00",
+      "state": "finished",
+      "home": {
+        "id": "373484",
+        "name": "FT FIT2PLAY HERENTALS",
+        "clubId": "9887",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27761.jpg"
+      },
+      "away": {
+        "id": "367155",
+        "name": "Futsal Atlas Lions Hoboken A",
+        "clubId": "9618",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27675.jpg"
+      },
+      "homeGoals": 4,
+      "awayGoals": 3
+    },
+    {
+      "id": "7614536",
+      "start": "2026-10-28T22:00:00+01:00",
+      "state": "finished",
+      "home": {
+        "id": "367333",
+        "name": "Elite Kiel Antwerpen B",
+        "clubId": "9632",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27687.jpg"
+      },
+      "away": {
+        "id": "367157",
+        "name": "Futsal Atlas Lions Hoboken B",
+        "clubId": "9618",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27675.jpg"
+      },
+      "homeGoals": 8,
+      "awayGoals": 3
+    },
+    {
+      "id": "7614537",
+      "start": "2026-10-28T21:00:00+01:00",
+      "state": "finished",
+      "home": {
+        "id": "374571",
+        "name": "FT ASSYRISKA ANTWERPEN",
+        "clubId": "9838",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27742.jpg"
+      },
+      "away": {
+        "id": "375176",
+        "name": "KONINKLIJKE DOVEN SPORT A",
+        "clubId": "9891",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27765.jpg"
+      },
+      "homeGoals": 3,
+      "awayGoals": 1
+    },
+    {
+      "id": "7614535",
+      "start": "2026-10-27T22:00:00+01:00",
+      "state": "finished",
+      "home": {
+        "id": "373694",
+        "name": "FC Los Incas Antwerpen",
+        "clubId": "9722",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/no_logo.jpg"
+      },
+      "away": {
+        "id": "364937",
+        "name": "ZVK LEEST B",
+        "clubId": "9784",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27731.jpg"
+      },
+      "homeGoals": 9,
+      "awayGoals": 8
+    },
+    {
+      "id": "7614533",
+      "start": "2026-10-26T20:00:00+01:00",
+      "state": "finished",
+      "home": {
+        "id": "367155",
+        "name": "Futsal Atlas Lions Hoboken A",
+        "clubId": "9618",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27675.jpg"
+      },
+      "away": {
+        "id": "372363",
+        "name": "MERIDIAN ANTWERPEN",
+        "clubId": "10003",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27776.jpg"
+      },
+      "homeGoals": 1,
+      "awayGoals": 3
+    },
+    {
+      "id": "7614532",
+      "start": "2026-10-23T22:00:00+02:00",
+      "state": "finished",
+      "home": {
+        "id": "372316",
+        "name": "FT Fusion United Antwerp",
+        "clubId": "9507",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27649.jpg"
+      },
+      "away": {
+        "id": "364937",
+        "name": "ZVK LEEST B",
+        "clubId": "9784",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27731.jpg"
+      },
+      "homeGoals": 13,
+      "awayGoals": 1
+    },
+    {
+      "id": "7614531",
+      "start": "2026-10-23T21:00:00+02:00",
+      "state": "finished",
+      "home": {
+        "id": "367157",
+        "name": "Futsal Atlas Lions Hoboken B",
+        "clubId": "9618",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27675.jpg"
+      },
+      "away": {
+        "id": "373484",
+        "name": "FT FIT2PLAY HERENTALS",
+        "clubId": "9887",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27761.jpg"
+      },
+      "homeGoals": 2,
+      "awayGoals": 7
+    },
+    {
+      "id": "7614529",
+      "start": "2026-10-23T20:30:00+02:00",
+      "state": "finished",
+      "home": {
+        "id": "369334",
+        "name": "FC VEZHDANISHT RUMST",
+        "clubId": "10000",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
+      },
+      "away": {
+        "id": "373694",
+        "name": "FC Los Incas Antwerpen",
+        "clubId": "9722",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/no_logo.jpg"
+      },
+      "homeGoals": 3,
+      "awayGoals": 2
+    },
+    {
+      "id": "7614530",
+      "start": "2026-10-23T19:00:00+02:00",
+      "state": "finished",
+      "home": {
+        "id": "375176",
+        "name": "KONINKLIJKE DOVEN SPORT A",
+        "clubId": "9891",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27765.jpg"
+      },
+      "away": {
+        "id": "367333",
+        "name": "Elite Kiel Antwerpen B",
+        "clubId": "9632",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27687.jpg"
+      },
+      "homeGoals": 5,
+      "awayGoals": 6
+    },
+    {
+      "id": "7614528",
+      "start": "2026-10-20T22:00:00+02:00",
+      "state": "finished",
+      "home": {
+        "id": "372363",
+        "name": "MERIDIAN ANTWERPEN",
+        "clubId": "10003",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27776.jpg"
+      },
+      "away": {
+        "id": "374571",
+        "name": "FT ASSYRISKA ANTWERPEN",
+        "clubId": "9838",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27742.jpg"
+      },
+      "homeGoals": 0,
+      "awayGoals": 2
+    }
+  ],
+  "leagueCalendarUrl": "https://www.voetbalvlaanderen.be/competitie/CHP_130260/kalender",
   "source": "https://www.voetbalvlaanderen.be/club/10000/komende-wedstrijden",
-  "updatedAt": "2026-11-09T21:53:35+00:00"
+  "updatedAt": "2026-11-10T17:33:36+00:00"
 }
