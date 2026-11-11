@@ -19,14 +19,14 @@
     "name": "Away Jersey",
     "tag": "2026 Season",
     "price": 49.99,
-    "description": "Official FC Vezhdanisht away shirt by JAKO in green and white stripes, with the club crest on the front and FC VEZHDANISHT on the back.",
+    "description": "Official FC Vezhdanisht away shirt by JAKO in green and white stripes, with the club crest on the front and a plain white back.",
     "images": [
       {
-        "src": "assets/store/jersey-away-front.jpg",
+        "src": "assets/store/jersey-greenwhite-stripes-front.jpg",
         "label": "Front"
       },
       {
-        "src": "assets/store/jersey-away-back.jpg",
+        "src": "assets/store/jersey-greenwhite-stripes-back.jpg",
         "label": "Back"
       }
     ]
