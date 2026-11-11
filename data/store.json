@@ -3,14 +3,14 @@
     "name": "Home Jersey",
     "tag": "2026 Season",
     "price": 39.99,
-    "description": "Official FC Vezhdanisht home shirt by JAKO in our red and black stripes, with the club crest on the front and FC VEZHDANISHT on the back.",
+    "description": "Official FC Vezhdanisht home shirt by JAKO in red and black stripes, with the club crest on the front and a plain red back.",
     "images": [
       {
-        "src": "assets/store/jersey-home-front.jpg",
+        "src": "assets/store/jersey-redblack-stripes-front.jpg",
         "label": "Front"
       },
       {
-        "src": "assets/store/jersey-home-back.jpg",
+        "src": "assets/store/jersey-redblack-stripes-back.jpg",
         "label": "Back"
       }
     ]
