@@ -32,7 +32,7 @@
     ]
   },
   {
-    "name": "Polo Shirt",
+    "name": "Polo Shirt Red",
     "tag": "Club Wear",
     "price": 44.99,
     "description": "JAKO polo shirt in club red with white collar and patterned white sleeves, with the FC Vezhdanisht crest on the chest.",
@@ -43,6 +43,38 @@
       },
       {
         "src": "assets/store/polo-red-back.jpg",
+        "label": "Back"
+      }
+    ]
+  },
+  {
+    "name": "Polo Shirt Black",
+    "tag": "Club Wear",
+    "price": 44.99,
+    "description": "JAKO polo shirt in black with red collar and patterned red sleeves, with the FC Vezhdanisht crest on the chest.",
+    "images": [
+      {
+        "src": "assets/store/polo-black-front.jpg",
+        "label": "Front"
+      },
+      {
+        "src": "assets/store/polo-black-back.jpg",
+        "label": "Back"
+      }
+    ]
+  },
+  {
+    "name": "Training T-Shirt Black",
+    "tag": "Training Wear",
+    "price": 39.99,
+    "description": "JAKO training t-shirt in black with patterned red sleeves and the FC Vezhdanisht crest on the chest.",
+    "images": [
+      {
+        "src": "assets/store/tshirt-black-front.jpg",
+        "label": "Front"
+      },
+      {
+        "src": "assets/store/tshirt-black-back.jpg",
         "label": "Back"
       }
     ]
