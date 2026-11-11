@@ -112,6 +112,38 @@
     ]
   },
   {
+    "name": "Track Jacket Black/Red",
+    "tag": "Training Wear",
+    "price": 44.99,
+    "description": "JAKO full-zip track jacket in black with red sleeves and collar, with the FC Vezhdanisht crest on the chest.",
+    "images": [
+      {
+        "src": "assets/store/jacket-blackred-front.jpg",
+        "label": "Front"
+      },
+      {
+        "src": "assets/store/jacket-blackred-back.jpg",
+        "label": "Back"
+      }
+    ]
+  },
+  {
+    "name": "Track Jacket Red/White",
+    "tag": "Training Wear",
+    "price": 44.99,
+    "description": "JAKO full-zip track jacket in red with white sleeves and collar, with the FC Vezhdanisht crest on the chest.",
+    "images": [
+      {
+        "src": "assets/store/jacket-redwhite-front.jpg",
+        "label": "Front"
+      },
+      {
+        "src": "assets/store/jacket-redwhite-back.jpg",
+        "label": "Back"
+      }
+    ]
+  },
+  {
     "name": "Club Cap",
     "tag": "Accessories",
     "price": 12.99,
