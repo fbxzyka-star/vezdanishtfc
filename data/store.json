@@ -32,50 +32,6 @@
     ]
   },
   {
-    "name": "Hooded Jacket Red/Black",
-    "tag": "Training Wear",
-    "price": 62.99,
-    "description": "JAKO hooded jacket in black with red sleeves and hood, full zip and the FC Vezhdanisht crest on the chest.",
-    "images": [
-      {
-        "src": "assets/store/jacket-redblack-front.jpg",
-        "label": "Front"
-      },
-      {
-        "src": "assets/store/jacket-redblack-side.jpg",
-        "label": "Side"
-      }
-    ]
-  },
-  {
-    "name": "Hooded Jacket Red",
-    "tag": "Training Wear",
-    "price": 55.99,
-    "description": "JAKO hooded jacket in club red with white stripes, full zip and the FC Vezhdanisht crest on the chest.",
-    "images": [
-      {
-        "src": "assets/store/jacket-red-front.jpg",
-        "label": "Front"
-      },
-      {
-        "src": "assets/store/jacket-red-side.jpg",
-        "label": "Side"
-      }
-    ]
-  },
-  {
-    "name": "Tracksuit White/Red",
-    "tag": "Set: Jacket + Pants",
-    "price": 85.99,
-    "description": "JAKO tracksuit set: white hooded jacket with red trims and the club crest, plus red training pants.",
-    "images": [
-      {
-        "src": "assets/store/tracksuit-white.jpg",
-        "label": "Set"
-      }
-    ]
-  },
-  {
     "name": "Club Cap",
     "tag": "Accessories",
     "price": 12.99,
@@ -96,18 +52,6 @@
       {
         "src": "assets/store/ball.jpg",
         "label": "Ball"
-      }
-    ]
-  },
-  {
-    "name": "Sports Bag",
-    "tag": "Accessories",
-    "price": 27.99,
-    "description": "JAKO sports bag in club red with the FC Vezhdanisht crest, shoulder strap and side pockets.",
-    "images": [
-      {
-        "src": "assets/store/bag.jpg",
-        "label": "Bag"
       }
     ]
   }
