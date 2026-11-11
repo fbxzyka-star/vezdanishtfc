@@ -80,6 +80,38 @@
     ]
   },
   {
+    "name": "Training T-Shirt Red",
+    "tag": "Training Wear",
+    "price": 39.99,
+    "description": "JAKO training t-shirt in club red with patterned white sleeves and the FC Vezhdanisht crest on the chest.",
+    "images": [
+      {
+        "src": "assets/store/tshirt-red-front.jpg",
+        "label": "Front"
+      },
+      {
+        "src": "assets/store/tshirt-red-back.jpg",
+        "label": "Back"
+      }
+    ]
+  },
+  {
+    "name": "Training Top Red/White",
+    "tag": "Training Wear",
+    "price": 44.99,
+    "description": "JAKO long-sleeve quarter-zip training top in red with white sleeves and the FC Vezhdanisht crest on the chest.",
+    "images": [
+      {
+        "src": "assets/store/quarterzip-red-front.jpg",
+        "label": "Front"
+      },
+      {
+        "src": "assets/store/quarterzip-red-back.jpg",
+        "label": "Back"
+      }
+    ]
+  },
+  {
     "name": "Club Cap",
     "tag": "Accessories",
     "price": 12.99,

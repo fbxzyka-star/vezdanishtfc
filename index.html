@@ -950,7 +950,7 @@
                         + '?subject=' + encodeURIComponent(`Order: ${p.name} (${fmtPrice(p.price)})`)
                         + '&body=' + encodeURIComponent(`Hello,\n\nI would like to order: ${p.name} (${fmtPrice(p.price)}).\n\n`
                             + (/jersey/i.test(p.name) ? 'Size: \nQuantity: \nName and number on the back (optional): \n'
-                                : /jacket|tracksuit|polo|shirt/i.test(p.name) ? 'Size: \nQuantity: \n' : 'Quantity: \n')
+                                : /jacket|tracksuit|polo|shirt|top/i.test(p.name) ? 'Size: \nQuantity: \n' : 'Quantity: \n')
                             + '\nThank you!');
                     return `<article data-p="${i}" data-v="0" class="w-full shrink-0 snap-center px-12 sm:px-16" aria-label="${esc(p.name)}">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center max-w-5xl mx-auto">
