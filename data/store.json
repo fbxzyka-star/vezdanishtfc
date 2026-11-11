@@ -38,7 +38,7 @@
     "description": "JAKO polo shirt in club red with white collar and patterned white sleeves, with the FC Vezhdanisht crest on the chest.",
     "images": [
       {
-        "src": "assets/store/polo-red-front.jpg",
+        "src": "assets/store/polo-red-front-hq.jpg",
         "label": "Front"
       },
       {
@@ -54,7 +54,7 @@
     "description": "JAKO polo shirt in black with red collar and patterned red sleeves, with the FC Vezhdanisht crest on the chest.",
     "images": [
       {
-        "src": "assets/store/polo-black-front.jpg",
+        "src": "assets/store/polo-black-front-hq.jpg",
         "label": "Front"
       },
       {
@@ -102,7 +102,7 @@
     "description": "JAKO long-sleeve quarter-zip training top in red with white sleeves and the FC Vezhdanisht crest on the chest.",
     "images": [
       {
-        "src": "assets/store/quarterzip-red-front.jpg",
+        "src": "assets/store/quarterzip-red-front-hq.jpg",
         "label": "Front"
       },
       {
@@ -118,7 +118,7 @@
     "description": "JAKO full-zip track jacket in black with red sleeves and collar, with the FC Vezhdanisht crest on the chest.",
     "images": [
       {
-        "src": "assets/store/jacket-blackred-front.jpg",
+        "src": "assets/store/jacket-blackred-front-hq.jpg",
         "label": "Front"
       },
       {
@@ -134,7 +134,7 @@
     "description": "JAKO full-zip track jacket in red with white sleeves and collar, with the FC Vezhdanisht crest on the chest.",
     "images": [
       {
-        "src": "assets/store/jacket-redwhite-front.jpg",
+        "src": "assets/store/jacket-redwhite-front-hq.jpg",
         "label": "Front"
       },
       {
