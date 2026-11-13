@@ -538,14 +538,14 @@
       "position": 2,
       "clubId": "9632",
       "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27687.jpg",
-      "points": 17,
-      "matchesPlayed": 7,
-      "matchesWon": 5,
+      "points": 20,
+      "matchesPlayed": 8,
+      "matchesWon": 6,
       "matchesLost": 0,
       "matchesDrawn": 2,
-      "goalsFor": 38,
-      "goalsAgainst": 18,
-      "goalDifference": 20
+      "goalsFor": 40,
+      "goalsAgainst": 19,
+      "goalDifference": 21
     },
     {
       "teamId": "373484",
@@ -584,13 +584,13 @@
       "clubId": "9507",
       "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27649.jpg",
       "points": 12,
-      "matchesPlayed": 6,
+      "matchesPlayed": 7,
       "matchesWon": 4,
-      "matchesLost": 2,
+      "matchesLost": 3,
       "matchesDrawn": 0,
-      "goalsFor": 41,
-      "goalsAgainst": 22,
-      "goalDifference": 19
+      "goalsFor": 42,
+      "goalsAgainst": 24,
+      "goalDifference": 18
     },
     {
       "teamId": "370975",
@@ -699,6 +699,25 @@
     }
   ],
   "leagueResults": [
+    {
+      "id": "7614544",
+      "start": "2026-11-13T22:00:00+01:00",
+      "state": "finished",
+      "home": {
+        "id": "372316",
+        "name": "FT Fusion United Antwerp",
+        "clubId": "9507",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27649.jpg"
+      },
+      "away": {
+        "id": "367333",
+        "name": "Elite Kiel Antwerpen B",
+        "clubId": "9632",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27687.jpg"
+      },
+      "homeGoals": 1,
+      "awayGoals": 2
+    },
     {
       "id": "7614542",
       "start": "2026-11-13T21:00:00+01:00",
@@ -907,28 +926,9 @@
       },
       "homeGoals": 2,
       "awayGoals": 7
-    },
-    {
-      "id": "7614529",
-      "start": "2026-10-23T20:30:00+02:00",
-      "state": "finished",
-      "home": {
-        "id": "369334",
-        "name": "FC VEZHDANISHT RUMST",
-        "clubId": "10000",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg"
-      },
-      "away": {
-        "id": "373694",
-        "name": "FC Los Incas Antwerpen",
-        "clubId": "9722",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/no_logo.jpg"
-      },
-      "homeGoals": 3,
-      "awayGoals": 2
     }
   ],
   "leagueCalendarUrl": "https://www.voetbalvlaanderen.be/competitie/CHP_130260/kalender",
   "source": "https://www.voetbalvlaanderen.be/club/10000/komende-wedstrijden",
-  "updatedAt": "2026-11-13T21:52:42+00:00"
+  "updatedAt": "2026-11-13T23:23:56+00:00"
 }
