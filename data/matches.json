@@ -719,25 +719,6 @@
       "awayGoals": 2
     },
     {
-      "id": "7614542",
-      "start": "2026-11-13T21:00:00+01:00",
-      "state": "finished",
-      "home": {
-        "id": "375176",
-        "name": "KONINKLIJKE DOVEN SPORT A",
-        "clubId": "9891",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27765.jpg"
-      },
-      "away": {
-        "id": "367155",
-        "name": "Futsal Atlas Lions Hoboken A",
-        "clubId": "9618",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27675.jpg"
-      },
-      "homeGoals": 1,
-      "awayGoals": 7
-    },
-    {
       "id": "7614543",
       "start": "2026-11-13T21:00:00+01:00",
       "state": "finished",
@@ -755,6 +736,25 @@
       },
       "homeGoals": 2,
       "awayGoals": 4
+    },
+    {
+      "id": "7614542",
+      "start": "2026-11-13T21:00:00+01:00",
+      "state": "finished",
+      "home": {
+        "id": "375176",
+        "name": "KONINKLIJKE DOVEN SPORT A",
+        "clubId": "9891",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27765.jpg"
+      },
+      "away": {
+        "id": "367155",
+        "name": "Futsal Atlas Lions Hoboken A",
+        "clubId": "9618",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27675.jpg"
+      },
+      "homeGoals": 1,
+      "awayGoals": 7
     },
     {
       "id": "7614539",
@@ -930,5 +930,5 @@
   ],
   "leagueCalendarUrl": "https://www.voetbalvlaanderen.be/competitie/CHP_130260/kalender",
   "source": "https://www.voetbalvlaanderen.be/club/10000/komende-wedstrijden",
-  "updatedAt": "2026-11-13T23:23:56+00:00"
+  "updatedAt": "2026-11-14T00:22:08+00:00"
 }
