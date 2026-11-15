@@ -136,6 +136,14 @@
         .no-scrollbar { scrollbar-width: none; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .roster-stripes { background: repeating-linear-gradient(135deg, #0b0b0b 0 70px, #b3141b 70px 140px); }
+        /* Hero background */
+        .hero-bg { background: #060606 url('assets/hero-bg.jpg') left center / cover no-repeat; }
+        @media (max-width: 767px) {
+            /* phone: scale the picture proportionally so the whole crest fits, then fade into black */
+            .hero-bg { background-image: url('assets/hero-bg-mobile.jpg'); background-size: 230% auto; background-position: 0 0; }
+            .hero-bg::after { content: ''; position: absolute; left: 0; right: 0; top: calc(230vw * 0.558 - 140px); height: 140px;
+                              background: linear-gradient(to bottom, rgba(6,6,6,0), #060606); }
+        }
     </style>
 </head>
 <body class="selection:bg-brand-red selection:text-white overflow-x-hidden">
@@ -221,17 +229,12 @@
 
     <!-- HERO SECTION -->
     <section id="hero" class="relative lg:min-h-[620px] lg:h-[78vh] flex items-center overflow-hidden bg-brand-black">
-        <!-- Background Imagery with Dark & Red overlay -->
-        <div class="absolute inset-0 bg-cover bg-center opacity-30 transform scale-105 duration-1000"
-             style="background-image: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920&auto=format&fit=crop');">
-        </div>
-        
-        <!-- Gradient layers -->
-        <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/70 to-transparent"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/90 to-transparent"></div>
-        
-        <!-- Decorative Red angled bar -->
-        <div class="absolute -right-20 top-0 w-96 h-full bg-brand-red/10 -skew-x-12 blur-3xl pointer-events-none"></div>
+        <!-- Background: club crest with red stripes (assets/hero-bg.jpg; phones use a proportionally scaled version) -->
+        <div class="hero-bg absolute inset-0" aria-hidden="true"></div>
+
+        <!-- Light gradient layers so text stays readable -->
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/70 to-transparent opacity-45"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/90 to-transparent opacity-35 lg:opacity-15"></div>
 
         <div class="relative max-w-7xl mx-auto px-6 w-full grid grid-cols-12 gap-y-8 lg:gap-8 items-center py-10">
             <!-- Left Info -->
