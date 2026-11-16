@@ -548,9 +548,24 @@
       "goalDifference": 21
     },
     {
+      "teamId": "370975",
+      "name": "FUTSAL CLUB ANTWERPEN UNITED B",
+      "position": 3,
+      "clubId": "9760",
+      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27717.jpg",
+      "points": 14,
+      "matchesPlayed": 9,
+      "matchesWon": 4,
+      "matchesLost": 3,
+      "matchesDrawn": 2,
+      "goalsFor": 37,
+      "goalsAgainst": 36,
+      "goalDifference": 1
+    },
+    {
       "teamId": "373484",
       "name": "FT FIT2PLAY HERENTALS",
-      "position": 3,
+      "position": 4,
       "clubId": "9887",
       "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27761.jpg",
       "points": 13,
@@ -565,7 +580,7 @@
     {
       "teamId": "373694",
       "name": "FC LOS INCAS ANTWERPEN",
-      "position": 4,
+      "position": 5,
       "clubId": "9722",
       "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/no_logo.jpg",
       "points": 13,
@@ -580,7 +595,7 @@
     {
       "teamId": "372316",
       "name": "FT FUSION UNITED ANTWERP",
-      "position": 5,
+      "position": 6,
       "clubId": "9507",
       "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27649.jpg",
       "points": 12,
@@ -591,21 +606,6 @@
       "goalsFor": 42,
       "goalsAgainst": 24,
       "goalDifference": 18
-    },
-    {
-      "teamId": "370975",
-      "name": "FUTSAL CLUB ANTWERPEN UNITED B",
-      "position": 6,
-      "clubId": "9760",
-      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27717.jpg",
-      "points": 11,
-      "matchesPlayed": 8,
-      "matchesWon": 3,
-      "matchesLost": 3,
-      "matchesDrawn": 2,
-      "goalsFor": 30,
-      "goalsAgainst": 30,
-      "goalDifference": 0
     },
     {
       "teamId": "364937",
@@ -644,13 +644,13 @@
       "clubId": "10003",
       "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27776.jpg",
       "points": 6,
-      "matchesPlayed": 7,
+      "matchesPlayed": 8,
       "matchesWon": 2,
-      "matchesLost": 5,
+      "matchesLost": 6,
       "matchesDrawn": 0,
-      "goalsFor": 17,
-      "goalsAgainst": 22,
-      "goalDifference": -5
+      "goalsFor": 23,
+      "goalsAgainst": 29,
+      "goalDifference": -6
     },
     {
       "teamId": "375176",
@@ -699,6 +699,25 @@
     }
   ],
   "leagueResults": [
+    {
+      "id": "7614546",
+      "start": "2026-11-16T21:00:00+01:00",
+      "state": "finished",
+      "home": {
+        "id": "370975",
+        "name": "FUTSAL CLUB ANTWERPEN UNI B",
+        "clubId": "9760",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27717.jpg"
+      },
+      "away": {
+        "id": "372363",
+        "name": "MERIDIAN ANTWERPEN",
+        "clubId": "10003",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27776.jpg"
+      },
+      "homeGoals": 7,
+      "awayGoals": 6
+    },
     {
       "id": "7614544",
       "start": "2026-11-13T22:00:00+01:00",
@@ -907,28 +926,9 @@
       },
       "homeGoals": 13,
       "awayGoals": 1
-    },
-    {
-      "id": "7614531",
-      "start": "2026-10-23T21:00:00+02:00",
-      "state": "finished",
-      "home": {
-        "id": "367157",
-        "name": "Futsal Atlas Lions Hoboken B",
-        "clubId": "9618",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27675.jpg"
-      },
-      "away": {
-        "id": "373484",
-        "name": "FT FIT2PLAY HERENTALS",
-        "clubId": "9887",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27761.jpg"
-      },
-      "homeGoals": 2,
-      "awayGoals": 7
     }
   ],
   "leagueCalendarUrl": "https://www.voetbalvlaanderen.be/competitie/CHP_130260/kalender",
   "source": "https://www.voetbalvlaanderen.be/club/10000/komende-wedstrijden",
-  "updatedAt": "2026-11-16T15:12:07+00:00"
+  "updatedAt": "2026-11-16T21:32:22+00:00"
 }
