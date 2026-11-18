@@ -523,14 +523,14 @@
       "position": 1,
       "clubId": "9838",
       "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27742.jpg",
-      "points": 22,
-      "matchesPlayed": 8,
-      "matchesWon": 7,
+      "points": 25,
+      "matchesPlayed": 9,
+      "matchesWon": 8,
       "matchesLost": 0,
       "matchesDrawn": 1,
-      "goalsFor": 31,
-      "goalsAgainst": 13,
-      "goalDifference": 18
+      "goalsFor": 35,
+      "goalsAgainst": 14,
+      "goalDifference": 21
     },
     {
       "teamId": "367333",
@@ -538,14 +538,14 @@
       "position": 2,
       "clubId": "9632",
       "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27687.jpg",
-      "points": 20,
-      "matchesPlayed": 8,
-      "matchesWon": 6,
+      "points": 23,
+      "matchesPlayed": 9,
+      "matchesWon": 7,
       "matchesLost": 0,
       "matchesDrawn": 2,
-      "goalsFor": 40,
-      "goalsAgainst": 19,
-      "goalDifference": 21
+      "goalsFor": 44,
+      "goalsAgainst": 22,
+      "goalDifference": 22
     },
     {
       "teamId": "373484",
@@ -599,13 +599,13 @@
       "clubId": "9507",
       "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27649.jpg",
       "points": 12,
-      "matchesPlayed": 7,
+      "matchesPlayed": 8,
       "matchesWon": 4,
-      "matchesLost": 3,
+      "matchesLost": 4,
       "matchesDrawn": 0,
-      "goalsFor": 42,
-      "goalsAgainst": 24,
-      "goalDifference": 18
+      "goalsFor": 43,
+      "goalsAgainst": 28,
+      "goalDifference": 15
     },
     {
       "teamId": "367155",
@@ -629,13 +629,13 @@
       "clubId": "9784",
       "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27731.jpg",
       "points": 9,
-      "matchesPlayed": 7,
+      "matchesPlayed": 8,
       "matchesWon": 3,
-      "matchesLost": 4,
+      "matchesLost": 5,
       "matchesDrawn": 0,
-      "goalsFor": 37,
-      "goalsAgainst": 45,
-      "goalDifference": -8
+      "goalsFor": 40,
+      "goalsAgainst": 49,
+      "goalDifference": -9
     },
     {
       "teamId": "372363",
@@ -699,6 +699,44 @@
     }
   ],
   "leagueResults": [
+    {
+      "id": "7614548",
+      "start": "2026-11-18T22:00:00+01:00",
+      "state": "finished",
+      "home": {
+        "id": "367333",
+        "name": "Elite Kiel Antwerpen B",
+        "clubId": "9632",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27687.jpg"
+      },
+      "away": {
+        "id": "364937",
+        "name": "ZVK LEEST B",
+        "clubId": "9784",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27731.jpg"
+      },
+      "homeGoals": 4,
+      "awayGoals": 3
+    },
+    {
+      "id": "7614549",
+      "start": "2026-11-18T22:00:00+01:00",
+      "state": "finished",
+      "home": {
+        "id": "374571",
+        "name": "FT ASSYRISKA ANTWERPEN",
+        "clubId": "9838",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27742.jpg"
+      },
+      "away": {
+        "id": "372316",
+        "name": "FT Fusion United Antwerp",
+        "clubId": "9507",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27649.jpg"
+      },
+      "homeGoals": 4,
+      "awayGoals": 1
+    },
     {
       "id": "7614547",
       "start": "2026-11-17T22:00:00+01:00",
@@ -888,47 +926,9 @@
       },
       "homeGoals": 8,
       "awayGoals": 3
-    },
-    {
-      "id": "7614537",
-      "start": "2026-10-28T21:00:00+01:00",
-      "state": "finished",
-      "home": {
-        "id": "374571",
-        "name": "FT ASSYRISKA ANTWERPEN",
-        "clubId": "9838",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27742.jpg"
-      },
-      "away": {
-        "id": "375176",
-        "name": "KONINKLIJKE DOVEN SPORT A",
-        "clubId": "9891",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27765.jpg"
-      },
-      "homeGoals": 3,
-      "awayGoals": 1
-    },
-    {
-      "id": "7614535",
-      "start": "2026-10-27T22:00:00+01:00",
-      "state": "finished",
-      "home": {
-        "id": "373694",
-        "name": "FC Los Incas Antwerpen",
-        "clubId": "9722",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/no_logo.jpg"
-      },
-      "away": {
-        "id": "364937",
-        "name": "ZVK LEEST B",
-        "clubId": "9784",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27731.jpg"
-      },
-      "homeGoals": 9,
-      "awayGoals": 8
     }
   ],
   "leagueCalendarUrl": "https://www.voetbalvlaanderen.be/competitie/CHP_130260/kalender",
   "source": "https://www.voetbalvlaanderen.be/club/10000/komende-wedstrijden",
-  "updatedAt": "2026-11-18T22:36:29+00:00"
+  "updatedAt": "2026-11-18T23:34:03+00:00"
 }
