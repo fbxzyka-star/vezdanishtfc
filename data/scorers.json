@@ -13,10 +13,6 @@
       "goals": 2
     },
     {
-      "name": "Aurel Zyka",
-      "goals": 2
-    },
-    {
       "name": "Bruce Gnana Saoro Haba",
       "goals": 2
     },
@@ -35,8 +31,12 @@
     {
       "name": "Omar Zyka",
       "goals": 2
+    },
+    {
+      "name": "Aurel Zyka",
+      "goals": 1
     }
   ],
-  "totalGoals": 26,
-  "updatedAt": "2026-11-22T11:33:07+00:00"
+  "totalGoals": 25,
+  "updatedAt": "2026-11-22T13:23:14+00:00"
 }
