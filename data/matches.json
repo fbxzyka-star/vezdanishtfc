@@ -584,13 +584,13 @@
       "clubId": "9722",
       "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/no_logo.jpg",
       "points": 13,
-      "matchesPlayed": 9,
+      "matchesPlayed": 10,
       "matchesWon": 4,
-      "matchesLost": 4,
+      "matchesLost": 5,
       "matchesDrawn": 1,
-      "goalsFor": 40,
-      "goalsAgainst": 44,
-      "goalDifference": -4
+      "goalsFor": 43,
+      "goalsAgainst": 52,
+      "goalDifference": -9
     },
     {
       "teamId": "372316",
@@ -623,9 +623,24 @@
       "goalDifference": 13
     },
     {
+      "teamId": "372363",
+      "name": "MERIDIAN ANTWERPEN",
+      "position": 8,
+      "clubId": "10003",
+      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27776.jpg",
+      "points": 9,
+      "matchesPlayed": 9,
+      "matchesWon": 3,
+      "matchesLost": 6,
+      "matchesDrawn": 0,
+      "goalsFor": 31,
+      "goalsAgainst": 32,
+      "goalDifference": -1
+    },
+    {
       "teamId": "364937",
       "name": "ZVK LEEST B",
-      "position": 8,
+      "position": 9,
       "clubId": "9784",
       "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27731.jpg",
       "points": 9,
@@ -640,7 +655,7 @@
     {
       "teamId": "369334",
       "name": "FC VEZHDANISHT RUMST",
-      "position": 9,
+      "position": 10,
       "clubId": "10000",
       "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27775.jpg",
       "points": 9,
@@ -651,21 +666,6 @@
       "goalsFor": 25,
       "goalsAgainst": 44,
       "goalDifference": -19
-    },
-    {
-      "teamId": "372363",
-      "name": "MERIDIAN ANTWERPEN",
-      "position": 10,
-      "clubId": "10003",
-      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27776.jpg",
-      "points": 6,
-      "matchesPlayed": 8,
-      "matchesWon": 2,
-      "matchesLost": 6,
-      "matchesDrawn": 0,
-      "goalsFor": 23,
-      "goalsAgainst": 29,
-      "goalDifference": -6
     },
     {
       "teamId": "375176",
@@ -699,6 +699,25 @@
     }
   ],
   "leagueResults": [
+    {
+      "id": "7614552",
+      "start": "2026-11-24T22:00:00+01:00",
+      "state": "finished",
+      "home": {
+        "id": "373694",
+        "name": "FC Los Incas Antwerpen",
+        "clubId": "9722",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/no_logo.jpg"
+      },
+      "away": {
+        "id": "372363",
+        "name": "MERIDIAN ANTWERPEN",
+        "clubId": "10003",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27776.jpg"
+      },
+      "homeGoals": 3,
+      "awayGoals": 8
+    },
     {
       "id": "7614550",
       "start": "2026-11-20T20:30:00+01:00",
@@ -907,28 +926,9 @@
       },
       "homeGoals": 6,
       "awayGoals": 2
-    },
-    {
-      "id": "7614498",
-      "start": "2026-11-02T22:00:00+01:00",
-      "state": "finished",
-      "home": {
-        "id": "373484",
-        "name": "FT FIT2PLAY HERENTALS",
-        "clubId": "9887",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27761.jpg"
-      },
-      "away": {
-        "id": "367155",
-        "name": "Futsal Atlas Lions Hoboken A",
-        "clubId": "9618",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27675.jpg"
-      },
-      "homeGoals": 4,
-      "awayGoals": 3
     }
   ],
   "leagueCalendarUrl": "https://www.voetbalvlaanderen.be/competitie/CHP_130260/kalender",
   "source": "https://www.voetbalvlaanderen.be/club/10000/komende-wedstrijden",
-  "updatedAt": "2026-11-24T22:05:11+00:00"
+  "updatedAt": "2026-11-24T22:40:51+00:00"
 }
