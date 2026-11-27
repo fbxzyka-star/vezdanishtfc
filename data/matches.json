@@ -578,9 +578,24 @@
       "goalDifference": 15
     },
     {
+      "teamId": "372316",
+      "name": "FT FUSION UNITED ANTWERP",
+      "position": 5,
+      "clubId": "9507",
+      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27649.jpg",
+      "points": 15,
+      "matchesPlayed": 9,
+      "matchesWon": 5,
+      "matchesLost": 4,
+      "matchesDrawn": 0,
+      "goalsFor": 48,
+      "goalsAgainst": 31,
+      "goalDifference": 17
+    },
+    {
       "teamId": "373694",
       "name": "FC LOS INCAS ANTWERPEN",
-      "position": 5,
+      "position": 6,
       "clubId": "9722",
       "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/no_logo.jpg",
       "points": 13,
@@ -591,21 +606,6 @@
       "goalsFor": 43,
       "goalsAgainst": 52,
       "goalDifference": -9
-    },
-    {
-      "teamId": "372316",
-      "name": "FT FUSION UNITED ANTWERP",
-      "position": 6,
-      "clubId": "9507",
-      "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27649.jpg",
-      "points": 12,
-      "matchesPlayed": 8,
-      "matchesWon": 4,
-      "matchesLost": 4,
-      "matchesDrawn": 0,
-      "goalsFor": 43,
-      "goalsAgainst": 28,
-      "goalDifference": 15
     },
     {
       "teamId": "369334",
@@ -629,13 +629,13 @@
       "clubId": "9618",
       "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27675.jpg",
       "points": 10,
-      "matchesPlayed": 9,
+      "matchesPlayed": 10,
       "matchesWon": 3,
-      "matchesLost": 5,
+      "matchesLost": 6,
       "matchesDrawn": 1,
-      "goalsFor": 37,
-      "goalsAgainst": 24,
-      "goalDifference": 13
+      "goalsFor": 40,
+      "goalsAgainst": 29,
+      "goalDifference": 11
     },
     {
       "teamId": "372363",
@@ -699,6 +699,25 @@
     }
   ],
   "leagueResults": [
+    {
+      "id": "7614556",
+      "start": "2026-11-27T22:00:00+01:00",
+      "state": "finished",
+      "home": {
+        "id": "372316",
+        "name": "FT Fusion United Antwerp",
+        "clubId": "9507",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27649.jpg"
+      },
+      "away": {
+        "id": "367155",
+        "name": "Futsal Atlas Lions Hoboken A",
+        "clubId": "9618",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27675.jpg"
+      },
+      "homeGoals": 5,
+      "awayGoals": 3
+    },
     {
       "id": "7614555",
       "start": "2026-11-27T21:00:00+01:00",
@@ -890,25 +909,6 @@
       "awayGoals": 2
     },
     {
-      "id": "7614542",
-      "start": "2026-11-13T21:00:00+01:00",
-      "state": "finished",
-      "home": {
-        "id": "375176",
-        "name": "KONINKLIJKE DOVEN SPORT A",
-        "clubId": "9891",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27765.jpg"
-      },
-      "away": {
-        "id": "367155",
-        "name": "Futsal Atlas Lions Hoboken A",
-        "clubId": "9618",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/27675.jpg"
-      },
-      "homeGoals": 1,
-      "awayGoals": 7
-    },
-    {
       "id": "7614543",
       "start": "2026-11-13T21:00:00+01:00",
       "state": "finished",
@@ -930,5 +930,5 @@
   ],
   "leagueCalendarUrl": "https://www.voetbalvlaanderen.be/competitie/CHP_130260/kalender",
   "source": "https://www.voetbalvlaanderen.be/club/10000/komende-wedstrijden",
-  "updatedAt": "2026-11-27T21:39:15+00:00"
+  "updatedAt": "2026-11-27T23:36:58+00:00"
 }
